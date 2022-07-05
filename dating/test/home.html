@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
+       :root{
+            --button-size: 7rem;
+        }
+
         .buttons{
             position: fixed;
             display: flex;
@@ -23,13 +27,13 @@
         }
 
         .buttons .button{
-            height: 5rem;
-            width: 5rem;
+            height: var(--button-size);
+            width: var(--button-size);
             border-radius: 50%;
         }
 
         .buttons .button .icon{
-            font-size: 5rem;
+            font-size: var(--button-size);
             border-radius: 50%;
             border: 1px solid;
         }
