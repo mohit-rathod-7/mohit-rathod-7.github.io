@@ -19,6 +19,10 @@
     --border: hsl(3290, 25%, 25%);   /*#48304d*/
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     background: var(--primary-bg);
 }
