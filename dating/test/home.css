@@ -60,9 +60,9 @@
 }
 
 .card-chip{
-    border: 1px solid #48304d;
+    border: 1px solid var(--border);
     background: var(--secondary-bg);
-    color: #48304d;
+    color:  var(--border);
     font-size: 12px;
     width: max-content;
     margin: 0 5px 5px 0;
