@@ -7,16 +7,16 @@
 
 :root{
     --primary-bg: hsl(298, 50%, 95%);   /*#fbe8fc*/
-    --secondary-bg: hsl(298, 74%, 90%);  /*#f7d1f8*/
+    --secondary-bg: hsl(298, 75%, 90%);  /*#f7d1f8*/
 
     --primary-cl: hsl(290, 23%, 25%);    /*#48304d*/
     --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
 
-    --layer-bg: hsl(298, 74%, 90%);      /*#f7d1f8*/
+    --layer-bg: hsl(298, 75%, 90%);      /*#f7d1f8*/
     --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
     --layer-cl-2: hsl(345, 100%, 78%);   /*#ff8fab*/
     
-    --border: hsl(3290, 23%, 25%);   /*#48304d*/
+    --border: hsl(3290, 25%, 25%);   /*#48304d*/
 }
 
 body{
