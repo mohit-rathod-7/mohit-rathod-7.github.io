@@ -15,6 +15,8 @@
     --layer-bg: hsl(298, 74%, 90%);      /*#f7d1f8*/
     --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
     --layer-cl-2: hsl(345, 100%, 78%);   /*#ff8fab*/
+    
+    --border: hsl(3290, 23%, 25%);   /*#48304d*/
 }
 
 body{
