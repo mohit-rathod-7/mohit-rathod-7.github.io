@@ -6,8 +6,8 @@
 }
 
 :root{
-    --primary-bg: hsl(298, 50%, 97%);   /*#fbe8fc*/
-    --secondary-bg: hsl(298, 75%, 90%);  /*#f7d1f8*/
+    --primary-bg: hsl(298, 0%, 97%);   /*#fbe8fc*/
+    --secondary-bg: hsl(298, 50%, 90%);  /*#f7d1f8*/
 
     --primary-cl: hsl(290, 25%, 25%);    /*#48304d*/
     --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
