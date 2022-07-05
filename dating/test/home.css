@@ -4,10 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-self: flex-start;
-    background-color: var(--white-color);
-    box-shadow: 0px 0px 1rem var(--gray-color);
-    border-radius: 5rem;
     position: relative;
+    box-shadow: var(--boxshadow-bottom);
 }
 
 .card.card__desktop{
@@ -27,33 +25,42 @@
     padding: 0.4rem 0.8rem;
     border-radius: 1rem;
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
 }
 
 .card-header{
     color: var(--primary-cl);
-    padding: 1.5rem 1rem 0 1rem;
-    margin: 0 1rem;
+    padding: 1.5rem 0rem 0 0rem;
+    margin: 0 0rem;
     font-size: 2.6rem;
     font-weight: bold;
 }
 
 .card-title{
     color: var(--secondary-cl);
-    padding: 0 1rem 1rem 1rem;
-    margin: 0 1rem;
+    padding: 0 0rem 1rem 0rem;
+    margin: 0 0rem;
     font-size: 1.8rem;
     font-weight: 500;
+    box-shadow: var(--boxshadow-bottom);
 }
 
 .card-icon, .card-button{
     color: unset;
 }
 
+.card-text{
+    font-size: 1.8rem;
+    color: var(--black);
+    padding: 1rem 0;
+    overflow-wrap: break-word;
+    box-shadow: var(--boxshadow-bottom);
+}
+
 .card-chips{
     display: flex;
-    padding: 0.5rem 2rem;
+    padding: 1rem 0rem;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
@@ -68,14 +75,6 @@
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.4rem 0.8rem;
     border-radius: 1rem;
-}
-
-.card-text{
-    font-size: 1.8rem;
-    color: var(--black);
-    padding: 0 1rem;
-    margin: 0 1rem;
-    overflow-wrap: break-word;
 }
 
 .card-img{
