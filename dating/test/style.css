@@ -6,17 +6,20 @@
 }
 
 :root{
-    --primary-bg: hsl(298, 0%, 100%);   /*#fbe8fc*/
-    --secondary-bg: hsl(298, 50%, 90%);  /*#f7d1f8*/
+    --primary-bg: hsl(298, 75%, 95%);   /*#fbe8fc*/
+    --secondary-bg: hsl(298, 75%, 90%);  /*#f7d1f8*/
 
     --primary-cl: hsl(290, 25%, 25%);    /*#48304d*/
     --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
 
     --layer-bg: hsl(298, 75%, 90%);      /*#f7d1f8*/
     --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
-    --layer-cl-2: hsl(345, 100%, 78%);   /*#ff8fab*/
-    
+    --primary-cl: hsl(290, 23%, 25%);    /*#48304d*/
+
     --border: hsl(3290, 25%, 25%);   /*#48304d*/
+    --boxshadow-bottom: 0 2px 0px -1px rgb(0 0 0 / 10%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 60%);
 }
 
 html{
@@ -25,6 +28,10 @@ html{
 
 body{
     background: var(--primary-bg);
+}
+
+.content{
+    padding: 20px;
 }
 
 a{
