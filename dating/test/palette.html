@@ -1,0 +1,112 @@
+<html>
+<head>        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: var(--primary-bg);
+        }
+        
+        :root{
+            --white: hsl(0, 0%, 100%);           /*#ffffff*/
+
+            --primary-bg: hsl(297, 100%, 95%);   /*#fbe8fc*/
+            --secondary-bg: hsl(298, 74%, 90%);  /*#f7d1f8*/
+
+            --primary-cl: hsl(290, 23%, 25%);    /*#48304d*/
+            --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
+
+            --layer-bg: hsl(298, 74%, 90%);      /*#f7d1f8*/
+            --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
+            --layer-cl-2: hsl(345, 100%, 78%);   /*#ff8fab*/
+        }
+
+        .container{
+            width: 100%;
+        }
+
+        .palette{
+            height: 100px;
+            border-bottom: 0.5px solid black;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color{
+            text-align: center;
+            margin: auto;
+        }
+        
+        #_1{
+            background: var(--white);
+        }
+        
+        #_2{
+            background: var(--primary-bg);
+        }
+        
+        #_3{
+            background: var(--secondary-bg);
+        }
+        
+        #_4{
+            background: var(--primary-cl);
+        }
+        
+        #_5{
+            background: var(--secondary-cl);
+        }
+        
+        #_6{
+            background: var(--layer-bg);
+        }
+        
+        #_7{
+            background: var(--layer-cl-1);
+        }
+        
+        #_8{
+            background: var(--layer-cl-2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="palette" id="_1">
+            <p class="color">#ffffff</p>
+        </div>
+
+        <div class="palette" id="_2">
+            <p class="color">#fbe8fc</p>
+        </div>
+
+        <div class="palette" id="_3">
+            <p class="color">#f7d1f8</p>
+        </div>
+
+        <div class="palette" id="_4">
+            <p class="color">#48304d</p>
+        </div>
+
+        <div class="palette" id="_5">
+            <p class="color">#ff37a6</p>
+        </div>
+        
+        <div class="palette" id="_6">
+            <p class="color">#ff37a6</p>
+        </div>
+
+        <div class="palette" id="_7">
+            <p class="color">#ff37a6</p>
+        </div>
+
+        <div class="palette" id="_8">
+            <p class="color">#ff37a6</p>
+        </div>
+    </div>
+</body>
+</html>

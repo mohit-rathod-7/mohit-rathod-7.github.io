@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --primary-bg: hsl(297, 100%, 95%);   /*#fbe8fc*/
+    --secondary-bg: hsl(298, 74%, 90%);  /*#f7d1f8*/
+
+    --primary-cl: hsl(290, 23%, 25%);    /*#48304d*/
+    --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
+
+    --layer-bg: hsl(298, 74%, 90%);      /*#f7d1f8*/
+    --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
+    --layer-cl-2: hsl(345, 100%, 78%);   /*#ff8fab*/
+}
+
+body{
+    background: var(--primary-bg);
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}
+
+.material-symbols-filled{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}

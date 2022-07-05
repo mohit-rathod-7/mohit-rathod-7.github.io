@@ -1,0 +1,24 @@
+.navbar{
+    background: var(--layer-bg);
+    position: fixed;
+    bottom: 0;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    z-index: 1000;
+}
+
+.navbar .icon{
+    color: var(--layer-cl-1);
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar a{
+    margin: auto;
+    text-decoration: none;
+    color: unset;
+}
