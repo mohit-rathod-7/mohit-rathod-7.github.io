@@ -7,6 +7,10 @@
     <link rel="stylesheet" href='home.css'>
     <link rel="stylesheet" href='navbar.css'>
     
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <!-- <link rel="stylesheet" href="https://sapphire-ui.netlify.app/css/components.css">    -->
     <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -35,11 +39,11 @@
             cursor: pointer;
         }
 
-        .buttons .button#like .icon{
+        .buttons .button #like .icon{
             background: var(--like-button-bg);
         }
 
-        .buttons .button#dislike .icon{
+        .buttons .button #dislike .icon{
             background: var(--dislike-button-bg);
         }
     </style>
@@ -102,24 +106,24 @@
         </div>    
         
         <div class="buttons">
-            <div class="button" id="dislike">
-                <span class="icon material-icons material-symbols-filled">cancel</span>
+            <div class="button">
+                <a id="dislike" href="#"><i class="icon material-icons material-symbols-filled">cancel</i></a>
             </div>
-            <div class="button" id="like">
-                <span class="icon material-icons material-symbols-filled">check_circle</span>
+
+            <div class="button">
+                <a id="like" href="#"><i class="icon material-icons material-symbols-filled">check_circle</i></a>
             </div>
         </div>
     </div>
 
-    <script type="javascript" src="home.js"></script>
+    <nav class="navbar">
+        <a href="home.html"><i class="icon material-icons material-symbols-filled" id="home">home</i></a>
+        <a href="likes.html"><i class="icon material-icons material-symbols-outlined" id="likes">favorite</i></a>
+        <a href="chats.html"><i class="icon material-icons material-symbols-outlined" id="chats">chat_bubble</i></a>
+        <a href="user.html"><i class="icon material-icons material-symbols-outlined" id="user">person</i></a>
+    </nav>
+    <div class="dummy"></div>
+
+    <script type="text/javascript" src="home.js"></script>
 </body>
-
-<nav class="navbar">
-    <a href="home.html"><i class="icon material-icons material-symbols-filled" id="home">home</i></a>
-    <a href="likes.html"><i class="icon material-icons material-symbols-outlined" id="likes">favorite</i></a>
-    <a href="chats.html"><i class="icon material-icons material-symbols-outlined" id="chats">chat_bubble</i></a>
-    <a href="user.html"><i class="icon material-icons material-symbols-outlined" id="user">person</i></a>
-</nav>
-<div class="dummy"></div>
-
 </html>
