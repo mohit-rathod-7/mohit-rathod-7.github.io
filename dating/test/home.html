@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
-       :root{
+        :root{
             --button-size: 6rem;
         }
 
@@ -26,24 +26,20 @@
             bottom: 10rem;
         }
 
-        .buttons .button{
-            height: var(--button-size);
-            width: var(--button-size);
-            border-radius: 50%;
-        }
-
         .buttons .button .icon{
             font-size: var(--button-size);
             border-radius: 50%;
-            border: 1px solid;
+            cursor: pointer;
         }
 
         .buttons .button#like .icon{
+            background: hsl(120, 75%, 75%);
             color: green;
             border-color: green;
         }
 
         .buttons .button#dislike .icon{
+            background: hsl(0, 75%, 75%);
             color: red;
             border-color: red;
         }
