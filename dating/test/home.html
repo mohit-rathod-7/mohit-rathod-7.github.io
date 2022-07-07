@@ -15,8 +15,8 @@
     <style>
         :root{
             --button-size: 6rem;
-            --like-button-cl: hsl(120, 80%, 25%);
-            --dislike-button-cl: hsl(0, 80%, 50%);
+            --like-button-bg: hsl(120, 50%, 70%);
+            --dislike-button-bg: hsl(0, 50%, 70%);
         }
 
         .buttons{
@@ -36,11 +36,11 @@
         }
 
         .buttons .button#like .icon{
-            background: hsl(120, 50%, 70%);
+            background: var(--like-button-bg);
         }
 
         .buttons .button#dislike .icon{
-            background: hsl(0, 50%, 70%);
+            background: var(--dislike-button-bg);
         }
     </style>
 </head>
