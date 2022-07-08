@@ -16,6 +16,7 @@
 
 .navbar__top{
     position: sticky;
+    height:3.5rem;
 }
 
 .navbar__bottom{
