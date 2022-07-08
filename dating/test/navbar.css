@@ -6,9 +6,8 @@
     height: 4rem;
     width: 100%;
     background: var(--layer-bg);
-    z-index: 1000;
-    
     color: var(--layer-cl-1);
+    z-index: 1000;
 }
 
 .navbar a{
@@ -21,6 +20,10 @@
     position: sticky;
     height: 3.5rem;
     border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.navbar__top .title{
+    font-size: 2rem;
 }
 
 .navbar__bottom{
