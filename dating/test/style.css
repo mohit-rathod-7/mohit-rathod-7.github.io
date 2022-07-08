@@ -30,10 +30,20 @@ body{
 }
 
 .content{
-    margin: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
+
+    height: 84vh;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    background: white;
+}
+
+.content::-webkit-scrollbar{
+    display: none;
 }
 
 a{
