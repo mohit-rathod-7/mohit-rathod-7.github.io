@@ -7,6 +7,8 @@
     width: 100%;
     background: var(--layer-bg);
     z-index: 1000;
+    
+    color: var(--layer-cl-1);
 }
 
 .navbar a{
@@ -17,7 +19,8 @@
 
 .navbar__top{
     position: sticky;
-    height:3.5rem;
+    height: 3.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .navbar__bottom{
@@ -27,7 +30,6 @@
 }
 
 .navbar__bottom .icon{
-    color: var(--layer-cl-1);
     padding: 0.8rem;
     margin: auto;
     cursor: pointer;
