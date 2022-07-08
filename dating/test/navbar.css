@@ -1,21 +1,11 @@
 .navbar{
-    background: var(--layer-bg);
-    position: fixed;
-    bottom: 0;
-    padding: 1rem 0;
     display: flex;
     align-items: center;
+    padding: 1rem 0;
     height: 4rem;
     width: 100%;
-    border-radius: 1.5rem 1.5rem 0 0;
+    background: var(--layer-bg);
     z-index: 1000;
-}
-
-.navbar .icon{
-    color: var(--layer-cl-1);
-    padding: 0.8rem;
-    margin: auto;
-    cursor: pointer;
 }
 
 .navbar a{
@@ -24,6 +14,23 @@
     color: unset;
 }
 
-.dummy{
+.navbar__top{
+    position: sticky;
+}
+
+.navbar__bottom{
+    position: fixed;
+    bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.navbar__bottom .icon{
+    color: var(--layer-cl-1);
+    padding: 0.8rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar__dummy{
     height: 4rem;
 }
