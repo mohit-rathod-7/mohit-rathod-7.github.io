@@ -1,5 +1,5 @@
 :root{
-    --button-size: 6rem;
+    --button-size: 6.25rem;
     --like-button-bg: hsl(120, 50%, 70%);
     --dislike-button-bg: hsl(0, 50%, 70%);
 }
