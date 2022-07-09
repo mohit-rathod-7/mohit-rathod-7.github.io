@@ -56,7 +56,7 @@ body{
     height: 100% !important;
     width: 4rem !important;
     border: 1px solid black;
-    z-index: 100;
+    z-index: 100 !important;
 }
 
 .swiper-button-next{
@@ -64,7 +64,17 @@ body{
     right: 0 !important;
 }
 
-.swiper-button-prev {
+.swiper-button-next::after{
+    position: absolute;
+    right: 1rem;
+}
+
+.swiper-button-prev{
     margin: auto auto auto 0 !important;
     left: 0 !important;
+}
+
+.swiper-button-prev::after{
+    position: absolute;
+    left: 1rem;
 }
