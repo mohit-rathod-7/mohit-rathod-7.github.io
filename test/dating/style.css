@@ -18,6 +18,7 @@
     --border: hsl(3290, 25%, 25%);   /*#48304d*/
     --boxshadow-bottom: 0 2px 0 -1px rgb(0 0 0 / 10%);
     --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
     --gray: hsl(0, 0%, 60%);
 }
 
