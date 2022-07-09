@@ -1,0 +1,43 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    height: 4rem;
+    width: 100%;
+    background: var(--layer-bg);
+    color: var(--layer-cl-1);
+    z-index: 1000;
+}
+
+.navbar a{
+    margin: auto;
+    text-decoration: none;
+    color: unset;
+}
+
+.navbar__top{
+    position: sticky;
+    height: 3.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.navbar__top .title{
+    font-size: 2rem;
+}
+
+.navbar__bottom{
+    position: fixed;
+    bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.navbar__bottom .icon{
+    padding: 0.8rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar__dummy{
+    height: 4rem;
+}

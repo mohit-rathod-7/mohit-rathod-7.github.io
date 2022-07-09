@@ -1,0 +1,88 @@
+.card{
+    background: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    position: relative;
+}
+
+.card.card__desktop{
+    margin: 5rem auto;
+}
+
+.card.card__mobile{
+    width: -webkit-fill-available;
+}
+
+.card-badge{
+    border: 0.1rem solid #48304d;
+    background: var(--secondary-bg);
+    color: #48304d;
+    font-size: 1.6rem;
+    width: max-content;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-header{
+    color: var(--primary-cl);
+    padding: 1.5rem 0rem 0 0rem;
+    margin: 0 0rem;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.card-title{
+    color: var(--secondary-cl);
+    padding: 0 0rem 1rem 0rem;
+    margin: 0 0rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.card-icon, .card-button{
+    color: unset;
+}
+
+.card-text{
+    font-size: 1.8rem;
+    color: var(--black);
+    padding: 1rem 0;
+    overflow-wrap: break-word;
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.card-chips{
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.card-chip{
+    border: 0.1rem solid #48304d;
+    background: var(--secondary-bg);
+    color: #48304d;
+    font-size: 1.4rem;
+    width: max-content;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+}
+
+.card-img{
+    width: 100%;
+    height: 25rem;
+}
+
+.card-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}

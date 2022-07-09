@@ -1,0 +1,1 @@
+created the file using command "pipreqs ." in terminal for particular folder
