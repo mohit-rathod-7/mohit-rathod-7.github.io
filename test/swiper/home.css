@@ -55,6 +55,7 @@ body{
     top: 0 !important;
     height: 100% !important;
     width: 4rem !important;
+    border: 1px solid black;
     z-index: 100 !important;
 }
 
@@ -76,4 +77,22 @@ body{
 .swiper-button-prev::after{
     position: absolute;
     left: 1rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    top: 1rem !important;
+    bottom: unset !important;
+}
+
+.swiper-pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swiper-pagination-bullet{
+    margin: 0 0.25rem !important;
+    width: -webkit-fill-available !important;
+    border-radius: 1rem !important;
 }
