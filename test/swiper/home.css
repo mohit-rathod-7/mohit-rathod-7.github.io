@@ -84,14 +84,16 @@ body{
 }
 
 .swiper-pagination{
+    padding: 0 0.2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: calc(100% - 0.2rem*2) !important;
 }
 
 .swiper-pagination-bullet{
-    margin: 0 0.25rem !important;
+    margin: 0 0.2rem !important;
     width: -webkit-fill-available !important;
     border-radius: 1rem !important;
 }
