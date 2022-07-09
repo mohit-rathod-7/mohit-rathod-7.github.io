@@ -11,6 +11,7 @@
     align-items: center;
     width: 90%;
     bottom: 7.75rem;
+    z-index: 1000;
 }
 
 .buttons .button .icon{
