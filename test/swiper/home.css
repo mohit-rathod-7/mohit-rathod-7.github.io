@@ -54,7 +54,9 @@ body{
     padding: 0 1rem;
     top: 0 !important;
     height: 100% !important;
+    width: 4rem !important;
     border: 1px solid black;
+    z-index: 100;
 }
 
 .swiper-button-next{
