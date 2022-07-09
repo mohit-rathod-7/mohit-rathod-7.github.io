@@ -30,13 +30,10 @@ body{
 }
 
 .content{
-    /* margin: 1rem; */
-    padding: 2rem;
+    padding: 1rem 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
-
-    /* height: 84vh; */
     height: 77vh;
     overflow-y: scroll;
     border-radius: 1rem;
