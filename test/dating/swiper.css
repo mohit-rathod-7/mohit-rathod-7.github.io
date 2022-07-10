@@ -91,6 +91,7 @@
 .swiper-pagination-bullet{
     margin: 0 0.1rem !important;
     width: -webkit-fill-available !important;
+    height: 0.5rem !important;
     border-radius: 0.5rem !important;
 }
 
