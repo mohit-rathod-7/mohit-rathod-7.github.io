@@ -16,7 +16,7 @@
 
 .buttons .button .icon{
     font-size: var(--button-size);
-    color: white;
+    color: var(--white);
     border-radius: 50%;
     cursor: pointer;
 }
