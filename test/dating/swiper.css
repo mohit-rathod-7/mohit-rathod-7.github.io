@@ -51,6 +51,10 @@
     z-index: 100 !important;
 }
 
+.swiper-button-next:focus, .swiper-button-prev:focus {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 .swiper-button-next{
     margin: auto 0 auto auto !important;
     right: 0 !important;
