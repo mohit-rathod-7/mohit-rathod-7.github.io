@@ -9,15 +9,19 @@
     <link rel="stylesheet" href='home.css'>
     <link rel="stylesheet" href='navbar.css'>
     <link rel="stylesheet" href='actions.css'>
+    <link rel="stylesheet" href='swiper.css'>
     
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
-    <!-- <link rel="stylesheet" href="https://sapphire-ui.netlify.app/css/components.css">    -->
+    <!-- Google Fonts  & Icons -->
     <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
     <style>
     
@@ -31,12 +35,35 @@
 
     <div class="content">
         <div class="card card__mobile">
-            <span class="card-badge">
-                <span class="material-symbols-outlined">more_vert</span>
-            </span>
+            <div class="card-images">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg"/>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg"/>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg"/>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <img src="card-img-1.jpeg"/>
+                        </div>
+                    </div>
 
-            <div class="card-img">
-                <img src="card-img-1.jpeg" alt="blue-watch"/>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
 
             <div>
@@ -84,33 +111,6 @@
             </div>    
         </div>  
 
-        <div class="card card__mobile">
-            <span class="card-badge">
-                <span class="material-symbols-outlined">more_vert</span>
-            </span>
-
-            <div class="card-img">
-                <img src="card-img-1.jpeg" alt="blue-watch"/>
-            </div>
-
-            <div>
-                <div class="card-header">Blue Watch</div>
-                <div class="card-title">by Rolex</div>
-            </div>
-
-            <p class="card-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
-            </p>
-
-            <div class="card-chips">
-                <span class="card-chip">10% OFF</span>
-                <span class="card-chip">15% OFF</span>
-                <span class="card-chip">20% OFF</span>
-                <span class="card-chip">25% OFF</span>
-                <span class="card-chip">30% OFF</span>
-            </div>    
-        </div> 
-        
         <div class="buttons">
             <div class="button">
                 <a id="dislike" href="#"><i class="icon material-icons material-symbols-filled">cancel</i></a>
@@ -131,5 +131,38 @@
     <div class="navbar__dummy"></div>
 
     <script type="text/javascript" src="home.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="text/javascript" >
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            slidesPerView: "auto",
+            
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+
+            coverflowEffect: {
+                rotate: 45,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 </html>
