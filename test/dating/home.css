@@ -16,9 +16,9 @@
 }
 
 .card-badge{
-    border: 0.1rem solid #48304d;
+    border: 0.1rem solid var(--border);
     background: var(--secondary-bg);
-    color: #48304d;
+    color: var(--primary-cl);
     font-size: 1.6rem;
     width: max-content;
     padding: 0.4rem 0.8rem;
@@ -66,13 +66,13 @@
 }
 
 .card-chip{
-    border: 0.1rem solid #48304d;
+    border: 0.1rem solid var(--border);
     background: var(--secondary-bg);
-    color: #48304d;
-    font-size: 1.4rem;
+    color: var(--primary-cl);
+    font-size: 1.3rem;
     width: max-content;
-    margin: 0 0.5rem 0.5rem 0;
-    padding: 0.4rem 0.8rem;
+    margin: 0 0.8rem 0.8rem 0;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
 }
 
