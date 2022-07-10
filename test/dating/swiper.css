@@ -89,9 +89,9 @@
 }
 
 .swiper-pagination-bullet{
-    margin: 0 0.2rem !important;
+    margin: 0 0.1rem !important;
     width: -webkit-fill-available !important;
-    border-radius: 1rem !important;
+    border-radius: 0.5rem !important;
 }
 
 .swiper-pagination-bullet:first-child{
