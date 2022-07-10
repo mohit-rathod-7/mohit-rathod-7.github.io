@@ -13,7 +13,7 @@
     --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
 
     --layer-bg: hsl(298, 75%, 90%);      /*#f7d1f8*/
-    --layer-cl-1: hsl(345, 95%, 71%);    /*#fb6f92*/
+    --layer-cl: hsl(345, 95%, 71%);    /*#fb6f92*/
 
     --border: hsl(3290, 25%, 25%);   /*#48304d*/
     --boxshadow-bottom: 0 2px 0 -1px rgb(0 0 0 / 10%);
