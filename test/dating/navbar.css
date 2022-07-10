@@ -6,7 +6,7 @@
     height: 4rem;
     width: 100%;
     background: var(--layer-bg);
-    color: var(--layer-cl-1);
+    color: var(--layer-cl);
     z-index: 1000;
 }
 
