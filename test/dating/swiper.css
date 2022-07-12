@@ -35,12 +35,6 @@
     height: 66vh !important;
 }
 
-@media screen and (max-width: 450px){
-    .swiper-wrapper{
-        height: 67vh !important;
-    }
-}
-
 .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right{
     background-image: none !important;
 }
@@ -112,4 +106,14 @@
 .swiper-pagination-bullet-active{
     opacity: 0.5 !important;
     background: var(--swiper-theme-color) !important;
+}
+
+@media screen and (max-width: 450px){
+    .swiper-wrapper{
+        height: 67vh !important;
+    }
+    
+    .swiper-slide img{
+        object-fit: cover;
+    }
 }
