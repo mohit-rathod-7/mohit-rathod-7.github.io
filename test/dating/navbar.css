@@ -1,7 +1,7 @@
 :root{
     --tw-ring-offset-shadow: 0 0 #0000;
     --tw-ring-shadow: 0 0 #0000;
-    --tw-shadow: 0 0px 10px -1px rgba(0,0,0,0.5);
+    --tw-shadow: 0 0px 10px -1px rgba(0,0,0,.5);
 }
 
 .navbar{
@@ -26,7 +26,7 @@
     position: sticky;
     height: 3.5rem;
     border-radius: 0 0 1.5rem 1.5rem;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
 }
 
 .navbar__top .title{
@@ -37,7 +37,6 @@
     position: fixed;
     bottom: 0;
     border-radius: 1.5rem 1.5rem 0 0;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
 }
 
 .navbar__bottom .icon{
@@ -47,5 +46,8 @@
 }
 
 .navbar__dummy{
-    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    height: 6rem;
+    width: 100%;
 }
