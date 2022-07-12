@@ -1,16 +1,19 @@
 :root{
-    --button-size: 6.25rem;
+    --button-size: 6rem;
     --like-button-bg: hsl(120, 50%, 70%);
     --dislike-button-bg: hsl(0, 50%, 70%);
 }
 
 .buttons{
+    padding: 1rem 0;
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 90%;
-    bottom: 7rem;
+    width: 100%;
+    left: 0;
+    bottom: 6rem;
+    background: var(--white);
     z-index: 1000;
 }
 
