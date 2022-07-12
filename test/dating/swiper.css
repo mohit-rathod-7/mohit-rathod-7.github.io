@@ -36,6 +36,12 @@
     height: 66vh !important;
 }
 
+@media screen and (max-width: 450px){
+    .swiper-wrapper{
+        height: 67vh !important;
+    }
+}
+
 .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right{
     background-image: none !important;
 }
