@@ -1,5 +1,5 @@
 .card{
-    background: var(--primary-bg);
+    background: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
