@@ -32,7 +32,7 @@
 }
 
 .swiper-wrapper{
-    height: 66vh !important;
+    height: 67vh !important;
 }
 
 .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right{
@@ -110,7 +110,7 @@
 
 @media screen and (max-width: 450px){
     .swiper-wrapper{
-        height: 67vh !important;
+        height: 68vh !important;
     }
     
     .swiper-slide img{
