@@ -27,7 +27,8 @@ html{
 }
 
 body{
-    background: var(--primary-bg);
+/*     background: var(--primary-bg); */
+    background: rgb(255, 255, 255);
 }
 
 .content{
