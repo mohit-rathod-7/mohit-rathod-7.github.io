@@ -23,17 +23,17 @@
     box-shadow: 0 -2px 0px 1px rgb(0 0 0 / 10%);
 }
 
-.card-badge{
-    border: 0.1rem solid var(--border);
-    background: var(--secondary-bg);
-    color: var(--primary-cl);
-    font-size: 1.6rem;
-    width: max-content;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
-    position: absolute;
+.card-close{
+    position: sticky;
     top: 0;
-    left: 0;
+    border-radius: 50%;
+}
+
+.card-close .icon{
+    padding: 1.5rem 0rem;
+    position: relative;
+    width: max-content;
+    float: right;
 }
 
 .card-header{
