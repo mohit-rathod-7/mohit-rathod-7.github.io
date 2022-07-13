@@ -132,6 +132,12 @@
     font-weight: unset;
 }
 
+.swiper-info .card-icon{
+    margin-left: 1rem;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
 .swiper-info .card-title__item{
     font-size: 1.8rem;
     color: var(--white);
