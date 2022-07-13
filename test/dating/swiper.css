@@ -1,5 +1,6 @@
 :root{
-    --swiper-theme-color: hsl(345, 95%, 71%) !important; /* var(--layer-cl) */
+    /* --swiper-theme-color: hsl(345, 95%, 71%) !important; var(--layer-cl) */
+    --swiper-theme-color: var(--white) !important;
 }
 
 .card-images{
