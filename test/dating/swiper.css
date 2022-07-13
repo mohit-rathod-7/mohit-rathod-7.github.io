@@ -108,6 +108,37 @@
     background: var(--swiper-theme-color) !important;
 }
 
+.swiper-info{
+    padding: 1rem;
+    position: absolute; 
+    bottom: 0; 
+    z-index: 100;
+    width: 100%;
+}
+
+.swiper-info .card-name{
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: unset;
+}
+
+.swiper-info .card-age{
+    margin-left: 1rem;
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: unset;
+}
+
+.swiper-info .card-title__item{
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.swiper-info .card-title__item-icon{
+    font-size: inherit;
+}
+
+
 @media screen and (max-width: 450px){
     .swiper-wrapper{
         height: 68vh !important;
