@@ -27,7 +27,7 @@ html{
 }
 
 body{
-     background: var(--white);
+    background: var(--primary-bg);
 }
 
 .content{
