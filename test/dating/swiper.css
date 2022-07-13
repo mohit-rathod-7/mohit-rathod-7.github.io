@@ -109,20 +109,22 @@
 }
 
 .swiper-info{
-    padding: 1rem;
+    padding: 0 2rem 2rem 2rem;
     position: absolute; 
     bottom: 0; 
     z-index: 100;
-    width: 100%;
+    width: -webkit-fill-available;
 }
 
 .swiper-info .card-name{
     color: var(--white);
     font-size: 3rem;
     font-weight: unset;
+    padding: 0;
 }
 
 .swiper-info .card-age{
+    padding: 0;
     margin-left: 1rem;
     color: var(--white);
     font-size: 2.2rem;
