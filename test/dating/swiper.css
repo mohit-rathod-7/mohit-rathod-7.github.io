@@ -45,7 +45,7 @@
 
 .swiper-button-next, .swiper-button-prev {
     padding: 0 1rem;
-    top: 0 !important;
+    top: 0.5rem !important;
     height: 100% !important;
     width: 3rem !important;
     z-index: 100 !important;
@@ -91,7 +91,7 @@
 .swiper-pagination-bullet{
     margin: 0 0.1rem !important;
     width: -webkit-fill-available !important;
-    height: 0.5rem !important;
+    height: 0.25rem !important;
     border-radius: 0.5rem !important;
 }
 
