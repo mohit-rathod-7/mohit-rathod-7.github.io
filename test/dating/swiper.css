@@ -1,5 +1,4 @@
 :root{
-    /* --swiper-theme-color: hsl(345, 95%, 71%) !important; var(--layer-cl) */
     --swiper-theme-color: var(--white) !important;
 }
 
@@ -46,7 +45,7 @@
 
 .swiper-button-next, .swiper-button-prev {
     padding: 0 1rem;
-    top: 0.5rem !important;
+    top: 0rem !important;
     height: 100% !important;
     width: 3rem !important;
     z-index: 100 !important;
@@ -78,6 +77,7 @@
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
     top: 0.5rem !important;
+    left: 0.5rem !important;
     bottom: unset !important;
 }
 
@@ -86,7 +86,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100% !important;
+    width: calc(100% - 1rem) !important
 }
 
 .swiper-pagination-bullet{
@@ -105,7 +105,7 @@
 }
 
 .swiper-pagination-bullet-active{
-    opacity: 0.5 !important;
+    opacity: 0.75 !important;
     background: var(--swiper-theme-color) !important;
 }
 
