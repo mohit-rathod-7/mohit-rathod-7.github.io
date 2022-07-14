@@ -76,7 +76,7 @@
 }
 
 .card-title__item-text{
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 .card-icon, .card-button{
@@ -93,7 +93,7 @@
 
 .card-chips{
     display: flex;
-    padding: 1rem 0 0 0;
+    padding: 2rem 0 1rem 0;
     align-items: center;
     justify-content: left;
     box-shadow: var(--boxshadow-bottom);
