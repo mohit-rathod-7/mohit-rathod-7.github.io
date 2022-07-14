@@ -18,6 +18,7 @@
     left: 0;
     bottom: 6rem;
     background: white;
+    border-radius: 1.5rem 1.5rem 0 0;
     max-height: 50vh;
     overflow-y: scroll;
     box-shadow: 0 -2px 0px 1px rgb(0 0 0 / 10%);
@@ -30,10 +31,11 @@
 }
 
 .card-close .icon{
-    padding: 1.5rem 0rem;
+    padding: 1.5rem 0;
     position: relative;
     width: max-content;
     float: right;
+    font-size: 3rem;
 }
 
 .card-header{
@@ -42,8 +44,8 @@
 }
 
 .card-name, .card-age{
-    margin: 0 0rem;
-    padding: 1.5rem 0rem 0 0rem;
+    margin: 0 0;
+    padding: 1.5rem 0 0 0;
 }
 
 .card-name{
@@ -61,8 +63,8 @@
 
 .card-title{
     color: var(--secondary-cl);
-    padding: 0 0rem 1rem 0rem;
-    margin: 0 0rem;
+    padding: 0 0 1rem 0;
+    margin: 0 0;
     font-size: 2rem;
     font-weight: 500;
     box-shadow: var(--boxshadow-bottom);
@@ -91,7 +93,7 @@
 
 .card-chips{
     display: flex;
-    padding: 1rem 0rem;
+    padding: 1rem 0;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
