@@ -93,7 +93,7 @@
 
 .card-chips{
     display: flex;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     align-items: center;
     justify-content: left;
     box-shadow: var(--boxshadow-bottom);
@@ -106,7 +106,7 @@
     color: var(--primary-cl);
     font-size: 1.3rem;
     width: max-content;
-    margin: 0 0.8rem 0.8rem 0;
+    margin: 0 1rem 1rem 0;
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;
 }
