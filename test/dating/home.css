@@ -39,12 +39,13 @@
 }
 
 .card-header{
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: baseline;
 }
 
 .card-name, .card-age{
-    margin: 0 0;
+    margin: 0;
     padding: 1.5rem 0 0 0;
 }
 
@@ -65,8 +66,7 @@
     color: var(--secondary-cl);
     padding: 0 0 1rem 0;
     margin: 0 0;
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.8rem;
     box-shadow: var(--boxshadow-bottom);
 }
 
@@ -96,6 +96,7 @@
     padding: 1rem 0;
     align-items: center;
     justify-content: left;
+    box-shadow: var(--boxshadow-bottom);
     flex-wrap: wrap;
 }
 
@@ -121,8 +122,18 @@
     height: 100%;
 }
 
+.card-report{
+    padding: 2rem;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.25rem;
+}
+
 .card-dummy{
-    height: 7rem;
+    height: 8rem;
 }
 
 
