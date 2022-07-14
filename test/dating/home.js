@@ -27,10 +27,20 @@ $(document).ready(function() {
 
 
 const cardInfo = gsap.timeline();
+var animationDuration = 0.5;
 
 $('.swiper-info').click(function(){
     cardInfo
-    .from('.card-info', { ease: 'power2.in', duration: 1, y: '100%', stagger: 0.15 })
+    .from('.card-info', { ease: 'power2.in', duration: animationDuration, y: '100%', stagger: 0.75 })
+    .to('.card-info', { ease: 'power2.in', duration: animationDuration, y: '0%'})
 
-    TweenLite.to(".card-info", 0.5, {ease: Back.easeInOutSine, force3D: true, x: '0%', display: 'block' });
+    TweenLite.to(".card-info", animationDuration, {ease: Back.easeInOutSine, force3D: true, display: 'block' });
+})
+
+
+$('.card-close .icon').click(function(){
+    cardInfo
+    .to('.card-info', { ease: 'power2.in', duration: animationDuration, y: '100%' })
+
+    TweenLite.to(".card-info", animationDuration, {ease: Back.easeInOutSine, force3D: true, display: 'none' });
 })
