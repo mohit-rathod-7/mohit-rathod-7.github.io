@@ -1,5 +1,5 @@
 .container{
-    padding: 2rem 0;
+    padding: 2.5rem 1.5rem;
     box-shadow: var(--boxshadow-bottom);
 }
 
@@ -19,7 +19,7 @@
     display: none;
     position: fixed;
     z-index: 1000;
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
     left: 0;
     bottom: 6rem;
     background: white;
@@ -31,12 +31,11 @@
 
 .card-close{
     position: sticky;
-    top: 0;
     border-radius: 50%;
 }
 
 .card-close .icon{
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     position: relative;
     width: max-content;
     float: right;
@@ -45,14 +44,12 @@
 }
 
 .card-header{
-    /* padding-bottom: 0.5rem; */
     display: flex;
     align-items: baseline;
 }
 
 .card-name, .card-age{
     margin: 0;
-    /* padding: 1.5rem 0 0 0; */
 }
 
 .card-name{
@@ -70,7 +67,6 @@
 
 .card-title{
     color: var(--secondary-cl);
-    /* padding: 0 0 1rem 0; */
     font-size: 1.8rem;
     box-shadow: var(--boxshadow-bottom);
 }
@@ -91,14 +87,13 @@
 .card-text{
     font-size: 1.8rem;
     color: var(--black);
-    /* padding: 1rem 0; */
     overflow-wrap: break-word;
     box-shadow: var(--boxshadow-bottom);
 }
 
 .card-chips{
     display: flex;
-    padding: 2rem 0 1rem 0;
+/*     padding: 2rem 0 1rem 0; */
     align-items: center;
     justify-content: left;
     box-shadow: var(--boxshadow-bottom);
