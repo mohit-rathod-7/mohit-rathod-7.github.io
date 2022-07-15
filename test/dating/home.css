@@ -1,3 +1,8 @@
+.container{
+    padding: 2rem 0;
+    box-shadow: var(--boxshadow-bottom);
+}
+
 .card{
     margin: 0 auto;
     display: flex;
@@ -40,14 +45,14 @@
 }
 
 .card-header{
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
     display: flex;
     align-items: baseline;
 }
 
 .card-name, .card-age{
     margin: 0;
-    padding: 1.5rem 0 0 0;
+    /* padding: 1.5rem 0 0 0; */
 }
 
 .card-name{
