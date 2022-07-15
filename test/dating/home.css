@@ -36,6 +36,7 @@
     width: max-content;
     float: right;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 .card-header{
