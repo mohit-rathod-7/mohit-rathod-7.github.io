@@ -5,6 +5,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+*::-webkit-scrollbar{
+    display: none;
+}
+
+*:focus{
+    -webkit-tap-highlight-color: transparent !important;
+}
+
 :root{
     --primary-bg: hsl(298, 0%, 100%);   /*#fbe8fc*/
     --secondary-bg: hsl(298, 75%, 90%);  /*#f7d1f8*/
@@ -39,10 +47,6 @@ body{
     overflow-y: scroll;
     border-radius: 1rem;
     background: white;
-}
-
-*::-webkit-scrollbar{
-    display: none;
 }
 
 a{
