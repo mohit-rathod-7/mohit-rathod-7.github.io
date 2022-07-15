@@ -70,8 +70,7 @@
 
 .card-title{
     color: var(--secondary-cl);
-    padding: 0 0 1rem 0;
-    margin: 0 0;
+    /* padding: 0 0 1rem 0; */
     font-size: 1.8rem;
     box-shadow: var(--boxshadow-bottom);
 }
@@ -92,7 +91,7 @@
 .card-text{
     font-size: 1.8rem;
     color: var(--black);
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     overflow-wrap: break-word;
     box-shadow: var(--boxshadow-bottom);
 }
