@@ -3,7 +3,7 @@
     <title>Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="var(--layer-bg)">
+    <meta name="theme-color" content="hsl(298, 75%, 90%)">
 
     <link rel="stylesheet" href='style.css'>
     <link rel="stylesheet" href='home.css'>
@@ -28,11 +28,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
     <style>
-        
+        .container{
+            padding: 1.5rem 0;
+            box-shadow: var(--boxshadow-bottom);
+        }
     </style>
 </head>
 
-<body>
+<body class="prevent-select">
     <nav class="navbar navbar__top">
         <h1 class="title">Date</h1>
     </nav>
@@ -93,7 +96,7 @@
                     <i class="icon material-icons material-symbols-filled">close</i>
                 </div>
 
-                <div class="card-header">
+                <div class="card-header container">
                     <div class="card-name">
                         <span class="card-name__first">Mohit</span>
                         <span class="card-name__last">Rathod</span>
@@ -102,7 +105,7 @@
                     <div class="card-age">21</div>
                 </div>
 
-                <div class="card-title">
+                <div class="card-title container">
                     <p class="card-title__item">
                         <i class="icon card-title__item-icon material-icons material-symbols-outlined">school</i>
                         <span class="card-title__item-text">University of Mumbai</span>
@@ -110,26 +113,32 @@
 
                     <p class="card-title__item">
                         <i class="icon card-title__item-icon material-icons material-symbols-outlined">home_pin</i>
-                        <span class="card-title__item-text">Mumbai</span>
+                        <span class="card-title__item-text">Lives in Mumbai</span>
+                    </p>
+
+                    <p class="card-title__item">
+                        <i class="icon card-title__item-icon material-icons material-symbols-outlined">cottage</i>
+                        <span class="card-title__item-text">From Sanderao</span>
                     </p>
                 </div>
 
-                <p class="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
+                <p class="card-text container">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio<br>
                 </p>
 
-                <div class="card-chips">
+                <div class="card-chips container">
                     <span class="card-chip">10% OFF</span>
                     <span class="card-chip">15% OFF</span>
                     <span class="card-chip">20% OFF</span>
                     <span class="card-chip">25% OFF</span>
                     <span class="card-chip">30% OFF</span>
-                </div>    
+                    <span class="card-chip">35% OFF</span>
+                </div>   
+
+                <p class="card-report container">Report Mohit Rathod</p> 
 
                 <div class="card-dummy"></div>
             </div>
