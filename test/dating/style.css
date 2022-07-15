@@ -50,6 +50,12 @@ a{
     color: unset;
 }
 
+.prevent-select{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .material-symbols-outlined{
     font-variation-settings:
     'FILL' 0,
