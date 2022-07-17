@@ -39,11 +39,11 @@ body{
 }
 
 .content{
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 81vh;
     overflow-y: scroll;
     border-radius: 1rem;
     background: white;
