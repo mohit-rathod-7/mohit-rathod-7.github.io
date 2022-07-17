@@ -44,7 +44,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 78vh;
+    height: 77vh;
     overflow-y: scroll;
     background: white;
     border-bottom: 1px solid red;
