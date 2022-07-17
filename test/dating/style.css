@@ -39,14 +39,14 @@ body{
 }
 
 .content{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    background: white;
     top: 5.5rem;
     bottom: 6rem;
     padding: 0.5rem;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background: white;
 }
 
 a{
