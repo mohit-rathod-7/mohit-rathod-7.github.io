@@ -31,9 +31,9 @@
     object-fit: contain;
 }
 
-.swiper-wrapper{
+/* .swiper-wrapper{
     height: 67vh !important;
-}
+} */
 
 .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right{
     background-image: none !important;
@@ -110,11 +110,13 @@
 }
 
 .swiper-info{
-    padding: 0 2rem 1.5rem 2rem;
+    padding: 0 2rem;
     position: absolute; 
+    top: calc(100% - 13rem);
     bottom: 0; 
     z-index: 100;
     width: -webkit-fill-available;
+    background: linear-gradient(180deg,  transparent 0%, rgba(0,0,0,1) 100%)
 }
 
 .swiper-info .card-name{
@@ -149,9 +151,9 @@
 
 
 @media screen and (max-width: 450px){
-    .swiper-wrapper{
+    /* .swiper-wrapper{
         height: 68vh !important;
-    }
+    } */
     
     .swiper-slide img{
         object-fit: cover;
