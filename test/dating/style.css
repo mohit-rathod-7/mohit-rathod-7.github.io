@@ -43,7 +43,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 81vh;
+    height: 80vh;
     overflow-y: scroll;
     border-radius: 1rem;
     background: white;
