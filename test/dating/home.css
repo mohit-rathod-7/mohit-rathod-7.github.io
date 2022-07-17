@@ -10,6 +10,7 @@
     flex-direction: row;
     justify-content: center;
     align-self: flex-start;
+    height: 100%;
     max-width: 1000px;
     background: var(--white);
     width: -webkit-fill-available;
@@ -132,10 +133,6 @@
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     word-spacing: 0.25rem;
-}
-
-.card-dummy{
-    height: 8rem;
 }
 
 
