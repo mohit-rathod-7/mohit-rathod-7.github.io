@@ -13,21 +13,18 @@
     width: 100%;
     left: 0;
     bottom: 6rem;
-    background: var(--white);
-    z-index: 1000;
+    z-index: 100;
 }
 
 .buttons .button .icon{
     font-size: var(--button-size);
-    color: var(--white);
-    border-radius: 50%;
     cursor: pointer;
 }
 
 .buttons .button #like .icon{
-    background: var(--like-button-bg);
+    color: var(--like-button-bg);
 }
 
 .buttons .button #dislike .icon{
-    background: var(--dislike-button-bg);
+    color: var(--dislike-button-bg);
 }
