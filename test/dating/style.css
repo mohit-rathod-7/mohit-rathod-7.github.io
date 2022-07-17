@@ -39,18 +39,14 @@ body{
 }
 
 .content{
-    padding: 0.5rem;
-    /* padding-bottom: 0; */
-    /* position: relative; */
     display: flex;
     flex-direction: column;
-    /* height: 77vh; */
     overflow-y: scroll;
     background: white;
-}
-.content{
-    padding: 0.5rem !important;
-    position: fixed !important;
+    top: 5.5rem;
+    bottom: 6rem;
+    padding: 0.5rem;
+    position: fixed;
 }
 
 a{
