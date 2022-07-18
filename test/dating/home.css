@@ -10,7 +10,7 @@
 
 .container__title{
     padding: 0.5rem 0 2.5rem 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .card{
@@ -109,7 +109,6 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    box-shadow: var(--boxshadow-bottom);
     flex-wrap: wrap;
 }
 
