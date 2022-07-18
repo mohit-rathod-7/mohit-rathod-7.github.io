@@ -1,5 +1,10 @@
+:root{
+    --padding-tb: 3rem;
+    --padding-lf: 1.5rem;
+}
+
 .container{
-    padding: 2.5rem 1.5rem;
+    padding: var(--padding-tb) var(--padding-lf);
     box-shadow: var(--boxshadow-bottom);
 }
 
@@ -131,7 +136,6 @@
 }
 
 .card-report{
-    padding: 4rem 1.5rem;
     color: #333;
     font-size: 1.8rem;
     text-align: center;
