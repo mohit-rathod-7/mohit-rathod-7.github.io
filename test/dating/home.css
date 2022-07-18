@@ -106,6 +106,10 @@
     box-shadow: var(--boxshadow-bottom);
 }
 
+.card-bio .container__content{
+    font-size: var(--fs-small);
+}
+
 .card-chips{
     display: flex;
     align-items: center;
