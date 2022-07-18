@@ -11,6 +11,7 @@
 .container__title{
     padding: 0.5rem 0 2.5rem 0;
     font-size: var(--fs-6);
+    font-weight: var(--fw-bolder);
 }
 
 .card{
@@ -64,14 +65,14 @@
 .card-name{
     color: var(--primary-cl);
     font-size: var(--fs-2);
-    font-weight: 900;
+    font-weight: var(--fw-bolder);
 }
 
 .card-age{
     margin-left: 1rem;
     color: var(--primary-cl);
     font-size: var(--fs-4);
-    font-weight: 500;
+    font-weight: var(--fw-normal);
 }
 
 .card-title{
@@ -136,6 +137,7 @@
 .card-report{
     color: #333;
     font-size: var(--fs-small);
+    font-weight: var(--fw-normal);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
