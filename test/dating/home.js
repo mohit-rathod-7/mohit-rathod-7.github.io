@@ -22,7 +22,7 @@ function scrollTopAnimated() {
 
 // SET TIMELINE
 const cardInfo = gsap.timeline();
-var animationDuration = 1;
+var animationDuration = 0.5;
 
 // TO OPEN .card-info BOX
 $('.swiper-info').click(function(){
@@ -31,8 +31,8 @@ $('.swiper-info').click(function(){
     .to('.card-info', { ease: 'power2.in', duration: animationDuration, y: '0%'})
     .set('.swiper', { pointerEvents: 'none' })
 
-    TweenLite.to(".card-info", animationDuration, {ease: Back.easeInOutSine, force3D: true, display: 'block' });
-    TweenLite.to(".swiper", animationDuration, {ease: Back.easeInOutSine, opacity: '0.8' });
+    TweenLite.to(".card-info", animationDuration*2, {ease: Back.easeInOutSine, force3D: true, display: 'block' });
+    TweenLite.to(".swiper", animationDuration*2, {ease: Back.easeInOutSine, opacity: '0.75' });
 })
 
 // TO CLOSE .card-info BOX
