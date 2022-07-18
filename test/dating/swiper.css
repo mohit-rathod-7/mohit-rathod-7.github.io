@@ -108,7 +108,7 @@
 .swiper-info{
     padding: 0 2rem;
     position: absolute; 
-    top: calc(100% - 14rem);
+    top: calc(100% - 15rem);
     bottom: 0; 
     z-index: 100;
     width: -webkit-fill-available;
