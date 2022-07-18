@@ -1,16 +1,5 @@
 $(document).ready(function() {
     $(document).on('click', '#like', function() {
-        console.log("LIKED");
-    });
-
-    $("#dislike").click(function(){
-        console.log("DISLIKED");
-    });
-});
-
-
-$(document).ready(function() {
-    $(document).on('click', '#like', function() {
         // var count = $(this).attr("data-count");
 
         req = $.ajax({
@@ -25,6 +14,7 @@ $(document).ready(function() {
     });
 });
 
+$("#home").addClass("disabled");
 
 // SET TIMELINE
 const cardInfo = gsap.timeline();
