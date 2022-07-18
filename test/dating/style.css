@@ -38,8 +38,14 @@
     --fs-5: calc(var(--fs-4) - 0.2rem);
     --fs-6: calc(var(--fs-5) - 0.2rem);
     --fs-small: 1.8rem;
-    --fs-button: 1.5rem;
     --fs-caption: 1.2rem;
+    --fs-button: 1.5rem;
+
+    --fw-bolder: 900;
+    --fw-bold: calc(var(--fw-bolder) - 200);
+    --fw-normal: calc(var(--fw-bold) - 200);
+    --fw-light: calc(var(--fw-normal) - 200);
+    --fw-lighter: calc(var(--fw-light) - 200);
 }
 
 html{
