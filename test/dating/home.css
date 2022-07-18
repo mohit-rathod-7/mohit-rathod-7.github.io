@@ -110,6 +110,10 @@
     font-size: var(--fs-small);
 }
 
+.card-bio .container__content p{
+    padding-bottom: 2.5rem;
+}
+
 .card-chips{
     display: flex;
     align-items: center;
