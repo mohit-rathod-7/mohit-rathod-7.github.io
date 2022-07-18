@@ -3,6 +3,11 @@
     box-shadow: var(--boxshadow-bottom);
 }
 
+.container__title{
+    padding: 0.5rem 0 2.5rem 0;
+    font-size: 1.8rem;
+}
+
 .card{
     margin: 0 auto;
     display: flex;
@@ -88,8 +93,8 @@
     color: unset;
 }
 
-.card-text{
-    font-size: 1.8rem;
+.card-bio{
+    font-size: 1.6rem;
     color: var(--black);
     overflow-wrap: break-word;
     box-shadow: var(--boxshadow-bottom);
@@ -126,7 +131,7 @@
 }
 
 .card-report{
-    padding: 2rem;
+    padding: 4rem 1.5rem;
     color: #333;
     font-size: 1.8rem;
     text-align: center;
