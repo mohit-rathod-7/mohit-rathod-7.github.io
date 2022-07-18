@@ -60,6 +60,10 @@ a{
     user-select: none;
 }
 
+.disabled{
+    pointer-events: none;
+}
+
 .material-symbols-outlined{
     font-variation-settings:
     'FILL' 0,
