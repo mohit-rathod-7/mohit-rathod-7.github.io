@@ -52,6 +52,7 @@
     float: right;
     font-size: 3rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .card-header{
