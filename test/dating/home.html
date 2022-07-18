@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 
     <style>
-        
     </style>
 </head>
 
@@ -153,10 +152,10 @@
     </div>
 
     <nav class="navbar navbar__bottom">
-        <a href="home.html"><i class="icon material-icons material-symbols-filled" id="home">home</i></a>
-        <a href="likes.html"><i class="icon material-icons material-symbols-outlined" id="likes">favorite</i></a>
-        <a href="chats.html"><i class="icon material-icons material-symbols-outlined" id="chats">chat_bubble</i></a>
-        <a href="user.html"><i class="icon material-icons material-symbols-outlined" id="user">person</i></a>
+        <a href="home.html" id="home"><i class="icon material-icons material-symbols-filled">home</i></a>
+        <a href="likes.html" id="likes"><i class="icon material-icons material-symbols-outlined">favorite</i></a>
+        <a href="chats.html" id="chats"><i class="icon material-icons material-symbols-outlined">chat_bubble</i></a>
+        <a href="user.html" id="user"><i class="icon material-icons material-symbols-outlined">person</i></a>
     </nav>
     <div class="navbar__dummy"></div>
 
@@ -166,33 +165,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script type="text/javascript" >
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            slidesPerView: "auto",
-            
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-
-            coverflowEffect: {
-                rotate: 45,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+    <script type="text/javascript" src="swiper.js"></script>
 </body>
 </html>
