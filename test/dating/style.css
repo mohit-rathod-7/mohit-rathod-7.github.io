@@ -15,20 +15,31 @@
 }
 
 :root{
-    --primary-bg: hsl(298, 0%, 100%);   /*#fbe8fc*/
-    --secondary-bg: hsl(298, 75%, 90%);  /*#f7d1f8*/
+    --primary-bg: hsl(298, 0%, 100%);
+    --secondary-bg: hsl(298, 75%, 90%);
 
-    --primary-cl: hsl(290, 25%, 25%);    /*#48304d*/
-    --secondary-cl: hsl(327, 100%, 61%); /*#ff37a6*/
+    --primary-cl: hsl(290, 25%, 25%);
+    --secondary-cl: hsl(327, 100%, 61%);
 
-    --layer-bg: hsl(298, 75%, 90%);      /*#f7d1f8*/
-    --layer-cl: hsl(345, 95%, 71%);    /*#fb6f92*/
+    --layer-bg: hsl(298, 75%, 90%);
+    --layer-cl: hsl(345, 95%, 71%);
 
-    --border: hsl(329, 25%, 25%);   /*#48304d*/
+    --border: hsl(329, 25%, 25%);
     --boxshadow-bottom: 0 2px 0 -1px rgb(0 0 0 / 10%);
+
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --gray: hsl(0, 0%, 60%);
+
+    --fs-1: 3rem;
+    --fs-2: calc(var(--fs-1) - 0.2rem);
+    --fs-3: calc(var(--fs-2) - 0.2rem);
+    --fs-4: calc(var(--fs-3) - 0.2rem);
+    --fs-5: calc(var(--fs-4) - 0.2rem);
+    --fs-6: calc(var(--fs-5) - 0.2rem);
+    --fs-small: 1.8rem;
+    --fs-button: 1.5rem;
+    --fs-caption: 1.2rem;
 }
 
 html{
@@ -46,8 +57,8 @@ body{
     position: fixed;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
     background: white;
+    width: -webkit-fill-available;
 }
 
 a{
