@@ -56,7 +56,7 @@
 }
 
 .card-header{
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: baseline;
     box-shadow: unset;
