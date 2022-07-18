@@ -114,7 +114,7 @@
 
 .card-chip{
     border: 0.1rem solid var(--border);
-    background: var(--secondary-bg);
+/*     background: var(--secondary-bg); */
     color: var(--primary-cl);
     font-size: 1.3rem;
     width: max-content;
