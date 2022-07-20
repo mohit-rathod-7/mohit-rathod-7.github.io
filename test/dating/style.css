@@ -3,7 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
-    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 *::-webkit-scrollbar{
@@ -11,7 +11,7 @@
 }
 
 *:focus{
-    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root{
@@ -22,7 +22,7 @@
     --secondary-cl: hsl(327, 100%, 61%);
 
     --layer-bg: hsl(298, 75%, 90%);
-    --layer-cl: hsl(345, 95%, 71%);
+    --layer-cl: hsl(345, 95%, 71%); /* #fb6f92 */
 
     --border: hsl(329, 25%, 25%);
     --boxshadow-bottom: 0 2px 0 -1px rgb(0 0 0 / 10%);
@@ -30,6 +30,7 @@
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --gray: hsl(0, 0%, 60%);
+    --text-link-cl: #106bd5;
 
     --fs-1: 3rem;
     --fs-2: calc(var(--fs-1) - 0.2rem);
@@ -44,7 +45,7 @@
     --fw-bolder: 900;
     --fw-bold: calc(var(--fw-bolder) - 200);
     --fw-normal: calc(var(--fw-bold) - 200);
-    --fw-light: calc(var(--fw-normal) - 200);
+    --fw-light: calc(var(--fw-normal) - 100);
     --fw-lighter: calc(var(--fw-light) - 200);
 }
 
@@ -52,18 +53,15 @@ html{
     font-size: 10px;
 }
 
-body{
-    background: var(--primary-bg);
-}
-
 .content{
+    padding: 0.5rem;
     top: 5.5rem;
     bottom: 6rem;
-    padding: 0.5rem;
     position: fixed;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: var(--white);
+    overflow-y: scroll;
     width: -webkit-fill-available;
 }
 
@@ -96,4 +94,45 @@ a{
     'wght' 300,
     'GRAD' 0,
     'opsz' 40
+}
+
+.heading{
+    font-size: var(--fs-1);
+    font-weight: var(--fw-bolder);
+    color: #21262e;
+    line-height: 1.2;
+}
+
+.sub-heading{
+    font-size: var(--fs-2);
+    font-weight: var(--fw-bolder);
+    color: #21262e;
+    line-height: 1.25;
+}
+
+.title{
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+    vertical-align: baseline;
+}
+
+.text{
+    font-size: var(--fs-small);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+    vertical-align: baseline;
+}
+
+.pri-text{
+    color: #21262e;
+}
+
+.sec-text{
+    color: #505050;
+}
+
+.link{
+    color: var(--text-link-cl);
+    text-decoration: underline;
 }
