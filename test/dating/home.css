@@ -60,28 +60,21 @@
     display: flex;
     align-items: baseline;
     box-shadow: unset;
-}
-
-.card-name{
     color: var(--primary-cl);
-    font-size: var(--fs-2);
-    font-weight: var(--fw-bolder);
 }
 
 .card-age{
     margin-left: 1rem;
-    color: var(--primary-cl);
-    font-size: var(--fs-4);
     font-weight: var(--fw-normal);
 }
 
 .card-title{
-    color: var(--secondary-cl);
     font-size: var(--fs-6);
     box-shadow: var(--boxshadow-bottom);
 }
 
 .card-title__item{
+    color: var(--secondary-cl);
     padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
