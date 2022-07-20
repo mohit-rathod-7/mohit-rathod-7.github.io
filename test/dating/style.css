@@ -32,21 +32,21 @@
     --gray: hsl(0, 0%, 60%);
     --text-link-cl: #106bd5;
 
-    --fs-1: 3rem;
-    --fs-2: calc(var(--fs-1) - 0.2rem);
-    --fs-3: calc(var(--fs-2) - 0.2rem);
-    --fs-4: calc(var(--fs-3) - 0.2rem);
-    --fs-5: calc(var(--fs-4) - 0.2rem);
-    --fs-6: calc(var(--fs-5) - 0.2rem);
-    --fs-small: 1.8rem;
-    --fs-caption: 1.2rem;
-    --fs-button: 1.5rem;
+    --fs-1: 3rem; /* 30px */
+    --fs-2: calc(var(--fs-1) - 0.2rem); /* 28px */
+    --fs-3: calc(var(--fs-2) - 0.2rem); /* 26px */
+    --fs-4: calc(var(--fs-3) - 0.2rem); /* 24px */
+    --fs-5: calc(var(--fs-4) - 0.2rem); /* 22px */
+    --fs-6: calc(var(--fs-5) - 0.2rem); /* 20px */
+    --fs-small: 1.8rem; /* 18px */
+    --fs-button: 1.5rem; /* 15px */
+    --fs-caption: 1.2rem; /* 12px */
 
     --fw-bolder: 900;
-    --fw-bold: calc(var(--fw-bolder) - 200);
-    --fw-normal: calc(var(--fw-bold) - 200);
-    --fw-light: calc(var(--fw-normal) - 100);
-    --fw-lighter: calc(var(--fw-light) - 200);
+    --fw-bold: calc(var(--fw-bolder) - 200); /* 700 */
+    --fw-normal: calc(var(--fw-bold) - 300); /* 400 */
+    --fw-light: calc(var(--fw-normal) - 100); /* 300 */
+    --fw-lighter: calc(var(--fw-light) - 100); /* 200 */
 }
 
 html{
