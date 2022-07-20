@@ -14,8 +14,6 @@ $(document).ready(function() {
     });
 });
 
-$("#home").addClass("disabled");
-
 function scrollTopAnimated() {
     $(".card-info").scrollTop(0);
 }
