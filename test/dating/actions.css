@@ -19,6 +19,7 @@
 .buttons .button .icon{
     font-size: var(--button-size);
     cursor: pointer;
+    min-width: 6rem !important;
 }
 
 .buttons .button #like .icon{
