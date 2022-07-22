@@ -6,7 +6,6 @@
     <meta name="theme-color" content="hsl(298, 75%, 90%)">
 
     <link rel="stylesheet" href='style.css'>
-    <link rel="stylesheet" href='home.css'>
     <link rel="stylesheet" href='navbar.css'>
     
     <!-- JQuery -->
@@ -20,8 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    
+    <noscript>
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    </noscript>
 
     <style>
         .content img{
@@ -29,7 +33,7 @@
             width: 70%;
         }
 
-        .content div{
+        .content #no-likes{
             padding: 7rem 4rem;
             text-align: center;
         }
@@ -44,24 +48,51 @@
             font-size: var(--fs-6);
             font-weight: var(--fw-normal);
         }
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container .user{
+            padding: 1rem;
+            margin: 0.5em;
+            width: 41.89%;
+            height: 24rem;
+            background-color: var(--gray);
+            border-radius: 1rem;
+        }
+        
+        .container .user:nth-child(even){
+            background: blue;
+        }
     </style>
 </head>
 
 <body class="prevent-select">
     <nav class="navbar navbar__top">
-        <h1 class="title">Date</h1>
+        <h1 class="sub-heading">Date</h1>
     </nav>
 
     <div class="content">
         <img src="spread_love.svg">
 
-        <div>
+        <div id="no-likes">
             <p class="heading">Spread Love</p>
 
             <p class="text">
                 You can see here who likes you,<br>
                 where you can match with them.
             </p>
+        </div>
+
+        <div class="container">
+            <div class="user"></div>
+
+            <div class="user"></div>
+
+            <div class="user"></div>
         </div>
     </div>
     
@@ -73,6 +104,6 @@
     </nav>
     <div class="navbar__dummy"></div>
 
-    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
