@@ -6,8 +6,8 @@
     <meta name="theme-color" content="hsl(298, 75%, 90%)">
 
     <link rel="stylesheet" href='style.css'>
-    <link rel="stylesheet" href='home.css'>
     <link rel="stylesheet" href='navbar.css'>
+    <link rel="stylesheet" href='chats.css'>
     
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -24,30 +24,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
 
     <style>
-        .content{
-            justify-content: center;
-        }
-
-        .content img{
-            margin: auto;
-            width: 50%;
-        }
-
-        .content div{
-            padding: 7rem 4rem;
-            text-align: center;
-        }
-
-        .heading{
-            margin: 1.5rem 0;
-            font-size: var(--fs-1);
-            font-weight: var(--fw-bolder);
-        }
-
-        .text{
-            font-size: var(--fs-6);
-            font-weight: var(--fw-normal);
-        }
+        
     </style>
 </head>
 
@@ -57,12 +34,12 @@
     </nav>
 
     <div class="content">
-        <img src="online_chat.svg">
+        <div id="no-chats">
+            <img src="online_chat.svg">
 
-        <div>
             <p class="heading">Start Liking</p>
 
-            <p class="text">
+            <p class="text sec-text">
                 When you match with other<br>
                 users they'll appear here, where <br>
                 you can send them a message.
