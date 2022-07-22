@@ -34,7 +34,7 @@
         }
 
         .content #no-likes{
-            padding: 7rem 4rem;
+            padding: 7rem 0;
             text-align: center;
         }
 
@@ -63,7 +63,7 @@
             background-color: var(--gray);
             border-radius: 1rem;
         }
-        
+
         .container .user:nth-child(even){
             background: blue;
         }
@@ -76,9 +76,9 @@
     </nav>
 
     <div class="content">
-        <img src="spread_love.svg">
-
         <div id="no-likes">
+            <img src="spread_love.svg">
+
             <p class="heading">Spread Love</p>
 
             <p class="text">
@@ -87,7 +87,7 @@
             </p>
         </div>
 
-        <div class="container">
+        <div id="likes" class="container">
             <div class="user"></div>
 
             <div class="user"></div>
