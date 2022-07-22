@@ -31,6 +31,8 @@
     --black: hsl(0, 0%, 0%);
     --gray: hsl(0, 0%, 60%);
     --text-link-cl: #106bd5;
+    --pri-text-cl: #21262e;
+    --sec-text-cl: #505050;
 
     --fs-1: 3rem; /* 30px */
     --fs-2: calc(var(--fs-1) - 0.2rem); /* 28px */
@@ -125,11 +127,11 @@ a{
 }
 
 .pri-text{
-    color: #21262e !important;
+    color: var(--pri-text-cl) !important;
 }
 
 .sec-text{
-    color: #505050 !important;
+    color: var(--sec-text-cl) !important;
 }
 
 .link{
