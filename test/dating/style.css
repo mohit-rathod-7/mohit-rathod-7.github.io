@@ -57,7 +57,7 @@ html{
 
 .content{
     padding: 0.5rem;
-    top: 5.5rem;
+    top: 6em;
     bottom: 6rem;
     position: fixed;
     display: flex;
@@ -137,4 +137,9 @@ a{
 .link{
     color: var(--text-link-cl) !important;
     text-decoration: underline !important;
+}
+
+.material-icons{
+    max-width: 2.4rem !important;
+    visibility: hidden;
 }
