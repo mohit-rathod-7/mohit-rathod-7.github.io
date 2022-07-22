@@ -60,7 +60,8 @@
             justify-content: space-between;
         }
 
-        .container .user{
+        .container .profile{
+            position: relative;
             margin: 0.5em;
             width: 47.372%;
             height: 26rem;
@@ -68,14 +69,27 @@
             border-radius: 1rem;
         }
 
-        .container .user .user__image{
+        .container .profile .profile__image{
             margin: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: inherit;
         }
-    </style>
+
+        .container .profile .profile__info{
+            padding: 0.5rem 0;
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            backdrop-filter: brightness(75%);
+        }
+
+        .container .profile .profile__info > p{
+            margin-left: 1rem;
+        }
+        </style>
 </head>
 
 <body class="prevent-select">
@@ -100,16 +114,30 @@
         </div>
         
         <div id="likes" class="container">
-            <div class="user">
-                <img class="user__image" src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+            <div class="profile">
+                <img class="profile__image" src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Mohit Rathod,</p>
+                    <p class="profile__age text">21</p>
+                </div>
             </div>
 
-            <div class="user">
-                <img class="user__image" src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80">
+            <div class="profile">
+                <img class="profile__image" src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80">
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Devansu Yadav,</p>
+                    <p class="profile__age text">21</p>
+                </div>
             </div>
-            
-            <div class="user">
-                <img class="user__image" src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80">
+
+            <div class="profile">
+                <img class="profile__image" src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80">
+                <div class="profile__info">
+                    <p class="profile__name title">Vrutik Maru,</p>
+                    <p class="profile__age text">21</p>
+                </div>
             </div>
         </div>
     </div>
