@@ -1,0 +1,29 @@
+.content img{
+    margin: 6.5rem auto;
+    width: 70%;
+}
+
+.content .heading{
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+.content #no-chats{
+    padding: 8.15rem 0;
+    text-align: center;
+}
+
+.heading{
+    margin: 1.5rem 0;
+    font-size: var(--fs-1);
+    font-weight: var(--fw-bolder);
+}
+
+.text{
+    font-size: var(--fs-6);
+    font-weight: var(--fw-normal);
+}
+
+.content{
+    justify-content: center;
+}
