@@ -61,16 +61,20 @@
         }
 
         .container .user{
-            padding: 1rem;
             margin: 0.5em;
-            width: 42.10%;
-            height: 24rem;
+            width: 47.372%;
+            height: 26rem;
             background-color: var(--gray);
             border-radius: 1rem;
         }
 
-        .container .user:nth-child(even){
-            background: blue;
+        .container .user .user__image{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            filter: blur(1rem);
         }
     </style>
 </head>
@@ -97,11 +101,17 @@
         </div>
         
         <div id="likes" class="container">
-            <div class="user"></div>
+            <div class="user">
+                <img class="user__image" src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+            </div>
 
-            <div class="user"></div>
-
-            <div class="user"></div>
+            <div class="user">
+                <img class="user__image" src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80">
+            </div>
+            
+            <div class="user">
+                <img class="user__image" src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80">
+            </div>
         </div>
     </div>
     
