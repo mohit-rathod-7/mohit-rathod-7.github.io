@@ -97,42 +97,42 @@ a{
 }
 
 .heading{
-    font-size: var(--fs-1);
-    font-weight: var(--fw-bolder);
+    font-size: var(--fs-1) !important;
+    font-weight: var(--fw-bolder) !important;
     color: #21262e;
-    line-height: 1.2;
+    line-height: 1.2 !important;
 }
 
 .sub-heading{
-    font-size: var(--fs-3);
-    font-weight: var(--fw-bolder);
+    font-size: var(--fs-3) !important;
+    font-weight: var(--fw-bolder) !important;
     color: #21262e;
-    line-height: 1.25;
+    line-height: 1.25 !important;
 }
 
 .title{
-    font-size: var(--fs-small);
-    font-weight: var(--fw-bold);
-    line-height: 1.5;
-    vertical-align: baseline;
+    font-size: var(--fs-small) !important;
+    font-weight: var(--fw-bold) !important;
+    line-height: 1.5 !important;
+    vertical-align: baseline !important;
 }
 
 .text{
-    font-size: var(--fs-small);
-    font-weight: var(--fw-normal);
-    line-height: 1.5;
-    vertical-align: baseline;
+    font-size: var(--fs-small) !important;
+    font-weight: var(--fw-normal) !important;
+    line-height: 1.5 !important;
+    vertical-align: baseline !important;
 }
 
 .pri-text{
-    color: #21262e;
+    color: #21262e !important;
 }
 
 .sec-text{
-    color: #505050;
+    color: #505050 !important;
 }
 
 .link{
-    color: var(--text-link-cl);
-    text-decoration: underline;
+    color: var(--text-link-cl) !important;
+    text-decoration: underline !important;
 }
