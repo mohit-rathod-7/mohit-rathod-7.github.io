@@ -140,6 +140,6 @@ a{
 }
 
 .material-icons{
-    max-width: 2.4rem !important;
+    min-width: 1.8rem !important;
     visibility: hidden;
 }
