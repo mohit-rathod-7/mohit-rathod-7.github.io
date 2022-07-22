@@ -125,6 +125,11 @@
     border: 0.1rem solid var(--border);
 }
 
+.card-chip.highlited{
+    border-color: var(--layer-cl);
+    border-width: 2px;
+}
+
 .card-img{
     width: 100%;
     height: 25rem;
