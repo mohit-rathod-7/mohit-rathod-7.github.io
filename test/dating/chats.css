@@ -27,7 +27,7 @@
 }
 
 .container .profile .profile__image-div{
-    margin: 1rem;
+    margin: 1rem 1.5rem;
     min-width: 5rem;
     max-width: 5rem;
     min-height: 5rem;
@@ -41,12 +41,12 @@
 }
 
 .container .profile .profile__info{
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% - 7rem - 1rem); /* width = 100% - "total width of .profile__image" - "padding-right of .profile__msg" */
+    width: calc(100% - 8rem - 1.5rem); /* width = 100% - "total width of .profile__image" - "padding-right of .profile__msg" */
 }
 
 .container .profile .profile__info .profile__msg{
