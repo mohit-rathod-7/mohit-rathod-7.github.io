@@ -52,12 +52,22 @@
 }
 
 .container .profile .profile__info{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 }
 
+.container .profile .profile__info .profile__msg-timestamp{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    margin-bottom: 0;
+    font-size: var(--fs-button) !important;
+}
+
 #chats{
-    margin-bottom: 35rem;
+    margin-bottom: 21rem;
 }
