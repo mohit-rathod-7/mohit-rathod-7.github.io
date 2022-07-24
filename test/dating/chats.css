@@ -1,29 +1,63 @@
-.content img{
-    margin: 6.5rem auto;
-    width: 70%;
+.content{
+    padding: 0 !important;
 }
 
 .content .heading{
-    margin: 2.5rem auto;
     text-align: center;
-}
-
-.content #no-chats{
-    padding: 8.15rem 0;
-    text-align: center;
-}
-
-.heading{
     margin: 1.5rem 0;
     font-size: var(--fs-1);
     font-weight: var(--fw-bolder);
 }
 
-.text{
-    font-size: var(--fs-6);
-    font-weight: var(--fw-normal);
+.content #no-chats{
+    padding: 8.25rem 0;
+    text-align: center;
 }
 
-.content{
+.content #no-chats img{
+    margin: 5.5rem auto;
+    width: 70%;
+}
+
+#no-chats .text{
+    font-size: var(--fs-6) !important;
+}
+
+.container .profile{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container .profile:nth-child(odd){
+    background: #f3f4f6;
+}
+
+.container .profile:nth-child(even){
+    background: #c3c4c6;
+}
+
+.container .profile .profile__image-div{
+    margin: 1rem;
+    min-width: 5rem;
+    max-width: 5rem;
+    min-height: 5rem;
+    max-height: 5rem;
+}
+
+.container .profile .profile__image{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container .profile .profile__info{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
+}
+
+#chats{
+    margin-bottom: 35rem;
 }
