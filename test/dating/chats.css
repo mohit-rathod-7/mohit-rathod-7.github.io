@@ -19,22 +19,11 @@
     width: 70%;
 }
 
-#no-chats .text{
-    font-size: var(--fs-6) !important;
-}
-
 .container .profile{
     display: flex;
     flex-direction: row;
     width: 100%;
-}
-
-.container .profile:nth-child(odd){
     background: #f3f4f6;
-}
-
-.container .profile:nth-child(even){
-    background: #c3c4c6;
 }
 
 .container .profile .profile__image-div{
@@ -52,11 +41,19 @@
 }
 
 .container .profile .profile__info{
+    padding-right: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: calc(100% - 7rem - 1rem); /* width = 100% - "total width of .profile__image" - "padding-right of .profile__msg" */
+}
+
+.container .profile .profile__info .profile__msg{
+    font-size: var(--fs-button) !important;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 
 .container .profile .profile__info .profile__msg-timestamp{
@@ -65,7 +62,7 @@
     right: 0;
     margin: 1rem;
     margin-bottom: 0;
-    font-size: var(--fs-button) !important;
+    font-size: var(--fs-caption) !important;
 }
 
 #chats{
