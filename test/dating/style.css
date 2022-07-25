@@ -25,6 +25,7 @@
     --layer-cl: hsl(345, 95%, 71%); /* #fb6f92 */
 
     --border: hsl(329, 25%, 25%);
+    --boxshadow: 0 0 0.2rem 0 #d3d4d6;
     --boxshadow-bottom: 0 2px 0 -1px rgb(0 0 0 / 10%);
 
     --white: hsl(0, 0%, 100%);
