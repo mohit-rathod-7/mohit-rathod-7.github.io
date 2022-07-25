@@ -28,4 +28,7 @@ function defer(){
 
 $(window).on('load', function() {
     defer();
+
+    $('.content').css('visibility', 'visible');
+    $('.loader').remove();
 });
