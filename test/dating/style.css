@@ -127,6 +127,10 @@ a{
     vertical-align: baseline !important;
 }
 
+.highlight{
+    color: var(--layer-cl);
+}
+
 .pri-text{
     color: var(--pri-text-cl) !important;
 }
