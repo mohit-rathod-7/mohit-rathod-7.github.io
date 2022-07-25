@@ -6,8 +6,8 @@
     <meta name="theme-color" content="hsl(298, 75%, 90%)">
 
     <link rel="stylesheet" href='style.css'>
-    <link rel="stylesheet" href='home.css'>
     <link rel="stylesheet" href='navbar.css'>
+    <link rel="stylesheet" href='user.css'>
     
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -29,6 +29,25 @@
     </noscript>
     
     <style>
+        :root{
+            --border: #f3f4f6;
+        }
+
+        .content .container{
+            margin: 1rem 1.5rem;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+        }
+
+        .content .container .container__title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .content .container .container__content input[type="range"]{
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -42,6 +61,27 @@
     </div>
 
     <div class="content">
+        <div class="container">
+            <div class="container__title title highlight">
+                <p>Maximum distance</p>
+                <p>14<span>km</span></p>
+            </div>
+            
+            <div class="container__content">
+                <input type="range" min="0" max="100" value="20">
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="container__title title highlight">
+                <p>Age range</p>
+                <p>18<span>-</span>24</p>
+            </div>
+            
+            <div class="container__content">
+                <input type="range" min="18" max="100" value="24">
+            </div>
+        </div>
     </div>
 
     <nav class="navbar navbar__bottom">
