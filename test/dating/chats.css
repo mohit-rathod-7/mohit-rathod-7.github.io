@@ -2,6 +2,10 @@
     padding: 0 !important;
 }
 
+.content > header{
+    box-shadow: var(--boxshadow-bottom);
+}
+
 .content .heading{
     margin: 2.5rem auto;
     text-align: center;
@@ -21,7 +25,6 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* background: #f3f4f6; */
     box-shadow: var(--boxshadow-bottom);
 }
 
