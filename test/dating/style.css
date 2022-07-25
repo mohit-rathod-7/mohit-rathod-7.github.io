@@ -73,6 +73,10 @@ a{
     color: unset;
 }
 
+li{
+    list-style: none;
+}
+
 .prevent-select{
     -webkit-user-select: none;
     -ms-user-select: none;
