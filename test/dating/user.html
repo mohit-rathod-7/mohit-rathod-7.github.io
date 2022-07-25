@@ -79,10 +79,11 @@
             box-shadow: unset
         }    
 
-        .container a{
-            font-size: var(--fs-button);
+        .content .container:last-child .container__content{
             margin: auto;
-            padding: 1.25rem;
+            padding: 1.5rem;
+            font-size: var(--fs-button);
+            text-align: center;
         }
     </style>
 </head>
@@ -149,7 +150,9 @@
         </div>
 
         <div class="container">
-            <a href="#">Logout</a>
+            <div class="container__content">
+                <a href="#">Logout</a>
+            </div>
         </div>
     </div>
 
