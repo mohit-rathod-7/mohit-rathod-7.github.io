@@ -14,8 +14,6 @@ $(document).ready(function() {
 
 // TO HIDE|DEFER FONT-TEXT|IMAGES WHILE LOADING PAGE
 function defer(){
-    $('.material-icons').css('visibility', 'visible');
-
     var imgDefer = document.getElementsByTagName('img');
 
     for (var i = 0; i < imgDefer.length; i++) {
@@ -29,6 +27,7 @@ function defer(){
 $(window).on('load', function() {
     defer();
 
+    $('.material-icons').css('visibility', 'visible');
     $('.content').css('visibility', 'visible');
     $('.loader').remove();
 });
