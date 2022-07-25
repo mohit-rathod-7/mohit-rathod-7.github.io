@@ -36,7 +36,6 @@
 
         .content .container{
             margin: 0.75rem 1.5rem;
-            padding: 1.25rem;
             background: var(--white);
             border-radius: 0.5rem;
             box-shadow: var(--boxshadow)
@@ -45,11 +44,18 @@
         .content .container:nth-child(1){
             margin-top: 1.5rem;
         }
-
+        
+        .content .container .container__content{
+            padding: 1.25rem;
+            padding-top: 0;
+        }
+        
         .content .container .container__title{
             display: flex;
             justify-content: space-between;
+            margin-top: 1.25rem;
             margin-bottom: 1.5rem;
+            padding: 0 1.25rem;
         }
 
         .content .container .container__content input[type="range"]{
@@ -61,6 +67,10 @@
             font-size: var(--fs-caption);
             box-shadow: var(--boxshadow);
         }
+
+        .content .container .container__content ul li:nth-child(2){
+            box-shadow: unset
+        }    
     </style>
 </head>
 
