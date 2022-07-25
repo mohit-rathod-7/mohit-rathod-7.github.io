@@ -65,6 +65,7 @@ html{
     background: var(--white);
     overflow-y: scroll;
     width: -webkit-fill-available;
+    visibility: hidden;
 }
 
 a{
@@ -142,4 +143,16 @@ a{
 .material-icons{
     min-width: 1.8rem !important;
     visibility: hidden;
+}
+
+.loader{
+    top: 6em;
+    bottom: 6rem;
+    position: fixed;
+    display: flex;
+    width: 100%;
+}
+
+.loader img{
+    margin: auto;
 }
