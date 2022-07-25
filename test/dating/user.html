@@ -49,6 +49,10 @@
             padding: 1.25rem;
             padding-top: 0;
         }
+
+        .content .container .container__content:nth-child(2){
+            padding: 0;
+        }
         
         .content .container .container__title{
             display: flex;
@@ -65,10 +69,10 @@
         .content .container .container__content ul li{
             padding: 1.5rem;
             font-size: var(--fs-caption);
-            box-shadow: var(--boxshadow);
+            box-shadow: var(--boxshadow-bottom);
         }
 
-        .content .container .container__content ul li:nth-child(2){
+        .content .container .container__content ul li:last-of-type{
             box-shadow: unset
         }    
     </style>
