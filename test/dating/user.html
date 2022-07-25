@@ -50,7 +50,7 @@
             padding-top: 0;
         }
 
-        .content .container .container__content:nth-child(2){
+        .content .container:nth-child(2) .container__content{
             padding: 0;
         }
         
@@ -72,7 +72,11 @@
             box-shadow: var(--boxshadow-bottom);
         }
 
-        .content .container .container__content ul li:last-of-type{
+        .content .container .container__content ul li:first-child{
+            box-shadow: var(--boxshadow-top);
+        }
+
+        .content .container .container__content ul li:last-child{
             box-shadow: unset
         }    
     </style>
