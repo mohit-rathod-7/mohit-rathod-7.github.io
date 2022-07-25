@@ -59,6 +59,12 @@
         .content .container .container__content input[type="range"]{
             width: 100%;
         }
+        
+        .content .container .container__content ul li{
+            padding: 1.5rem;
+            font-size: var(--fs-caption);
+            box-shadow: var(--boxshadow-bottom);
+        }
     </style>
 </head>
 
@@ -82,7 +88,21 @@
                 <input type="range" min="0" max="100" value="20">
             </div>
         </div>
-        
+
+        <div class="container">
+            <div class="container__title title highlight">
+                <p>Show me</p>
+            </div>
+            
+            <div class="container__content">
+                <ul>
+                    <li value="men">Men</li>
+                    <li value="women">Women</li>
+                    <li value="everyone">Everyone</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="container">
             <div class="container__title title highlight">
                 <p>Age range</p>
