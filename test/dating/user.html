@@ -34,6 +34,25 @@
             padding: 0 !important;
         }
 
+        .content header{
+            position: relative;
+            text-align: center;
+        }
+
+        .content header #edit_profile{
+            position: absolute;
+            padding: 1rem;
+            right: 10.75rem;
+            bottom: 1rem;
+            background: #ddd;
+            border-radius: 50%;
+        }
+        
+        .content header img{
+            width: 50%;
+            border-radius: 50%;
+        }
+
         .content .container{
             margin: 0.75rem 1.5rem;
             background: var(--white);
@@ -54,10 +73,10 @@
             padding-top: 0;
         }
 
-        .content .container:nth-child(2) .container__content, .content .container:nth-child(4) .container__content{
+        .container.pd_0 .container__content{
             padding: 0;
         }
-        
+
         .content .container .container__title{
             display: flex;
             justify-content: space-between;
@@ -103,6 +122,16 @@
     </div>
 
     <div class="content">
+        <header>
+            <img src="assets/dark/profile_pic.svg">
+
+            <div id="edit_profile">
+                <a href="#">
+                    <i class="icon material-icons material-symbols-filled">edit</i>
+                </a>
+            </div>
+        </header>
+
         <div class="container">
             <div class="container__title title highlight">
                 <p>Maximum distance</p>
@@ -114,7 +143,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container pd_0">
             <div class="container__title title highlight">
                 <p>Show me</p>
             </div>
@@ -139,12 +168,12 @@
             </div>
         </div>
         
-        <div class="container">
-            <div class="container__title title sec-text">
+        <div class="container pd_0">
+            <div class="container__title title highlight">
                 <p>Others</p>
             </div>
             
-            <div class="container__content sec-text">
+            <div class="container__content">
                 <ul>
                     <li value="men">Community guidelines</li>
                     <li value="women">Safety tips</li>
