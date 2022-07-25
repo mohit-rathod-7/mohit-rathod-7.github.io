@@ -104,7 +104,7 @@
             box-shadow: unset
         }    
 
-        .content .container:last-child .container__content{
+        .content .container.logout .container__content, .content .container.delete_account .container__content{
             margin: auto;
             padding: 1.5rem;
             font-size: var(--fs-button);
@@ -185,9 +185,15 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container logout">
             <div class="container__content">
                 <a href="#" class="sec-text">Logout</a>
+            </div>
+        </div>
+
+        <div class="container delete_account">
+            <div class="container__content">
+                <a href="#" class="highlight">Delete Account</a>
             </div>
         </div>
     </div>
