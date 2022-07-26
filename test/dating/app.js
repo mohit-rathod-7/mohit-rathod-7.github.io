@@ -25,9 +25,9 @@ function defer(){
 }
 
 $(window).on('load', function() {
+    $('.material-icons').css('visibility', 'visible');
     defer();
 
-    $('.material-icons').css('visibility', 'visible');
     $('.content').css('visibility', 'visible');
     $('.loader').remove();
 });
