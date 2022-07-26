@@ -43,6 +43,18 @@
         .navbar.navbar__top .nav__link#close{
             display: none;
         }
+
+        .navbar.navbar__top .nav__header{
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar.navbar__top .nav__header img{
+            margin-right: 1.5rem;
+            height: 5rem;
+            width: 5rem;
+        }
         
         .navbar.navbar__top .nav__modal{
             position: absolute;
@@ -50,12 +62,14 @@
             flex-direction: column;
             top: 6rem;
             right: 0;
-            background: #ede;
+            width: 50%;
+            max-width: 50%;
+            background: #f3f4f6;
             box-shadow: var(--boxshadow);
         }
 
         .navbar.navbar__top .nav__modal .nav__modal-link{
-            padding: 1rem;
+            padding: 1.15rem;
             width: -webkit-fill-available;
             font-size: var(--fs-caption);
             box-shadow: var(--boxshadow-bottom);
@@ -76,8 +90,10 @@
     <nav class="navbar navbar__top">
         <a href="chats.html" class="nav__link" id="back"><i class="icon material-icons material-symbols-outlined">arrow_back</i></a>
         
-        <div class=" material-icons">
-            <h1 class="sub-heading">Aman Bamboli</h1>
+        <div class="material-icons nav__header">
+            <img class="profile__image" src="assets/light/male_avatar.svg">
+
+            <h1 class="title">Aman Bamboli</h1>
         </div>
         
         <a href="#" class="nav__link" id="menu"><i class="icon material-icons material-symbols-outlined">more_vert</i></a>
