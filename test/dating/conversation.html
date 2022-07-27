@@ -15,7 +15,7 @@
         
     <!-- JQuery Mobile -->
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-    <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -52,8 +52,8 @@
 
         .navbar.navbar__top .nav__header img{
             margin-right: 1.5rem;
-            height: 5rem;
-            width: 5rem;
+            height: 4rem;
+            width: 4rem;
         }
         
         .navbar.navbar__top .nav__modal{
@@ -98,10 +98,31 @@
             padding: 1rem 1.5rem;
         }
 
+        .message_bar .message_bar__form div{
+            display: flex;
+            width: 100%;
+            position:relative;
+        }
+        
+        .message_bar .message_bar__form div > a{
+            padding: 0.8rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+
+        .message_bar .message_bar__form div > a#fullscreen_exit{
+            display: none;
+        }
+
         .message_bar .message_bar__form .input_bar{
+            height: 100%;
             width: 100%;
             padding: 0.8rem;
+            padding-right: 4rem;
             border-radius: 1rem;
+            font-size: var(--fs-button);
             resize: none;
             outline: none;
         }
@@ -147,7 +168,12 @@
 
             <div class="message_bar">
                 <form class="message_bar__form" method="post">
-                    <textarea class="input_bar" rows="1" id="input_bar">ASCII art is great, but...</textarea>
+                    <div>
+                        <textarea class="input_bar" rows="1" id="input_bar">ASCII art is great, but...</textarea>
+
+                        <a href="#" id="fullscreen"><i class="icon material-icons material-symbols-filled">fullscreen</i></a>
+                        <a href="#" id="fullscreen_exit"><i class="icon material-icons material-symbols-filled">fullscreen_exit</i></a>
+                    </div>
                     
                     <a href="#" class="send" id="send"><i class="icon material-icons material-symbols-filled">send</i></a>
                 </form>
@@ -177,6 +203,27 @@
             $('.nav__modal').css('display', 'none'); 
             $('#menu').css('display', 'block'); 
             $('#close').css('display', 'none'); 
+        });
+    </script>
+
+    <script>
+        const message = document.getElementById('input_bar');
+
+        message.addEventListener('input', function handleChange(event) {
+            console.log(event.target);
+            console.log(event.target.value);
+        });
+
+        $("#fullscreen").click(function(){
+            $('.input_bar').css('height', '20rem'); 
+            $('#fullscreen_exit').css('display', 'block'); 
+            $('#fullscreen').css('display', 'none'); 
+        });
+
+        $("#fullscreen_exit").click(function(){
+            $('.input_bar').css('height', '100%'); 
+            $('#fullscreen').css('display', 'block'); 
+            $('#fullscreen_exit').css('display', 'none'); 
         });
     </script>
 </body>
