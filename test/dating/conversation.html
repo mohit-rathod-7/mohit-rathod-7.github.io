@@ -117,12 +117,17 @@
         }
 
         .message_bar .message_bar__form .input_bar{
-            height: 100%;
+            min-height: 4rem;
+            max-height: 13rem;
             width: 100%;
             padding: 0.8rem;
             padding-right: 4rem;
             border-radius: 1rem;
             font-size: var(--fs-button);
+            line-height: 2rem;
+            border: 0;
+            box-shadow: var(--boxshadow);
+            word-wrap:break-word;
             resize: none;
             outline: none;
         }
@@ -169,7 +174,7 @@
             <div class="message_bar">
                 <form class="message_bar__form" method="post">
                     <div>
-                        <textarea class="input_bar" rows="1" id="input_bar">ASCII art is great, but...</textarea>
+                        <textarea onkeyup="textAreaAdjust(this)" class="input_bar" rows="1" id="input_bar">ASCII art is great, but...</textarea>
 
                         <a href="#" id="fullscreen"><i class="icon material-icons material-symbols-filled">fullscreen</i></a>
                         <a href="#" id="fullscreen_exit"><i class="icon material-icons material-symbols-filled">fullscreen_exit</i></a>
@@ -215,7 +220,7 @@
         });
 
         $("#fullscreen").click(function(){
-            $('.input_bar').css('height', '20rem'); 
+            $('.input_bar').css('height', '15rem'); 
             $('#fullscreen_exit').css('display', 'block'); 
             $('#fullscreen').css('display', 'none'); 
         });
@@ -225,6 +230,16 @@
             $('#fullscreen').css('display', 'block'); 
             $('#fullscreen_exit').css('display', 'none'); 
         });
+
+        function textAreaAdjust(element){
+            height = element.scrollHeight;
+            if (height > 131){
+                pass;
+            }
+            else{
+                element.style.height = (element.scrollHeight)+"px";
+            }
+        }
     </script>
 </body>
 </html>
