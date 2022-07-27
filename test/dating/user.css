@@ -1,0 +1,101 @@
+.content{
+    background: #f3f4f6;
+    padding: 0 !important;
+}
+
+.content header{
+    margin: 3rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.content header #edit_profile{
+    position: absolute;
+    padding: 1rem;
+    right: 10.75rem;
+    bottom: 1rem;
+    background: #f3f4f6;
+    border-radius: 50%;
+    box-shadow: var(--boxshadow);
+}
+
+.content header img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.content .container{
+    margin: 0.75rem 1.5rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--boxshadow)
+}
+
+.content .container:first-child{
+    margin-top: 1.5rem;
+}
+
+.content .container:last-child{
+    margin-bottom: 1.5rem;
+}
+
+.content .container .container__content{
+    padding: 1.25rem;
+    padding-top: 0;
+}
+
+.container.pd_0 .container__content{
+    padding: 0;
+}
+
+.content .container .container__title{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 0 1.25rem;
+}
+
+.content .container .container__content input[type="range"]{
+    width: 100%;
+}
+
+.content .container .container__content ul li{
+    padding: 1.5rem;
+    font-size: var(--fs-caption);
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.content .container .container__content ul li:first-child{
+    box-shadow: var(--boxshadow-top), var(--boxshadow-bottom);
+}
+
+.content .container .container__content ul li:last-child{
+    box-shadow: unset
+}    
+
+.content .container.logout .container__content, .content .container.delete_account .container__content{
+    margin: auto;
+    padding: 1.5rem;
+    font-size: var(--fs-button);
+    font-weight: var(--fw-bold);
+    text-align: center;
+}
+
+.progress {
+    background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #f3f4f6 0%, #f3f4f6 100%);
+    border-radius: 3px;
+    height: 6px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #083535;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #f7d2f9;
+}
