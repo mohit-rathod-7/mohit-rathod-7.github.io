@@ -131,6 +131,10 @@
             resize: none;
             outline: none;
         }
+         
+        .message_bar .message_bar__form .input_bar::-webkit-scrollbar{
+            display: unset;
+        }
 
         .message_bar .message_bar__form .send .icon{
             margin-left: 1.5rem;
@@ -215,8 +219,8 @@
         const message = document.getElementById('input_bar');
 
         message.addEventListener('input', function handleChange(event) {
-            console.log(event.target);
-            console.log(event.target.value);
+            // console.log(event.target);
+            // console.log(event.target.value);
         });
 
         $("#fullscreen").click(function(){
@@ -233,11 +237,12 @@
 
         function textAreaAdjust(element){
             height = element.scrollHeight;
-            if (height > 131){
-                pass;
+            
+            if (height < 131){
+                element.style.height = (element.scrollHeight)+"px";
             }
             else{
-                element.style.height = (element.scrollHeight)+"px";
+                console.log();
             }
         }
     </script>
