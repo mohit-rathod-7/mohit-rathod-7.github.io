@@ -276,11 +276,12 @@
         }
 
         function changeCssOfAgeSlider(){
-            const root = document.querySelector('#yearSelector').shadowRoot;
-
+            root = document.querySelector('#yearSelector').shadowRoot;
             slider_min_max = root.getElementById("minMaxSlider");
             slider_min = root.getElementById("min");
             slider_max = root.getElementById("max");
+
+            slider_min_max.style.height = "6px";
 
             slider_min.style.height = "6px";
             slider_min.style.background = "#6b5b95";
