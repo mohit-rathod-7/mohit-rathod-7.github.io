@@ -267,8 +267,8 @@
             const root = document.querySelector('#yearSelector').shadowRoot;
             
             root.addEventListener('input', function() {
-                const min_value = document.querySelector('#yearSelector').getElementById("min").value;
-                const max_value = document.querySelector('#yearSelector').getElementById("max").value;
+                const min_value = root.getElementById("min").value;
+                const max_value = root.getElementById("max").value;
 
                 $("#min_age").text(min_value);
                 $("#max_age").text(max_value);
