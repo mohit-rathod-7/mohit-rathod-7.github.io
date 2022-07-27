@@ -8,7 +8,7 @@
     <link rel="stylesheet" href='style.css'>
     <link rel="stylesheet" href='navbar.css'>
     <link rel="stylesheet" href='chats.css'>
-    
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -82,7 +82,34 @@
         .navbar.navbar__top .nav__modal .nav__modal-link:last-child {
             box-shadow: unset;
         }
+        
+        /* ------------------------------------------------------------ */
 
+        .message_bar{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: inherit;
+            border-top: 1px solid #2a3942;
+        }
+
+        .message_bar .message_bar__form{
+            display: flex;
+            padding: 1rem 1.5rem;
+        }
+
+        .message_bar .message_bar__form .input_bar{
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            resize: none;
+        }
+
+        .message_bar .message_bar__form .send .icon{
+            margin-left: 1.5rem;
+            padding: 0.8rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -100,9 +127,9 @@
         <a href="#" class="nav__link" id="close"><i class="icon material-icons material-symbols-outlined">close</i></a>
 
         <div class="nav__modal">
-            <a href="#" class="nav__modal-link text">View Profile</a>
-            <a href="#" class="nav__modal-link text">Report</a>
-            <a href="#" class="nav__modal-link text">Block</a>
+            <a href="#" class="nav__modal-link text sec-text">View Profile</a>
+            <a href="#" class="nav__modal-link text sec-text">Report</a>
+            <a href="#" class="nav__modal-link text sec-text">Block</a>
         </div>
     </nav>
 
@@ -112,16 +139,16 @@
 
     <div class="content">
         <div id="chats" class="container">
-            <div class="profile" id="aman786">
-                <div class="profile__image-div">
-                    <img class="profile__image" src="assets/light/male_avatar.svg">
-                </div>
+            <div class="profile">
                 
-                <div class="profile__info">
-                    <p class="profile__name title">Aman Bamboli</p>
-                    <p class="profile__msg text sec-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p class="profile__msg-timestamp text sec-text">Today</p>
-                </div>
+            </div>
+
+            <div class="message_bar">
+                <form class="message_bar__form" method="post">
+                    <textarea class="input_bar" rows="1" id="input_bar">ASCII art is great, but...</textarea>
+                    
+                    <a href="#" class="send" id="send"><i class="icon material-icons material-symbols-filled">send</i></a>
+                </form>
             </div>
         </div>
     </div>
