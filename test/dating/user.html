@@ -111,6 +111,27 @@
             font-weight: var(--fw-bold);
             text-align: center;
         }
+    
+        .progress {
+            /* background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #fff 20%, #fff 100%); */
+            background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #f3f4f6 0%, #f3f4f6 100%);
+            border: solid black 1px ;
+            border-radius: 3px;
+            height: 6px;
+            outline: none;
+            transition: background 450ms ease-in;
+            -webkit-appearance: none;
+        }
+
+        .progress::-webkit-slider-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #083535;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+            background: #f7d2f9;
+        }
     </style>
 </head>
 
@@ -141,7 +162,7 @@
             </div>
             
             <div class="container__content">
-                <input type="range" min="0" max="100" value="20">
+                <input class="progress" type="range" min="0" max="100" value="20">
             </div>
         </div>
 
@@ -166,7 +187,24 @@
             </div>
             
             <div class="container__content">
-                <input type="range" min="18" max="100" value="24">
+                <range-selector
+                    id="yearSelector"
+                    min-label="Minimum"
+                    max-label="Maximum"
+                    min-range="18"
+                    max-range="100"
+                    preset-min="18" 
+                    preset-max="24"
+                    number-of-legend-items-to-show="2"
+                    slider-color="#6b5b95"
+                    slider-color="orange"
+                    circle-color="#f7d2f9"
+                    circle-border-color="#083535"
+                    hide-legend
+                    hide-label
+                />
+
+                <!-- circle-color="#f7cac9" -->
             </div>
         </div>
         
@@ -207,5 +245,17 @@
     <div class="navbar__dummy"></div>
 
     <script type="text/javascript" src="app.js"></script>
+
+    <!-- Calculate color of .progress -->
+    <script>
+        const progress = document.querySelector('.progress');
+  
+        progress.addEventListener('input', function() {
+            const value = this.value;
+            this.style.background = `linear-gradient(to right, #6b5b95 0%, #6b5b95 ${value}%, #f3f4f6 ${value}%, #f3f4f6 100%)`
+        })  
+    </script>
+                
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
 </body>
 </html>
