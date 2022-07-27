@@ -113,7 +113,6 @@
         }
     
         .progress {
-            /* background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #fff 20%, #fff 100%); */
             background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #f3f4f6 0%, #f3f4f6 100%);
             border: solid black 1px ;
             border-radius: 3px;
@@ -158,11 +157,11 @@
         <div class="container">
             <div class="container__title title highlight">
                 <p>Maximum distance</p>
-                <p class="sec-text">14 km</p>
+                <p class="sec-text" id="distance"></p>
             </div>
             
             <div class="container__content">
-                <input class="progress" type="range" min="0" max="100" value="20">
+                <input class="progress" type="range" min="1" max="100" value="20">
             </div>
         </div>
 
@@ -203,8 +202,6 @@
                     hide-legend
                     hide-label
                 />
-
-                <!-- circle-color="#f7cac9" -->
             </div>
         </div>
         
@@ -248,11 +245,17 @@
 
     <!-- Calculate color of .progress -->
     <script>
+        // Set .progress label on page load
+        $("#distance").text( $(".progress").val() + " km");
+
         const progress = document.querySelector('.progress');
-  
+        
         progress.addEventListener('input', function() {
             const value = this.value;
+
             this.style.background = `linear-gradient(to right, #6b5b95 0%, #6b5b95 ${value}%, #f3f4f6 ${value}%, #f3f4f6 100%)`
+            
+            $("#distance").text(value + " km");
         })  
     </script>
                 
