@@ -83,7 +83,7 @@
         .content .container .container__title{
             display: flex;
             justify-content: space-between;
-            margin: 1.25rem 0;
+            margin: 1.5rem 0;
             padding: 0 1.25rem;
         }
 
@@ -145,7 +145,7 @@
 
     <div class="content">
         <header>
-            <img defer src="assets/dark/profile_pic.svg">
+            <img loading="lazy" src="https://via.placeholder.com/195x195/eee/eee" data-src="assets/dark/profile_pic.svg">
 
             <div id="edit_profile">
                 <a href="#">
@@ -199,7 +199,6 @@
                     preset-max="35"
                     number-of-legend-items-to-show="2"
                     slider-color="#6b5b95"
-                    slider-color="orange"
                     circle-color="#f7d2f9"
                     circle-border-color="#083535"
                     hide-legend
@@ -248,7 +247,6 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
 
-    <!-- Calculate color of .progress -->
     <script>
         function updateDistanceOnChange(){
             // Set .progress label on page load
@@ -266,19 +264,45 @@
         }  
         
         function updateAgeOnChange(){
-            const abc = document.querySelector('#yearSelector');
+            const root = document.querySelector('#yearSelector').shadowRoot;
             
-            abc.addEventListener('input', function() {
-                const min_value = document.querySelector('#yearSelector').shadowRoot.getElementById("min").value;
-                const max_value = document.querySelector('#yearSelector').shadowRoot.getElementById("max").value;
+            root.addEventListener('input', function() {
+                const min_value = document.querySelector('#yearSelector').getElementById("min").value;
+                const max_value = document.querySelector('#yearSelector').getElementById("max").value;
 
                 $("#min_age").text(min_value);
                 $("#max_age").text(max_value);
             })
         }
+
+        function changeCssOfAgeSlider(){
+            const root = document.querySelector('#yearSelector').shadowRoot;
+
+            slider_min_max = root.getElementById("minMaxSlider");
+            slider_min = root.getElementById("min");
+            slider_max = root.getElementById("max");
+
+            slider_min.style.height = "6px";
+            slider_min.style.background = "#6b5b95";
+            slider_min.style.backgroundImage = "unset";
+            slider_min.style.margin = "0";
+            slider_min.style.borderTopLeftRadius     = "3px";
+            slider_min.style.borderBottomLeftRadius  = "3px";
+
+            slider_max.style.height = "6px";
+            slider_max.style.background = "#6b5b95";
+            slider_max.style.backgroundImage = "unset";
+            slider_max.style.margin = "0";
+            slider_max.style.borderTopRightRadius    = "3px";
+            slider_max.style.borderBottomRightRadius = "3px";
+        }
     </script>
                 
     <script> 
+        document.addEventListener("DOMContentLoaded", function(){
+            changeCssOfAgeSlider()
+        });
+
         window.onload = function(){
             updateDistanceOnChange();
             updateAgeOnChange();
