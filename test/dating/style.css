@@ -68,6 +68,7 @@ html{
     overflow-y: scroll;
     width: -webkit-fill-available;
     visibility: hidden;
+    overscroll-behavior-y: contain;
 }
 
 a{
