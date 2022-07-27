@@ -22,12 +22,15 @@ function defer(){
             imgDefer[i].removeAttribute('data-src');
         }
     }
-}
-
-$(window).on('load', function() {
-    $('.material-icons').css('visibility', 'visible');
-    defer();
 
     $('.content').css('visibility', 'visible');
     $('.loader').remove();
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    defer();
+});
+
+$(window).on('load', function() {
+    $('.material-icons').css('visibility', 'visible');
 });
