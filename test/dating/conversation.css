@@ -1,0 +1,186 @@
+/* ------------------------------------------------- Top Navbar ------------------------------------------------- */
+.navbar.navbar__top{
+    position: relative;
+}
+
+.navbar.navbar__top .nav__link .icon{
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 40
+}
+
+.navbar.navbar__top .nav__link:first-of-type{
+    margin-left: 1.5rem;
+}
+
+.navbar.navbar__top .nav__link#menu, .navbar.navbar__top .nav__link#close{
+    margin-right: 1.5rem;
+}
+
+.navbar.navbar__top .nav__link#close{
+    display: none;
+}
+
+.navbar.navbar__top .nav__header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar.navbar__top .nav__header img{
+    margin-right: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+}
+
+.navbar.navbar__top .nav__modal{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 6rem;
+    right: 0;
+    width: 50%;
+    max-width: 50%;
+    background: var(--white);
+    box-shadow: var(--boxshadow);
+}
+
+.navbar.navbar__top .nav__modal .nav__modal-link{
+    padding: 1.15rem;
+    width: -webkit-fill-available;
+    font-size: var(--fs-button) !important;
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.navbar.navbar__top .nav__modal .nav__modal-link:first-child {
+    box-shadow: var(--boxshadow-top), var(--boxshadow-bottom);
+}
+
+.navbar.navbar__top .nav__modal .nav__modal-link:last-child {
+    box-shadow: unset;
+}
+
+/* ------------------------------------------------- Message Bar ------------------------------------------------- */
+
+.message_bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--boxshadow-top);
+}
+
+.message_bar .message_bar__form{
+    display: flex;
+    padding: 1rem 1.5rem;
+}
+
+.message_bar .message_bar__form div{
+    display: flex;
+    width: 100%;
+    position:relative;
+}
+
+.message_bar .message_bar__form div > a{
+    padding: 0.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.message_bar .message_bar__form div > a#fullscreen_exit{
+    display: none;
+}
+
+.message_bar .message_bar__form .input_bar{
+    min-height: 4rem;
+    max-height: 13rem;
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 4rem;
+    border-radius: 1rem;
+    font-size: var(--fs-button);
+    line-height: 2rem;
+    border: 0;
+    background: #f3f4f6;
+    box-shadow: var(--boxshadow);
+    word-wrap:break-word;
+    resize: none;
+    outline: none;
+}
+
+.message_bar .message_bar__form .send .icon{
+    margin-left: 1.5rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    color: var(--layer-cl);
+}
+
+/* ------------------------------------------------- Chat Section ------------------------------------------------- */
+
+.content{
+    padding: 0 !important;
+}
+
+.content .container .chat_section{
+    padding-top: 1rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 0;
+    bottom: 6rem;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.content .container .chat_section .chat{
+    width: inherit;
+}
+
+.content .container .chat_section .chat .date{
+    margin: auto;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    width: fit-content;
+    font-size: var(--fs-button);
+    color: #8696a0;
+    border-radius: 0.75rem;
+    box-shadow: var(--boxshadow);
+}
+
+.content .container .chat_section .chat .messages{
+    padding: 1rem;
+    font-size: var(--fs-small);
+}
+
+.content .container .chat_section .chat .messages .message_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content .container .chat_section .chat .messages .me{
+    align-items: flex-end;
+}
+
+.content .container .chat_section .chat .messages .other{
+    align-items: flex-start;
+}
+
+.content .container .chat_section .chat .messages .message{
+    margin: 0.25rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--boxshadow);
+}
+
+.content .container .chat_section .chat .messages .me .message{
+    background: var(--layer-bg);
+}
+
+.content .container .chat_section .chat .messages .other .message{
+    background: #f3f4f6;
+}
