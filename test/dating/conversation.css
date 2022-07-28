@@ -122,7 +122,6 @@
 /* ------------------------------------------------- Chat Section ------------------------------------------------- */
 
 .content{
-    padding: 0 !important;
     user-select: unset !important;
 }
 
