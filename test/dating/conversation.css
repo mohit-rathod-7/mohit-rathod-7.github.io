@@ -103,7 +103,7 @@
     padding-right: 4rem;
     border-radius: 1rem;
     font-size: var(--fs-button);
-    line-height: 2rem;
+    line-height: 2.4rem;
     border: 0;
     background: #f3f4f6;
     box-shadow: var(--boxshadow);
@@ -123,6 +123,7 @@
 
 .content{
     padding: 0 !important;
+    user-select: unset !important;
 }
 
 .content .container .chat_section{
