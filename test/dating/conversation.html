@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href='style.css'>
     <link rel="stylesheet" href='navbar.css'>
-    <link rel="stylesheet" href='chats.css'>
+    <!-- <link rel="stylesheet" href='chats.css'> -->
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -131,16 +131,62 @@
             resize: none;
             outline: none;
         }
-         
-        .message_bar .message_bar__form .input_bar::-webkit-scrollbar{
-            display: unset;
-        }
 
         .message_bar .message_bar__form .send .icon{
             margin-left: 1.5rem;
             padding: 0.8rem;
             cursor: pointer;
             color: var(--layer-cl);
+        }
+
+        /* ------------------------------------------------------------ */
+
+        .content{
+            padding: 0 !important;
+        }
+
+        .content .container .chat_section{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 6rem;
+            background-color: #ded;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        
+        .content .container .chat_section .chat{
+            width: inherit;
+        }
+
+        .content .container .chat_section .chat .date{
+            position: sticky;
+            text-align: center;
+        }
+
+        .content .container .chat_section .chat .messages{
+            padding: 1rem;
+            font-size: var(--fs-small);
+        }
+
+        .content .container .chat_section .chat .messages .message_container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content .container .chat_section .chat .messages .me{
+            align-items: flex-end;
+        }
+
+        .content .container .chat_section .chat .messages .other{
+            align-items: flex-start;
+        }
+
+        .content .container .chat_section .chat .messages .message{
+            margin: 0.5rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: var(--boxshadow);
         }
     </style>
 </head>
@@ -170,9 +216,39 @@
     </div>
 
     <div class="content">
-        <div id="chats" class="container">
-            <div class="profile">
-                
+        <div class="container">
+            <div class="chat_section">
+                <div class="chat">
+                    <header class="date">Today</header>
+
+                    <div class="messages">
+                        <ul class="me message_container">
+                            <li class="message">Hi</li>
+                            <li class="message">kaisa hai?</li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi</li>
+                            <li class="message">kaisa hai?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <header class="date">Yesterday</header>
+
+                    <div class="messages">
+                        <ul class="me message_container">
+                            <li class="message">Hi</li>
+                            <li class="message">kaisa hai?</li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi</li>
+                            <li class="message">kaisa hai?</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="message_bar">
@@ -237,7 +313,7 @@
 
         function textAreaAdjust(element){
             height = element.scrollHeight;
-            
+
             if (height < 131){
                 element.style.height = (element.scrollHeight)+"px";
             }
