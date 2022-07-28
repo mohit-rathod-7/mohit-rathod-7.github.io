@@ -13,8 +13,6 @@
 .swiper{
     width: 100%;
     height: -webkit-fill-available;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .swiper-slide{
