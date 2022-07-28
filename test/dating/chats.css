@@ -1,7 +1,3 @@
-.content{
-    padding: 0 !important;
-}
-
 .content > header{
     box-shadow: var(--boxshadow-bottom);
 }
