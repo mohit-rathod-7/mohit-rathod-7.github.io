@@ -1,9 +1,12 @@
+.content{
+    padding: 0 3.5rem !important;
+}
+
 .heading{
     margin: 1.5rem 0;
 }
 
 .swiper{
-    padding: 0 3rem !important;
     width: unset !important;
 }
 
@@ -12,10 +15,6 @@
     height: 100%;
     width: 35rem;
     object-fit: contain !important;
-}
-
-.content #bottom{
-    padding: 0 3.5rem;
 }
 
 .content #bottom p{
