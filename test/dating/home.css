@@ -1,0 +1,50 @@
+.heading{
+    margin: 1.5rem 0;
+}
+
+.swiper{
+    height: 28rem;
+    padding: 5rem 0;
+}
+
+.swiper-slide img{
+    margin: auto;
+    height: 100%;
+    width: 35rem;
+    object-fit: contain !important;
+}
+
+.content #bottom{
+    padding: 0 3.5rem;
+}
+
+.content #bottom p{
+    letter-spacing: 0.1rem;
+}
+
+.content #bottom .buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.content #bottom .buttons .button{
+    margin: 2rem 0;
+    padding: 1.5rem;
+    width: 100%;
+    font-size: var(--fs-button);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    color: var(--layer-cl);
+    border-radius: 1rem;
+}
+
+.content #bottom .buttons .button#signup{
+    margin-right: 1rem;
+    background: var(--layer-bg);
+    border: 1px solid var(--layer-bg);
+}
+
+.content #bottom .buttons .button#login{
+    margin-left: 1rem;
+    border: 1px solid var(--layer-cl);
+}
