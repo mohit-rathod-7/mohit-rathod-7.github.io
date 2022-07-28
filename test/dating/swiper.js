@@ -1,4 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
+    lazy: true,
     effect: "coverflow",
     slidesPerView: "auto",
     
