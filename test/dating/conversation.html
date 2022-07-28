@@ -150,7 +150,6 @@
             position: absolute;
             top: 0;
             bottom: 6rem;
-            background-color: #ded;
             display: flex;
             flex-direction: column-reverse;
         }
@@ -160,8 +159,12 @@
         }
 
         .content .container .chat_section .chat .date{
+            margin: auto;
+            padding: 0.5rem 1rem;
             position: sticky;
             text-align: center;
+            width: fit-content;
+            box-shadow: var(--boxshadow);
         }
 
         .content .container .chat_section .chat .messages{
@@ -182,6 +185,14 @@
             align-items: flex-start;
         }
 
+        .content .container .chat_section .chat .messages .me .message{
+            background: var(--layer-bg);
+        }
+
+        .content .container .chat_section .chat .messages .other .message{
+            background: #f3f4f7;
+        }
+        
         .content .container .chat_section .chat .messages .message{
             margin: 0.5rem;
             padding: 1rem;
