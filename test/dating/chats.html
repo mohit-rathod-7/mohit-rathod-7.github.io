@@ -62,7 +62,7 @@
         </header>
 
         <div id="chats" class="container">
-            <div class="profile" id="aman786">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/light/male_avatar.svg">
                 </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="profile">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/light/female_avatar.svg">
                 </div>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             
-            <div class="profile">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/light/male_avatar.svg">
                 </div>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             
-            <div class="profile">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/dark/male_avatar.svg">
                 </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             
-            <div class="profile">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/dark/female_avatar.svg">
                 </div>
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="profile">
+            <div class="profile" data-link="conversation.html">
                 <div class="profile__image-div">
                     <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="assets/dark/male_avatar.svg">
                 </div>
@@ -145,5 +145,12 @@
     <div class="navbar__dummy"></div>
 
     <script type="text/javascript" src="app.js"></script>
+
+    <script>
+        $('.profile').click(function(){
+            window.location = $(this).attr('data-link');
+            return false;
+        });
+    </script>
 </body>
 </html>
