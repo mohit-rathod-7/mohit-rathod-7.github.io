@@ -74,6 +74,7 @@
             font-weight: var(--fw-bold);
             text-align: center;
             color: var(--layer-cl);
+            border: 1px solid var(--layer-bg);
             border-radius: 1rem;
         }
 
@@ -84,8 +85,6 @@
 
         .content #bottom .buttons .button#login{
             margin-left: 1rem;
-            border: 1px solid var(--layer-bg);
-            background: #f3f4f6;
         }
     </style>
 </head>
@@ -138,8 +137,8 @@
     </div>
     
     <nav class="navbar navbar__bottom">
-        <a href="home.html" id="home"><i class="icon material-icons material-symbols-outlined">home</i></a>
-        <a href="likes.html" id="likes" class="disabled"><i class="icon material-icons material-symbols-filled">favorite</i></a>
+        <a href="home.html" id="home"><i class="icon material-icons material-symbols-filled">home</i></a>
+        <a href="likes.html" id="likes" class="disabled"><i class="icon material-icons material-symbols-outlined">favorite</i></a>
         <a href="chats.html" id="chats"><i class="icon material-icons material-symbols-outlined">chat_bubble</i></a>
         <a href="user.html" id="user"><i class="icon material-icons material-symbols-outlined">person</i></a>
     </nav>
@@ -153,11 +152,15 @@
     <!-- Initialize Swiper -->
     <script>  
         var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
+            lazy: true,
+            slidesPerView: "auto",
+            grabCursor: true,
             centeredSlides: true,
+            loop: true,
+
             autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+                delay: 2500,
+                disableOnInteraction: false,
             }
         });
       </script>
