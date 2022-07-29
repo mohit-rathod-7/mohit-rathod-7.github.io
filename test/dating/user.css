@@ -65,6 +65,10 @@
     box-shadow: var(--boxshadow-bottom);
 }
 
+.content .container .container__content ul li.active{
+    background: rgb(0 0 0 / 10%);
+}
+
 .content .container .container__content ul li .icon{
     margin: 1rem 1.5rem;
     position: absolute;
