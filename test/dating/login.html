@@ -43,7 +43,7 @@
         }
 
         .content #top{
-            margin: 4.5rem auto;
+            margin: 5.5rem auto;
             display: flex;
         }
 
@@ -51,25 +51,15 @@
             width: 65%;
         }
 
-        .content .form p{
+        .content #top p{
             letter-spacing: 0.1rem;
         }
 
-        .content .form .button{
-            margin: 2rem 0;
-            padding: 1.5rem;
-            font-size: var(--fs-button);
-            font-weight: var(--fw-bold);
-            text-align: center;
-            color: var(--layer-cl);
-            border-radius: 1rem;
+        .content .form .field{
+            margin-top: 2rem;
         }
 
-        .content .form .button#login{
-            background: var(--layer-bg);
-        }
-
-        .input_bar{
+        .content .form .input_bar{
             width: 100%;
             margin: 1rem 0;
             padding: 1rem;
@@ -79,7 +69,19 @@
             border: 0;
             outline: 0;
             background: #f3f4f6;
+            background: red;
             box-shadow: var(--boxshadow);
+        }
+
+        .content .form .button#login{
+            margin: 2rem 0;
+            padding: 1.5rem;
+            font-size: var(--fs-button);
+            font-weight: var(--fw-bold);
+            text-align: center;
+            color: var(--layer-cl);
+            border-radius: 1rem;
+            background: var(--layer-bg);
         }
     </style>
 </head>
@@ -105,12 +107,16 @@
         </div>
 
         <form class="form">
-            <label class="title sec-text" for="mobile_number">Enter your mobile number</label>
+            <div class="field">
+                <label class="title sec-text" for="mobile_number">Enter your mobile number</label>
+                <input type="number" class="input_bar" name="mobile_number">
+            </div>
 
-            <input type="number" class="input_bar" name="mobile_number">
+            <div class="field">
+                <label class="title sec-text" for="password">Enter your password</label>
+                <input type="text" class="input_bar" name="password">
+            </div>
 
-            <input type="text" class="input_bar" name="password">
-            
             <div class="button" id="login">
                 <a href="#">Login</a>
             </div>
