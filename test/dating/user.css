@@ -60,8 +60,17 @@
 
 .content .container .container__content ul li{
     padding: 1.5rem;
+    position: relative;
     font-size: var(--fs-caption);
     box-shadow: var(--boxshadow-bottom);
+}
+
+.content .container .container__content ul li .icon{
+    margin: 1rem 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #3fb950;
 }
 
 .content .container .container__content ul li:first-child{
