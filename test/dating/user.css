@@ -75,6 +75,11 @@
     top: 0;
     right: 0;
     color: #3fb950;
+    display: none;
+}
+
+.content .container .container__content ul li.active .icon{
+    display: unset;
 }
 
 .content .container .container__content ul li:first-child{
