@@ -37,7 +37,7 @@
 }
 
 .content .form .button#login{
-    margin: 3.5rem 0;
+    margin: 3.25rem 0;
     padding: 1.5rem;
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
