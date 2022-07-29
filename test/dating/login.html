@@ -71,12 +71,13 @@
 
         .input_bar{
             width: 100%;
+            margin: 1rem 0;
             padding: 1rem;
-            padding-right: 4rem;
             border-radius: 1rem;
             font-size: var(--fs-button);
             line-height: 2.4rem;
             border: 0;
+            outline: 0;
             background: #f3f4f6;
             box-shadow: var(--boxshadow);
         }
@@ -100,14 +101,15 @@
                 life.
             </p>
             
-            <!-- <img loading="lazy" src="https://via.placeholder.com/380x624/fff/fff" data-src="assets/playing_cards.svg"> -->
-            <img loading="lazy" src="https://via.placeholder.com/380x624/fff/fff" data-src="assets/couple.jpg">
+            <img loading="lazy" src="https://via.placeholder.com/380x624/fff/fff" data-src="assets/playing_cards.svg">
         </div>
 
         <form class="form">
-            <label class="title sec-text" for="input_bar">Enter your mobile number</label>
+            <label class="title sec-text" for="mobile_number">Enter your mobile number</label>
 
-            <input type="number" class="input_bar" name="input_bar">
+            <input type="number" class="input_bar" name="mobile_number">
+
+            <input type="text" class="input_bar" name="password">
             
             <div class="button" id="login">
                 <a href="#">Login</a>
