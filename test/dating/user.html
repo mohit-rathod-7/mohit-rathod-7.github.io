@@ -68,9 +68,9 @@
             
             <div class="container__content">
                 <ul>
-                    <li value="men">Men</li>
+                    <li value="men">Men<span class="icon material-icons material-symbols-filled">check_circle</span></li>
                     <li class="active" value="women">Women<span class="icon material-icons material-symbols-filled">check_circle</span></li>
-                    <li value="everyone">Everyone</li>
+                    <li value="everyone">Everyone<span class="icon material-icons material-symbols-filled">check_circle</span></li>
                 </ul>
             </div>
         </div>
@@ -202,6 +202,13 @@
             updateDistanceOnChange();
             updateAgeOnChange();
         }
+    </script>
+
+    <!-- Change gender preferences -->
+    <script>
+        $(".container__content ul li").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
     </script>
 </body>
 </html>
