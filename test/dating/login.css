@@ -7,7 +7,7 @@
 }
 
 .content #top{
-    margin: 6.5rem auto;
+    margin: 4.5rem auto;
     display: flex;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .content .form .button#login{
-    margin: 3rem 0;
+    margin: 3.5rem 0;
     padding: 1.5rem;
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
@@ -45,4 +45,19 @@
     color: var(--layer-cl);
     border-radius: 1rem;
     background: var(--layer-bg);
+}
+
+.content .form #signup{
+    display: flex;
+    justify-content: center;
+}
+
+.content .form #signup p{
+    font-size: var(--fs-button) !important;
+}
+
+.content .form #signup a{
+    margin-left: 0.5rem;
+    color: var(--gray);
+    font-size: var(--fs-button) !important;
 }
