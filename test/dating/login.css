@@ -31,6 +31,7 @@
     position: absolute;
     top: 2rem;
     right: 1rem;
+    color: var(--gray);
 }
 
 .content .form .field div .password-icon.invisible{
