@@ -23,6 +23,20 @@
     margin-top: 2rem;
 }
 
+.content .form .field div{
+    position: relative;
+}
+
+.content .form .field div .password-icon{
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+.content .form .field div .password-icon.invisible{
+    display: none;
+}
+
 .content .form .input_bar{
     width: 100%;
     margin: 1rem 0;

@@ -58,7 +58,12 @@
 
             <div class="field">
                 <label class="title sec-text" for="password">Enter your password</label>
-                <input type="password" class="input_bar" name="password">
+                
+                <div>
+                    <input type="password" class="input_bar password" name="password">
+                    <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
+                    <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
+                </div>
             </div>
 
             <div class="button" id="login">
@@ -81,5 +86,22 @@
     <div class="navbar__dummy"></div>
 
     <script type="text/javascript" src="app.js"></script>
+    
+    <script>
+        $("body").on('click', '.password-icon', function(){
+            var input = $(".password");
+
+            if (input.attr("type") == "password"){
+                input.attr("type", "text");
+                $('.password-icon').css('display', 'none');
+                $('.password-icon.invisible').css('display', 'block');
+            }
+            else{
+                input.attr("type", "password");
+                $('.password-icon').css('display', 'block');
+                $('.password-icon.invisible').css('display', 'none');
+            }
+        });
+    </script>
 </body>
 </html>
