@@ -1,0 +1,68 @@
+.content > header{
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.content .heading{
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+.content #no-chats{
+    padding: 8.5rem 0;
+    text-align: center;
+}
+
+.content #no-chats img{
+    margin: 5.5rem auto;
+    width: 70%;
+}
+
+.container .profile{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.container .profile .profile__image-div{
+    margin: 1rem 1.5rem;
+    min-width: 5rem;
+    max-width: 5rem;
+    min-height: 5rem;
+    max-height: 5rem;
+}
+
+.container .profile .profile__image{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container .profile .profile__info{
+    padding-right: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 8rem - 1.5rem); /* width = 100% - "total width of .profile__image" - "padding-right of .profile__msg" */
+}
+
+.container .profile .profile__info .profile__msg{
+    font-size: var(--fs-button) !important;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+.container .profile .profile__info .profile__msg-timestamp{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5rem;
+    margin-bottom: 0;
+    font-size: var(--fs-caption) !important;
+}
+
+#chats{
+    margin-bottom: 12.4rem;
+}
