@@ -12,7 +12,7 @@
     <div class="field">
         <label class="title sec-text" for="height">Height</label>
         
-        <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+        <div style="display: flex; justify-content: space-between; margin: 1rem 0;">
             <div>
                 <label for="feet">Feet : </label>
                 
@@ -62,15 +62,13 @@
 
 <script>
         function next() {
-            let url = "signup.html";
-
             req = $.ajax({
-                url : url,
+                url : "s4.html",
                 type : "GET"
             });
 
             req.done(function(data){
-                window.location.href = url;   
+                $(".content").html(data);
             });
         }
 
