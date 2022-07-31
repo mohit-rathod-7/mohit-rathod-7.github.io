@@ -19,15 +19,14 @@
     </div>
 
     <div class="buttons">
-        <div class="button" id="back">Back</div>
+        <div class="button" id="back" onclick="back()">Back</div>
 
-        <div class="button" id="next">Next</div>
+        <div class="button" id="next" onclick="next()">Next</div>
     </div>
 </form>
 
 <script>
-    $(document).ready(function() {
-        $(document).on('click', '#next', function() {
+        function next() {
             let url = "signup.html";
 
             req = $.ajax({
@@ -38,9 +37,9 @@
             req.done(function(data){
                 window.location.href = url;   
             });
-        });
+        }
 
-        $(document).on('click', '#back', function() {
+        function back() {
             req = $.ajax({
                 url : "s2.html",
                 type : "GET"
@@ -49,6 +48,5 @@
             req.done(function(data){
                 $(".content").html(data);
             });
-        });
-    });
+        }
 </script>
