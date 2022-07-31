@@ -131,7 +131,7 @@
 
 .card-chip.highlited{
     border-color: var(--layer-cl);
-    border-width: 2px;
+    border-width: 0.2rem;
 }
 
 .card-img{
