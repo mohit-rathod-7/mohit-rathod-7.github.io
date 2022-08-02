@@ -1,0 +1,47 @@
+<!-- Page2.html -->
+<form class="form">
+    <div class="field">
+        <label class="title sec-text" for="date_of_birth">Select your date of birth</label>
+        <input type="date" class="input_bar" name="date_of_birth">
+    </div>
+
+    <div class="field">
+        <label class="title sec-text">Select your gender</label>
+        
+        <div style="display: flex; justify-content: space-between">
+            <label class="container">
+                <p>Male</p>
+                <input type="radio" name="radio" data-value="male">
+                <span class="checkmark" for="radio"></span>
+            </label>
+
+            <label class="container"><p>Female</p>
+                <input type="radio" name="radio" data-value="female">
+                <span class="checkmark" for="radio"></span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="title sec-text" for="email">Enter your Email ID</label>
+        <input type="email" class="input_bar" name="email" placeholder="Eg : email@example.com">
+    </div>
+
+    <div class="field">
+        <label class="title sec-text" for="mobile_number">Enter your Mobile number</label>
+        <input type="number" class="input_bar" name="mobile_number" placeholder="Eg : 9123456789">
+    </div>
+
+    <div class="buttons">
+        <div class="button" id="back" onclick="back_url('credentials')">Back</div>
+
+        <div class="button" id="next" onclick="next(3)">Next</div>
+    </div>
+</form>
+
+<!-- Handle Radio buttons -->
+<script>
+    $('.container').click(function () {
+            console.log($(this).find("input").attr("data-value"));
+        });
+</script>
