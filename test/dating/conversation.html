@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Home</title>
+    <title>Conversation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="hsl(298, 75%, 90%)">
@@ -12,7 +12,10 @@
     <!-- JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        
+       
+    <!-- Pusher -->
+    <script type="text/javascript" src="https://js.pusher.com/7.2/pusher.min.js"></script>
+ 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    
@@ -58,110 +61,200 @@
     <div class="content">
         <div class="container">
             <div class="chat_section">
-                <div class="chat">
+                <div class="chat" data-date="04/08/2022">
                     <header class="date">Today</header>
 
                     <div class="messages">
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="chat">
+                <div class="chat" data-date="03/07/2022">
                     <header class="date">Yesterday</header>
 
                     <div class="messages">
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="chat">
-                    <header class="date">26/7/2022</header>
+                <div class="chat" data-date="26/07/2022">
+                    <header class="date">26/07/2022</header>
 
                     <div class="messages">
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
 
                         <ul class="me message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
                         </ul>
                         
                         <ul class="other message_container">
-                            <li class="message">Hi</li>
-                            <li class="message">kaisa hai?</li>
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -170,8 +263,8 @@
             <div class="message_bar">
                 <form class="message_bar__form" method="post">
                     <div>
-                        <textarea placeholder="Message" onkeyup="textAreaAdjust(this)" class="input_bar" rows="1" id="input_bar"></textarea>
-
+                        <textarea placeholder="Message" onkeyup="textAreaAdjust(this)" class="input_bar" rows="1" id="message"></textarea>
+                        <input type="hidden" id="your_username" value="{{ your_username }}">
                         <a href="#" id="fullscreen"><i class="icon material-icons material-symbols-filled">fullscreen</i></a>
                         <a href="#" id="fullscreen_exit"><i class="icon material-icons material-symbols-filled">fullscreen_exit</i></a>
                     </div>
