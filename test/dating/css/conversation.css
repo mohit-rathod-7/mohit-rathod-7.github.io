@@ -174,8 +174,12 @@
 .content .container .chat_section .chat .messages .message{
     margin: 0.25rem;
     padding: 1rem;
-    border-radius: 0.75rem;
+    padding-right: 6rem;
+    display: flex;
+    position: relative;
+    background: var(--layer-bg);
     box-shadow: var(--boxshadow);
+    border-radius: 0.75rem;
 }
 
 .content .container .chat_section .chat .messages .me .message{
@@ -184,4 +188,11 @@
 
 .content .container .chat_section .chat .messages .other .message{
     background: #f3f4f6;
+}
+
+.content .container .chat_section .chat .messages .message .message-timestamp{
+    right: 0.5rem;
+    bottom: 0.5rem;
+    position: absolute;
+    font-size: var(--fs-caption);
 }
