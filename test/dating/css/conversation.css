@@ -148,6 +148,7 @@
     top: 0;
     width: fit-content;
     font-size: var(--fs-button);
+    background: var(--white);
     color: #8696a0;
     border-radius: 0.75rem;
     box-shadow: var(--boxshadow);
