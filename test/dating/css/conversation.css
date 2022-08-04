@@ -143,6 +143,7 @@
 
 .content .container .chat_section .chat .date{
     margin: auto;
+    margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     position: sticky;
     top: 0;
@@ -157,6 +158,7 @@
 
 .content .container .chat_section .chat .messages{
     padding: 1rem;
+    padding-top: 0;
     font-size: var(--fs-small);
 }
 
