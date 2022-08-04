@@ -199,4 +199,5 @@
     bottom: 0.5rem;
     position: absolute;
     font-size: var(--fs-caption);
+    text-transform: uppercase;
 }
