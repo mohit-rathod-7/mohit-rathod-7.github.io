@@ -1,0 +1,250 @@
+{% from "macros/nav.html" import chat_navbar_top, navbar_bottom %}
+{% from "macros/loader.html" import loader %}
+{% from "macros/head.html" import common, GSAP %}
+
+<html>
+<head>
+    <title>Chat</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat/chat.css') }}">
+
+    {{ common() }}
+    {{ GSAP() }}
+</head>
+
+<body class="prevent-select">
+    {{ chat_navbar_top(details) }}
+    
+    {{ loader() }}
+    
+    <div class="content">
+        <div class="container">
+            <div class="chat_section">
+<!--            <div class="chat" data-date="03/08/2022">
+                    <header class="date">Today</header>
+
+                    <div class="messages">
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+<!--            <div class="chat" data-date="03/07/2022">
+                    <header class="date">Yesterday</header>
+
+                    <div class="messages">
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->             
+    
+<!--            <div class="chat" data-date="26/07/2022">
+                    <header class="date">26/07/2022</header>
+
+                    <div class="messages">
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+
+                        <ul class="me message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:04 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <ul class="other message_container">
+                            <li class="message">Hi
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                            
+                            <li class="message">kaisa hai?
+                                <span class="message-timestamp sec-text">5:19 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="message_bar">
+                <form class="message_bar__form" method="post">
+                    <div>
+                        <textarea placeholder="Message" onkeyup="textAreaAdjust(this)" class="input_bar" rows="1" id="message"></textarea>
+                        <a href="#" id="fullscreen"><i class="icon material-icons material-symbols-filled">fullscreen</i></a>
+                        <a href="#" id="fullscreen_exit"><i class="icon material-icons material-symbols-filled">fullscreen_exit</i></a>
+                    </div>
+                    
+                    <a href="#" class="send" id="send"><i class="icon material-icons material-symbols-filled">send</i></a>
+                    
+                    <div style="display: none;">
+                        <input type="hidden" id="your_username" value="{{ details['username'] }}">
+                        <input type="hidden" id="channel_name" value="{{ details['channel_name'] }}">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{ navbar_bottom(nav_data) }}
+    
+    <!-- Pusher -->
+    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/initialize_chat.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/chat.js') }}" defer></script>
+</body>
+</html>

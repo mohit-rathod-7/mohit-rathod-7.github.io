@@ -1,0 +1,45 @@
+{% from "macros/loader.html" import loader %}
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common %}
+
+<html>
+<head>
+    <title>Authentication</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/home.css') }}">
+    
+    {{ common() }}
+</head>
+
+<body class="prevent-select">
+   {{ navbar_top() }}
+   
+   {{ loader() }}
+
+    <div class="content">
+        <img loading="lazy" src="https://via.placeholder.com/380x624/fff/fff" data-src="{{ url_for('static', filename='img/pure_love.svg') }}">
+
+        <div id="bottom">
+            <p class="title sec-text">Let's get closer 😊</p>
+
+            <p class="heading pri-text">
+                The best place to <br>
+                meet your future<br>
+                partner
+            </p>
+
+            <div class="buttons">
+                <div class="button" id="signup">
+                    <a href="{{ url_for('auth.signup') }}">Sign up</a>
+                </div>
+
+                <div class="button" id="login">
+                    <a href="{{ url_for('auth.login') }}">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{ navbar_bottom(nav_data) }}
+</body>
+</html>

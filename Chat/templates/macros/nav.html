@@ -1,0 +1,50 @@
+{% macro navbar_top() %}
+<nav class="navbar navbar__top">
+    <h1 class="sub-heading">Date</h1>
+</nav>
+{% endmacro %}
+
+
+{% macro chat_navbar_top(details) %}
+<nav class="navbar navbar__top">
+    <a class="nav__link" id="back" onclick="history.back()"><i class="icon material-icons material-symbols-outlined">arrow_back</i></a>
+    
+    <div class="material-icons nav__header">
+        <img class="profile__image" src="{{ url_for('static', filename='img/male_avatar.svg') }}">
+
+        <h1 class="title">{{ details['fullname'] }}</h1>
+    </div>
+    
+    <a href="#" class="nav__link" id="menu"><i class="icon material-icons material-symbols-outlined">more_vert</i></a>
+    <a href="#" class="nav__link" id="close"><i class="icon material-icons material-symbols-outlined">close</i></a>
+
+    <div class="nav__modal">
+        <a href="#" class="nav__modal-link text sec-text">View Profile</a>
+        <a href="#" class="nav__modal-link text sec-text">Clear chat</a>
+        <a href="#" class="nav__modal-link text sec-text">Report</a>
+        <a href="#" class="nav__modal-link text sec-text">Block</a>
+    </div>
+</nav>
+{% endmacro %}
+
+
+{% macro navbar_bottom(nav_data) %}
+<nav class="navbar navbar__bottom">
+    <a href="{{ url_for('recs.home') }}" id="home" class="nav__link {{nav_data['disabled']['home']}}">
+        <i class="icon material-icons material-symbols-{{nav_data['icon']['home']}}">home</i>
+    </a>
+
+    <a href="{{ url_for('like.home') }}" id="like" class="nav__link {{nav_data['disabled']['like']}}">
+        <i class="icon material-icons material-symbols-{{nav_data['icon']['like']}}">favorite</i>
+    </a>
+
+    <a href="{{ url_for('chat.home') }}" id="chat" class="nav__link {{nav_data['disabled']['chat']}}">
+        <i class="icon material-icons material-symbols-{{nav_data['icon']['chat']}}">chat_bubble</i>
+    </a>
+
+    <a href="{{ url_for('user.home') }}" id="user" class="nav__link {{nav_data['disabled']['user']}}">
+        <i class="icon material-icons material-symbols-{{nav_data['icon']['user']}}">person</i>
+    </a>
+</nav>
+<div class="navbar__dummy"></div>
+{% endmacro %}

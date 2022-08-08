@@ -1,0 +1,78 @@
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common %}
+{% from "macros/loader.html" import loader %}
+
+<!DOCTYPE html>
+    <head>
+        <title>Page not found</title>
+
+        {{ common() }}
+
+        <style>
+            .content{
+                text-align: center;
+                padding: 5.75rem 4rem;
+            }
+
+            .content img{
+                width: -webkit-fill-available;
+            }
+            
+            .content h1{
+                margin: 3rem;
+            }
+
+            .content .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .content .buttons .button{
+                margin: 2.9rem 0;
+                padding: 1.5rem;
+                width: 100%;
+                font-size: var(--fs-button);
+                font-weight: var(--fw-bold);
+                text-align: center;
+                color: var(--layer-cl);
+                border-radius: 1rem;
+            }
+
+            .content .buttons .button#back{
+                margin-right: 1rem;
+                background: var(--layer-bg);
+                border: 1px solid var(--layer-bg);
+            }
+
+            .content .buttons .button#home{
+                margin-left: 1rem;
+                border: 1px solid var(--layer-cl);
+            }
+        </style>
+    </head>
+
+    <body class="prevent-select">
+        {{ navbar_top() }}
+
+        {{ loader() }}
+
+        <div class="content">
+            <img src="{{ url_for('static', filename='img/page_not_found.svg') }}">
+            
+            <h1 class="heading pri-text">Page not found</h1>
+
+            <p class="title sec-text">
+                The page you are looking for might have been removed,<br>
+                had its name changed or is temporarily unavailable
+            </p>
+
+            <div class="buttons">
+                <a class="button" id="back" onclick="history.back()">Go Back</a>
+                <a class="button" id="home" href="{{ url_for('recs.home') }}">Go to Home</a>
+            </div>
+        </div>
+
+        {{ navbar_bottom(nav_data) }}
+    </body>
+</html>

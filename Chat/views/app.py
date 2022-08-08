@@ -1,9 +1,11 @@
 # Flask imports
-from flask import Flask
+from pydoc import render_doc
+from flask import Flask, redirect, render_template, url_for
 from flask_jsglue import JSGlue
 
 # Database imports
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 # Built-In Imports
 import os
@@ -17,28 +19,41 @@ app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 
 # BASIC CONFIG
-app.config['SECRET_KEY'] = 'thisissecret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../static/db/database.db'
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
-
-# RCAPTCHA CONFIG
-app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] ='6LcmFawcAAAAAI175JYBVdXy3pdls_l2degC7hDm'
-app.config['RECAPTCHA_PRIVATE_KEY'] ='6LcmFawcAAAAAMqVSb06ZIe5eTLCwHKFP_iOqsbS'
-app.config['RECAPTCHA_OPTIONS'] = {'theme': 'dark'}
-app.config['TESTING'] = True
+app.config['SECRET_KEY']                   =  'thisissecret'
+app.config['SQLALCHEMY_DATABASE_URI']      =  'sqlite:///../static/db/database.db'
+app.config['JSONIFY_PRETTYPRINT_REGULAR']  =  False
 
 
 # LOGIN MANAGER CONFIG
-# login_manager = LoginManager()
-# login_manager.init_app(app)
-# login_manager.login_view = 'auth.log_in'
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'auth.login'
 
 
-# @app.errorhandler(404)
-# # inbuilt function which takes error as parameter 
-# def not_found(e):
-#     return "<h1>error page</h1>"
+@app.route('/')
+def home():
+    return redirect(url_for('auth.home'))
+
+
+@app.errorhandler(404)
+def not_found(e):        
+    nav_data = {
+        "disabled": {
+            "home": "",
+            "like": "",
+            "chat": "",
+            "user": "",
+        },
+
+        "icon": {
+            "home": "outlined",
+            "like": "outlined",
+            "chat": "outlined",
+            "user": "outlined",
+        }
+    }
+
+    return render_template("error.html", nav_data=nav_data)
 
 
 db = SQLAlchemy(app)

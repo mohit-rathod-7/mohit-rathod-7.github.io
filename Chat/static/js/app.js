@@ -34,26 +34,3 @@ $("#close").click(function(){
     $('#menu').css('display', 'block'); 
     $('#close').css('display', 'none'); 
 });
-
-$("#fullscreen").click(function(){
-    $('.input_bar').css('height', '15rem'); 
-    $('#fullscreen_exit').css('display', 'block'); 
-    $('#fullscreen').css('display', 'none'); 
-});
-
-$("#fullscreen_exit").click(function(){
-    $('.input_bar').css('height', '100%'); 
-    $('#fullscreen').css('display', 'block'); 
-    $('#fullscreen_exit').css('display', 'none'); 
-});
-
-function textAreaAdjust(element){
-    height = element.scrollHeight;
-
-    if (height < 131){
-        element.style.height = (element.scrollHeight)+"px";
-    }
-    else{
-        console.log();
-    }
-}

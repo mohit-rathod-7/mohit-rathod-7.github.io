@@ -1,0 +1,185 @@
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common %}
+{% from "macros/loader.html" import loader %}
+
+<html>
+<head>
+    <title>User</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/user.css') }}">
+    
+    {{ common() }}
+</head>
+
+<body class="prevent-select">
+    {{ navbar_top() }}
+    
+    {{ loader() }}
+
+    <div class="content">
+        <header>
+            <img loading="lazy" src="https://via.placeholder.com/195x195/eee/eee" data-src="{{ url_for('static', filename='img/profile_pic.svg') }}">
+
+            <div id="edit_profile">
+                <a href="#">
+                    <i class="icon material-icons material-symbols-filled">edit</i>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="container__title title highlight">
+                <p>Maximum distance</p>
+                <p class="sec-text" id="distance"></p>
+            </div>
+            
+            <div class="container__content">
+                <input class="progress" type="range" min="1" max="100" value="20">
+            </div>
+        </div>
+
+        <div class="container pd_0">
+            <div class="container__title title highlight">
+                <p>Show me</p>
+            </div>
+            
+            <div class="container__content">
+                <ul>
+                    <li value="men">Men<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                    <li class="active" value="women">Women<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                    <li value="everyone">Everyone<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container__title title highlight">
+                <p>Age range</p>
+
+                <p class="sec-text">
+                    <span id="min_age">18</span>-<span id="max_age">35</span>
+                </p>
+            </div>
+            
+            <div class="container__content">
+                <range-selector
+                    id="yearSelector"
+                    min-label="Minimum"
+                    max-label="Maximum"
+                    min-range="18"
+                    max-range="100"
+                    preset-min="18" 
+                    preset-max="35"
+                    number-of-legend-items-to-show="2"
+                    slider-color="#6b5b95"
+                    circle-color="#f7d2f9"
+                    circle-border-color="#083535"
+                    hide-legend
+                    hide-label
+                />
+            </div>
+        </div>
+        
+        <div class="container pd_0">
+            <div class="container__title title highlight">
+                <p>Others</p>
+            </div>
+            
+            <div class="container__content">
+                <ul>
+                    <li value="men">Community guidelines</li>
+                    <li value="women">Safety tips</li>
+                    <li value="everyone">Safety centre</li>
+                    <li value="everyone">Privacy policy</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container logout">
+            <div class="container__content">
+                <a href="{{ url_for('auth.logout') }}" class="sec-text">Logout</a>
+            </div>
+        </div>
+
+        <div class="container delete_account">
+            <div class="container__content">
+                <a href="#" class="highlight">Delete Account</a>
+            </div>
+        </div>
+    </div>
+
+    {{ navbar_bottom(nav_data)}}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
+
+    <script>
+        function updateDistanceOnChange(){
+            // Set .progress label on page load
+            $("#distance").text( $(".progress").val() + " km");
+
+            const progress = document.querySelector('.progress');
+            
+            progress.addEventListener('input', function() {
+                const value = this.value;
+
+                this.style.background = `linear-gradient(to right, #6b5b95 0%, #6b5b95 ${value}%, #f3f4f6 ${value}%, #f3f4f6 100%)`
+                
+                $("#distance").text(value + " km");
+            })
+        }  
+        
+        function updateAgeOnChange(){
+            const root = document.querySelector('#yearSelector').shadowRoot;
+            
+            root.addEventListener('input', function() {
+                const min_value = root.getElementById("min").value;
+                const max_value = root.getElementById("max").value;
+
+                $("#min_age").text(min_value);
+                $("#max_age").text(max_value);
+            })
+        }
+
+        function changeCssOfAgeSlider(){
+            root = document.querySelector('#yearSelector').shadowRoot;
+            slider_min_max = root.getElementById("minMaxSlider");
+            slider_min = root.getElementById("min");
+            slider_max = root.getElementById("max");
+
+            slider_min_max.style.height = "6px";
+
+            slider_min.style.height = "6px";
+            slider_min.style.background = "#6b5b95";
+            slider_min.style.backgroundImage = "unset";
+            slider_min.style.margin = "0";
+            slider_min.style.borderTopLeftRadius     = "3px";
+            slider_min.style.borderBottomLeftRadius  = "3px";
+
+            slider_max.style.height = "6px";
+            slider_max.style.background = "#6b5b95";
+            slider_max.style.backgroundImage = "unset";
+            slider_max.style.margin = "0";
+            slider_max.style.borderTopRightRadius    = "3px";
+            slider_max.style.borderBottomRightRadius = "3px";
+        }
+
+        document.addEventListener("DOMContentLoaded", function(){
+            changeCssOfAgeSlider()
+        });
+
+        window.onload = function(){
+            updateDistanceOnChange();
+            updateAgeOnChange();
+        }
+    </script>
+
+    <!-- Change gender preferences -->
+    <script>
+        $(".container__content ul li").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+</body>
+</html>

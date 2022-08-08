@@ -1,0 +1,31 @@
+:root{
+    --button-size: 6rem;
+    --like-button-bg: hsl(120, 50%, 70%);
+    --dislike-button-bg: hsl(0, 50%, 70%);
+}
+
+.buttons{
+    padding: 2rem 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    bottom: 6rem;
+    z-index: 100;
+}
+
+.buttons .button .icon{
+    font-size: var(--button-size);
+    cursor: pointer;
+    min-width: 6rem !important;
+}
+
+.buttons .button#like .icon{
+    color: var(--like-button-bg);
+}
+
+.buttons .button#dislike .icon{
+    color: var(--dislike-button-bg);
+}

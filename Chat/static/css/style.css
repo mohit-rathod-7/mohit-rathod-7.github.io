@@ -163,8 +163,11 @@ li{
     position: fixed;
     display: flex;
     width: 100%;
+    z-index: 1000;
 }
 
 .loader img{
     margin: auto;
+    width: inherit;
+    transform: scale(1.5);
 }

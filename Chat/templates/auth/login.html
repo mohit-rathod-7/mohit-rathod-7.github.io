@@ -1,0 +1,82 @@
+{% from "macros/loader.html" import loader %}
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common %}
+
+<html>
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/login.css') }}">
+    
+    {{ common() }}
+</head>
+
+<body class="prevent-select">
+    {{ navbar_top() }}
+
+    {{ loader() }}
+
+    <div class="content">
+        <div id="top">
+            <p class="heading pri-text">
+                Login to<br>
+                a lovely<br>
+                life.
+            </p>
+            
+            <img loading="lazy" src="https://via.placeholder.com/174x208/fff/fff" data-src="{{ url_for('static', filename='img/playing_cards.svg') }}/">
+        </div>
+
+        <form class="form" id="loginForm" method="POST" action="{{ url_for('auth.login') }}">
+            <div>
+                {{ form.csrf_token }}
+
+                <input type="hidden" name="next" value="{{ request.args.get('next', '') }}" />
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="email">Enter your Email ID</label>
+                <input type="email" class="input_bar" name="email" id="email">
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="password">Enter your password</label>
+                
+                <div>
+                    <input type="password" class="input_bar password" name="password" id="password">
+                    <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
+                    <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
+                </div>
+            </div>
+
+            <div class="button" id="login" onclick="$('#loginForm').submit()">Login</div>
+
+            <div id="signup">
+                <p class="text sec-text">Don't have an account?</p>
+                <a class="title" href="{{ url_for('auth.signup') }}">Sign up</a>
+            </div>
+        </form>
+    </div>
+    
+    {{ navbar_bottom(nav_data) }}
+
+    
+    <!-- Handle Password visibility -->
+    <script>
+        $("body").on('click', '.password-icon', function(){
+            var input = $(".password");
+
+            if (input.attr("type") == "password"){
+                input.attr("type", "text");
+                $('.password-icon').css('display', 'none');
+                $('.password-icon.invisible').css('display', 'block');
+            }
+            else{
+                input.attr("type", "password");
+                $('.password-icon').css('display', 'block');
+                $('.password-icon.invisible').css('display', 'none');
+            }
+        });
+    </script>
+</body>
+</html>

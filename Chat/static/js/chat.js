@@ -1,27 +1,49 @@
-$(function(){
-    $("#send").on('click', function(){
-        var message = $("#message").val();
-        var trimmed_message = message.trim();
+$("#fullscreen").click(function(){
+    $('.input_bar').css('height', '15rem'); 
+    $('#fullscreen_exit').css('display', 'block'); 
+    $('#fullscreen').css('display', 'none'); 
+});
 
-        if (trimmed_message != ""){
-            var your_username = $("#your_username").val();
+$("#fullscreen_exit").click(function(){
+    $('.input_bar').css('height', '100%'); 
+    $('#fullscreen').css('display', 'block'); 
+    $('#fullscreen_exit').css('display', 'none'); 
+});
 
-            req =  $.ajax({
-                url : "/chat/send_message",
-                type: "POST",
-                data : {'username': your_username, 'message':message}
-            });
+function textAreaAdjust(element){
+    height = element.scrollHeight;
 
-            req.done(function(){
-                $('#message').val('');
-                $('#message').css("height", '100%');
-            });
-        }
-        else{
-            alert("Message is empty !!!");
+    if (height < 131){
+        element.style.height = (element.scrollHeight)+"px";
+    }
+    else{
+        console.log();
+    }
+}
+
+// Send message button
+$("#send").on('click', function(){
+    var message = $("#message").val();
+    var trimmed_message = message.trim();
+
+    if (trimmed_message != ""){
+        var your_username = $("#your_username").val();
+
+        req =  $.ajax({
+            url : "/chat/send_message",
+            type: "POST",
+            data : {'username': your_username, 'message':message, 'channel_name':$("#channel_name").val()}
+        });
+
+        req.done(function(){
             $('#message').val('');
-        }
-    });
+            $('#message').css("height", '100%');
+        });
+    }
+    else{
+        alert("Message is empty !!!");
+        $('#message').val('');
+    }
 });
 
 // Enable pusher logging - don't include this in production
@@ -32,7 +54,8 @@ var pusher = new Pusher('f1d4aad8ba9309f28a05', {
     encrypted: true
 });
 
-var channel = pusher.subscribe('my-channel');
+var channel_name = $("#channel_name").val();
+var channel = pusher.subscribe(channel_name);
 
 channel.bind('new-message', function(data){
     // alert(JSON.stringify(data));
@@ -45,7 +68,6 @@ channel.bind('new-message', function(data){
     var current_time = d.toLocaleTimeString("en-GB", {hour:'numeric', minute:'numeric', hour12: true});
     var current_date = d.toLocaleDateString("en-GB", {day: 'numeric', month: 'numeric', year: 'numeric'});
 
-    console.log("Current date :", current_date, "Current time :", current_time)
 
     let messaged_by_me = `
         <ul class="me message_container">
@@ -92,11 +114,9 @@ channel.bind('new-message', function(data){
     // For new chat
     if (latest_chat == undefined){
         if ($("#your_username").val() == data.username){
-            console.log("new chat sent by me")
             $(".chat_section").prepend(new_chat_by_me);
         }
         else{
-            console.log("new chat received")
             $(".chat_section").prepend(new_chat_received);
         }
     }

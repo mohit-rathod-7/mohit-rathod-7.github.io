@@ -1,0 +1,72 @@
+{% from "macros/loader.html" import loader %}
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common, GSAP, Pusher %}
+
+<html>
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat/home.css') }}">
+
+    {{ common() }}
+    {{ GSAP() }}
+    {{ JSGlue.include() }}
+</head>
+
+<body class="prevent-select">
+    {{ navbar_top() }}
+
+    <div class="loader">
+        <img src="assets/loader/loader.gif">
+    </div>
+
+    <div class="content">
+        <header>
+            <p class="heading sec-text">Your Conversations</p>
+        </header>
+
+        <div id="chats" class="container" data-your-key="0001">
+            <div class="profile" data-user-key="0002">
+                <div class="profile__image-div">
+                    <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="{{ url_for('static', filename='img/male_avatar.svg') }}">
+                </div>
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Aman Bamboli</p>
+                    <p class="profile__msg text sec-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="profile__msg-timestamp text sec-text">Today</p>
+                </div>
+            </div>
+            
+            <div class="profile" data-user-key="0003">
+                <div class="profile__image-div">
+                    <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="{{ url_for('static', filename='img/male_avatar.svg') }}"">
+                </div>
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Devansu Yadav</p>
+                    <p class="profile__msg text sec-text">Lorem ipsum dolor sit.</p>
+                    <p class="profile__msg-timestamp text sec-text">Yesterday</p>
+                </div>
+            </div>
+            
+            <div class="profile" data-user-key="0004">
+                <div class="profile__image-div">
+                    <img class="profile__image" loading="lazy" src="https://via.placeholder.com/50x50/eee/eee" data-src="{{ url_for('static', filename='img/male_avatar.svg') }}"">
+                </div>
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Vrutik Maru</p>
+                    <p class="profile__msg text sec-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="profile__msg-timestamp text sec-text">22/07/22</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ navbar_bottom(nav_data) }}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/initialize_chat.js') }}"></script>
+</body>
+</html>

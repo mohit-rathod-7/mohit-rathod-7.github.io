@@ -1,0 +1,68 @@
+{% from "macros/nav.html" import navbar_top, navbar_bottom %}
+{% from "macros/head.html" import common %}
+{% from "macros/loader.html" import loader %}
+
+<html>
+<head>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/like/like.css') }}">
+    
+    {{ common() }}
+</head>
+
+<body class="prevent-select">
+    {{ navbar_top() }}
+
+    {{ loader() }}
+
+    <div class="content">
+        <div id="no-likes">
+            <img loading="lazy" src="https://via.placeholder.com/266x303/eee/eee" data-src="{{ url_for('static', filename='img/spread_love.svg') }}">
+
+            <p class="heading">Spread Love</p>
+
+            <p class="text sec-text">
+                You can see here when somebody likes you,<br>
+                where you can match with them.
+            </p>
+        </div>
+
+        <header>
+            <p class="heading sec-text">Your likes</p>
+        </header>
+        
+        <div id="likes" class="container">
+            <div class="profile">
+                <img loading="lazy" class="profile__image" src="https://via.placeholder.com/180x260/eee/eee" data-src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Mohit Rathod,</p>
+                    <p class="profile__age text">21</p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img loading="lazy" class="profile__image" src="https://via.placeholder.com/180x260/eee/eee" data-src="https://images.unsplash.com/photo-1480429370139-e0132c086e2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80">
+                
+                <div class="profile__info">
+                    <p class="profile__name title">Devansu Yadav,</p>
+                    <p class="profile__age text">21</p>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img loading="lazy" class="profile__image" src="https://via.placeholder.com/180x260/eee/eee"  data-src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=370&q=80">
+                <div class="profile__info">
+                    <p class="profile__name title">Vrutik Maru,</p>
+                    <p class="profile__age text">21</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{ navbar_bottom(nav_data) }}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
