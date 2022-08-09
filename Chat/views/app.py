@@ -53,7 +53,7 @@ def not_found(e):
         }
     }
 
-    return render_template("error.html", nav_data=nav_data)
+    return render_template("error/error.html", nav_data=nav_data)
 
 
 db = SQLAlchemy(app)

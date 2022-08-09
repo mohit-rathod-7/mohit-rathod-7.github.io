@@ -56,6 +56,7 @@
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
     text-align: center;
+    width: -webkit-fill-available;
     color: var(--layer-cl);
     border-radius: 1rem;
     background: var(--layer-bg);
@@ -74,4 +75,9 @@
     margin-left: 0.5rem;
     color: var(--gray);
     font-size: var(--fs-button) !important;
+}
+
+.content .form .field .error{
+    color: red;
+    font-size: var(--fs-button);
 }

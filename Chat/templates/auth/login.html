@@ -36,20 +36,22 @@
 
             <div class="field">
                 <label class="title sec-text" for="email">Enter your Email ID</label>
-                <input type="email" class="input_bar" name="email" id="email">
+                <input type="email" class="input_bar" name="email" id="email" onkeyup="validateEmail()">
+                <span class="error" id="error_email"></span>
             </div>
 
             <div class="field">
                 <label class="title sec-text" for="password">Enter your password</label>
                 
                 <div>
-                    <input type="password" class="input_bar password" name="password" id="password">
+                    <input type="password" class="input_bar password" name="password" id="password" onkeyup="validatePassword()">
                     <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
+                    <span class="error" id="error_password"></span>
                 </div>
             </div>
 
-            <div class="button" id="login" onclick="$('#loginForm').submit()">Login</div>
+            <button class="button" id="login" type="submit" onclick="return validateLoginForm()">Login</button>
 
             <div id="signup">
                 <p class="text sec-text">Don't have an account?</p>
@@ -60,7 +62,10 @@
     
     {{ navbar_bottom(nav_data) }}
 
-    
+    <!-- LINK JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/auth/login.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validate.js') }}"></script>
+
     <!-- Handle Password visibility -->
     <script>
         $("body").on('click', '.password-icon', function(){
@@ -78,5 +83,6 @@
             }
         });
     </script>
+
 </body>
 </html>

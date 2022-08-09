@@ -33,30 +33,35 @@
 
             <div class="field">
                 <label class="title sec-text" for="email">Enter your Email ID</label>
-                <input type="email" id="email" class="input_bar" name="email" required>
+                <input type="email" id="email" class="input_bar" name="email" onkeyup="validateEmail()">
+                <span class="error" id="error_email"></span>
             </div>
 
             <div class="field">
                 <label class="title sec-text" for="password">Enter your password</label>
 
                 <div>
-                    <input type="password" class="input_bar password" name="password" id="password">
+                    <input type="password" class="input_bar password" name="password" id="password_1" onkeyup="validatePasswords()">
                     <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
                 </div>
+
+                <span class="error" id="error_password"></span>
             </div>
 
             <div class="field">
                 <label class="title sec-text" for="confirm_password">Enter your password again</label>
                 
                 <div>
-                    <input type="password" class="input_bar password" name="password">
+                    <input type="password" class="input_bar password" name="password" id="password_2" onkeyup="validatePasswords()">
                     <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
                 </div>
+
+                <span class="error" id="error_password"></span>
             </div>
 
-            <div class="button" id="signup" onclick="$('#signupForm').submit()">Signup</div>
+            <button class="button" id="signup" type="submit" onclick="return validateSignupForm()">Signup</button>
 
             <div id="login">
                 <p class="text sec-text">Already have an account?</p>
@@ -66,6 +71,10 @@
     </div>
     
     {{ navbar_bottom(nav_data) }}
+
+    <!-- LINK JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/auth/signup.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validate.js') }}"></script>
 
     <!-- Handle Password visibility -->
     <script>

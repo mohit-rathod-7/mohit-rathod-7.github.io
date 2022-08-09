@@ -121,12 +121,19 @@
 .card-chip{
     margin: 0 1rem 1rem 0;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: flex-start;
     width: max-content;
     font-size: var(--fs-button);
     font-weight: 500;
     color: var(--pri-text-cl);
     border-radius: 1.5rem;
     border: 0.1rem solid var(--border);
+}
+
+.card-chip .icon{
+    margin-right: 0.5rem;
+    font-size: var(--fs-button);
 }
 
 .card-chip.highlited{

@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
+from flask_login import login_required, current_user
 import pusher
 
 
@@ -30,11 +31,13 @@ nav_data = {
 
 
 @chat.route('/')
+@login_required
 def home():
     return render_template("chat/home.html", nav_data=nav_data)
 
 
 @chat.route('/<your_key>/<user_key>', methods=['GET', 'POST'])
+@login_required
 def conversation(your_key, user_key):
     if your_key == user_key:
         return ""

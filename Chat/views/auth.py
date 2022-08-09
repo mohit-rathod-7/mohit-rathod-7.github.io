@@ -62,7 +62,7 @@ def signup():
                     db.session.commit()
 
                     flash("Successfully Signed up", "success")
-                    return redirect(url_for('auth.one'))
+                    return redirect(url_for('auth.credentials', page_num='1'))
 
                 except:
                     flash("This username already exists", "error")
@@ -78,43 +78,50 @@ def signup():
         return redirect(url_for('recs.home'))
 
 
-@auth.route('/credentials/1/', methods=['GET', 'POST'])
-def one():
-    return ""
+@auth.route('/credentials/<page_num>/', methods=['GET', 'POST'])
+def credentials(page_num):
+    if request.method == "GET":
+        if page_num == "1":
+            print("ONE")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        elif page_num == "2":
+            print("TWO")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        elif page_num == "3":
+            print("THREE")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        elif page_num == "4":
+            print("FOUR")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        elif page_num == "5":
+            print("FIVE")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        elif page_num == "6":
+            print("SIX")
+            return render_template("auth/credentials.html", page_num=page_num, nav_data=nav_data)
+        else:
+            return ""
 
 
-@auth.route('/credentials/2/', methods=['GET', 'POST'])
-def two():
-    return ""
-
-@auth.route('/credentials/3/', methods=['GET', 'POST'])
-def three():
-    return ""
-
-
-@auth.route('/credentials/4/', methods=['GET', 'POST'])
-def four():
-    return ""
-
-
-@auth.route('/credentials/5/', methods=['GET', 'POST'])
-def five():
-    return ""
-
-
-@auth.route('/credentials/6/', methods=['GET', 'POST'])
-def six():
-    return ""
-
-
-@auth.route('/credentials/7/', methods=['GET', 'POST'])
-def seven():
-    return ""
-
-
-@auth.route('/credentials/8/', methods=['GET', 'POST'])
-def eight():
-    return ""
+    elif request.method == "POST":
+        if page_num == "1":
+            print("Post : ONE")
+            return redirect(url_for('auth.credentials', page_num='2'))
+        elif page_num == "2":
+            print("Post : TWO")
+            return redirect(url_for('auth.credentials', page_num='3'))
+        elif page_num == "3":
+            print("Post : THREE")
+            return redirect(url_for('auth.credentials', page_num='4'))
+        elif page_num == "4":
+            print("Post : FOUR")
+            return redirect(url_for('auth.credentials', page_num='5'))
+        elif page_num == "5":
+            print("Post : FIVE")
+            return redirect(url_for('auth.credentials', page_num='6'))
+        elif page_num == "6":
+            print("Post : SIX")
+            return "End of credentials"
 
 
 @auth.route('/login/', methods=['GET', 'POST'])
