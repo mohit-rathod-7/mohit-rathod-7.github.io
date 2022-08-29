@@ -63,6 +63,7 @@
     padding: 1.5rem;
     position: relative;
     font-size: var(--fs-caption);
+    color:var(--sec-text-cl);
     font-weight: var(--fw-bold);
     box-shadow: var(--boxshadow-bottom);
 }
