@@ -69,7 +69,7 @@
     background: #f6f5f4;
 }
 
-.content .container .container__content ul li .icon{
+.content .container .container__content ul li.gender .icon{
     margin: 1rem 1.5rem;
     position: absolute;
     top: 0;
@@ -78,7 +78,7 @@
     display: none;
 }
 
-.content .container .container__content ul li.active .icon{
+.content .container .container__content ul li.active.gender .icon{
     display: unset;
 }
 
