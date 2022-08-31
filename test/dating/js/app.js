@@ -35,4 +35,17 @@ $(window).on('load', function() {
     $('.material-icons').css('visibility', 'visible');
 });
 
-$('head').append('<style>.navbar__bottom{visibility:hidden}@media (orientation:portrait) and (height:' + $(window).height() + 'px){.navbar__bottom{visibility:visible}}@media (orientation:portrait) and (height:' + $(window).width() + 'px){.navbar__bottom{visibility:visible}}@media (orientation:landscape) and (height:' + $(window).width() + 'px){.navbar__bottom{visibility:visible}}@media (orientation:landscape) and (height:' + $(window).height() + 'px){.navbar__bottom{visibility:visible}}</style>')
+$('head').append(`<style>.navbar__bottom{visibility:hidden}
+@media (orientation:portrait) and (height:` + $(window).height() + `px){.navbar__bottom{visibility:visible}}
+@media (orientation:portrait) and (height:` + $(window).width() + `px){.navbar__bottom{visibility:visible}}
+@media (orientation:landscape) and (height:` + $(window).height() + `px){.navbar__bottom{visibility:visible}}
+@media (orientation:landscape) and (height:` + $(window).width() + `px){.navbar__bottom{visibility:visible}}
+</style>`)
+
+$('input').focus( function() {
+    $('.navbar__bottom').hide();
+});
+
+$('input').blur( function() {
+    $('.navbar__bottom').show();
+});
