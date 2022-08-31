@@ -62,8 +62,8 @@
 .content .container .container__content ul li{
     padding: 1.5rem;
     position: relative;
+    color: var(--sec-text-cl);
     font-size: var(--fs-caption);
-    color:var(--sec-text-cl);
     font-weight: var(--fw-bold);
     box-shadow: var(--boxshadow-bottom);
 }
@@ -99,6 +99,12 @@
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
     text-align: center;
+}
+
+.content .version{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: var(--fs-caption) !important;
 }
 
 .progress {
