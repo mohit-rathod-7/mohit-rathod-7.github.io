@@ -35,13 +35,6 @@ $(window).on('load', function() {
     $('.material-icons').css('visibility', 'visible');
 });
 
-$('head').append(`<style>
-@media (orientation:portrait)  and (height:`  + $(window).height() + `px){.navbar__top{visibility:visible;}}
-@media (orientation:portrait)  and (height:`  + $(window).width()  + `px){.navbar__top{visibility:visible;}}
-@media (orientation:landscape) and (height:`  + $(window).height() + `px){.navbar__top{visibility:hidden;}}
-@media (orientation:landscape) and (height:`  + $(window).width()  + `px){.navbar__top{visibility:hidden;}}
-</style>`)
-
 $('input').focus( function() {
     $('.navbar__bottom').hide();
 });
