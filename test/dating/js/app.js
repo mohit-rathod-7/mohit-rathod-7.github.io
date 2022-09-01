@@ -35,10 +35,12 @@ $(window).on('load', function() {
     $('.material-icons').css('visibility', 'visible');
 });
 
-$('input').focus( function() {
+$('input[type="text"], input[type="password"]').focus( function() {
     $('.navbar__bottom').hide();
+    $('.navbar__dummy').hide();
 });
 
-$('input').blur( function() {
+$('input[type="text"], input[type="password"]').blur( function() {
     $('.navbar__bottom').show();
+    $('.navbar__dummy').show();
 });
