@@ -48,38 +48,47 @@
         </div>
 
         <form class="form">
-            <div class="field">
-                <label class="title sec-text" for="email">Enter your Email ID</label>
-                <input type="email" class="input_bar" name="email">
+                        <div>
+                {{ form.csrf_token }}
+
+                <input type="hidden" name="next" value="{{ request.args.get('next', '') }}" />
             </div>
 
             <div class="field">
-                <label class="title sec-text" for="password">Enter your password</label>
+                <label class="title sec-text" for="username">Username</label>
+                <input type="text" id="username" class="input_bar" name="username" onkeyup="validateUsername()">
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="email">Email ID</label>
+                <input type="email" id="email" class="input_bar" name="email" onkeyup="validateEmail()">
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="password">Password</label>
 
                 <div>
-                    <input type="password" class="input_bar password" name="password">
+                    <input type="password" class="input_bar password" name="password" id="password" onkeyup="validatePasswords()">
                     <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
                 </div>
             </div>
 
             <div class="field">
-                <label class="title sec-text" for="confirm_password">Enter your password again</label>
+                <label class="title sec-text" for="confirm_password">Confirm password</label>
                 
                 <div>
-                    <input type="password" class="input_bar password" name="password">
+                    <input type="password" class="input_bar password" name="confirm_password" id="confirm_password" onkeyup="validatePasswords()">
                     <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
                 </div>
             </div>
 
-            <div class="button" id="signup">
-                <a href="credentials.html">Signup</a>
-            </div>
+            <button class="button" id="signup" type="submit" onclick="return validateSignupForm()">Signup</button>
 
             <div id="login">
                 <p class="text sec-text">Already have an account?</p>
-                <a class="title" href="login.html">Log in</a>
+                <a class="title" href="#">Log in</a>
             </div>
         </form>
     </div>
