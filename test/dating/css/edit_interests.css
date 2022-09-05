@@ -1,0 +1,59 @@
+.content {
+    padding: 0 3.5rem;
+}
+
+.content .form .field {
+    margin-top: 2rem;
+}
+
+.card-chips {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.card-chip {
+    margin: 0 1rem 1rem 0;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    font-size: var(--fs-button);
+    font-weight: 500;
+    color: var(--pri-text-cl);
+    border-radius: 1.5rem;
+    border: 0.1rem solid var(--border);
+    cursor: pointer;
+}
+
+.card-chip.selected {
+    border-color: var(--layer-cl);
+    border-width: 0.2rem;
+}
+
+.content .buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.content .buttons .button {
+    margin: 1.85rem 0;
+    padding: 1.5rem;
+    width: 100%;
+    font-size: var(--fs-button);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    color: var(--layer-cl);
+    border-radius: 1rem;
+}
+
+.content .buttons .button#update {
+    margin-left: 1rem;
+    background: var(--layer-bg);
+    border: 1px solid var(--layer-bg);
+}
+
+.content .buttons .button#cancel {
+    margin-right: 1rem;
+    border: 1px solid var(--layer-cl);
+}
