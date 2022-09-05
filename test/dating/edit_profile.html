@@ -1,0 +1,337 @@
+<html>
+<head>
+    <title>Edit Interests</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="hsl(298, 75%, 90%)">
+
+    <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href='css/navbar.css'>
+    <link rel="stylesheet" href='css/credentials.css'>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Google Fonts  & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'>
+     
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    </noscript> 
+</head>
+
+<body class="prevent-select">
+    <nav class="navbar navbar__top">
+        <h1 class="sub-heading">Date</h1>
+    </nav>
+
+    <div class="loader">
+        <img defer src="assets/loader/loader.gif">
+    </div>
+
+    <div class="content">
+        <form class="form" id="form" method="POST" action="#">      
+            <div class="field">
+                <label class="title sec-text" for="firstname">Enter your First name</label>
+                <input type="text" class="input_bar" name="firstname" id="firstname" placeholder="Eg : Mohit" required>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="middlename">Enter your Middle name</label>
+                <input type="text" class="input_bar" name="middlename" id="middlename" placeholder="Eg : Raj" required>
+            </div>
+            
+            <div class="field">
+                <label class="title sec-text" for="lastname">Enter your Last name</label>
+                <input type="text" class="input_bar" name="lastname" id="lastname" placeholder="Eg : Rathod" required>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="date_of_birth">Select your date of birth</label>
+                <input type="date" class="input_bar" name="date_of_birth" id="date_of_birth" required>
+            </div>
+            
+            <div class="field">
+                <label class="title sec-text" for="gender">Select your gender</label>
+                
+                <div style="display: flex; justify-content: flex-start">
+                    <label class="container">
+                        <input type="radio" name="gender" value="Male">
+                        <p>Male</p>
+                    </label>
+        
+                    <label class="container">
+                        <input type="radio" name="gender" value="Female">
+                        <p>Female</p>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="field">
+                <label class="title sec-text" for="mobile_number">Enter your Mobile number</label>
+                <input type="number" class="input_bar" name="mobile_number" id="mobile_number" placeholder="Eg : 9123456789" onkeyup="validateMobileNumber()" required>
+            </div>
+                    
+            <div class="field">         
+                <p class="sub-heading sec-text">Your current</p>
+            </div>
+
+            <div class="field">           
+                <label class="title sec-text" for="current_state">State</label>
+
+                <div class="select__wrapper">
+                    <select class="form-control" name="current_state" id="current_state">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="current_district">District</label>
+
+                <div class="select__wrapper">
+                    <select class="form-control" name="current_district" id="current_district">
+                        <option value="">-- select one -- </option>
+                    </select>
+                </div>    
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="current_city">City</label>
+                <input type="text" class="input_bar" name="current_city" id="current_city" placeholder="Eg : Mumbai">
+            </div>
+                    
+            <div class="field">         
+                <p class="sub-heading sec-text">You are from</p>
+            </div>
+
+            <div class="field">           
+                <label class="title sec-text" for="native_state">State</label>
+
+                <div class="select__wrapper">
+                    <select class="form-control" name="native_state" id="native_state">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="native_district">District</label>
+
+                <div class="select__wrapper">
+                    <select class="form-control" name="native_district" id="native_district">
+                        <option value="">-- select one -- </option>
+                    </select>
+                </div>    
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="native_city">City</label>
+                <input type="text" class="input_bar" name="native_city" id="native_city" placeholder="Eg : Mumbai">
+            </div>
+                    
+            <div class="field">
+                <label class="title sec-text" for="university">Your University</label>
+                <input type="text" class="input_bar" name="university" id="university" placeholder="Eg : Mumbai university">
+            </div>
+            
+            <div class="field">
+                <label class="title sec-text" for="job_title">Job title</label>
+                <input type="text" class="input_bar" name="job_title" id="job_title" placeholder="Eg : Software Engineer">
+            </div>
+
+            <div class="field">
+                <label class="title sec-text" for="height">Height</label>
+                
+                <div style="display: flex; justify-content: space-between; margin: 1rem 0;">
+                    <div>
+                        <label for="feet">Feets : </label>
+                        
+                        <div class="select__wrapper">
+                            <select name="feet" id="feet">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                        
+                    <div>    
+                        <label for="inch">Inches : </label>
+                        
+                        <div class="select__wrapper">
+                            <select name="inch" id="inch">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+            <div class="field">
+                <label class="title sec-text">What's your Zodiac sign?</label>
+                
+                <div class="card-chips zodiac_sign">
+                    <span  class="card-chip"  data-value="Capricorn">    Capricorn    </span>
+                    <span  class="card-chip"  data-value="Aquarius">     Aquarius     </span>
+                    <span  class="card-chip"  data-value="Pices">        Pices        </span>
+                    <span  class="card-chip"  data-value="Aries">        Aries        </span>
+                    <span  class="card-chip"  data-value="Taurus">       Taurus       </span>
+                    <span  class="card-chip"  data-value="Gemini">       Gemini       </span>
+                    <span  class="card-chip"  data-value="Cancer">       Cancer       </span>
+                    <span  class="card-chip"  data-value="Leo">          Leo          </span>
+                    <span  class="card-chip"  data-value="Virgo">        Virgo        </span>
+                    <span  class="card-chip"  data-value="Libra">        Libra        </span>
+                    <span  class="card-chip"  data-value="Scorpio">      Scorpio      </span>
+                    <span  class="card-chip"  data-value="Sagittarius">  Sagittarius  </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text">Do you have any pets?</label>
+                
+                <div class="card-chips pets">
+                    <span  class="card-chip"  data-value="Cat">                  Cat                  </span>
+                    <span  class="card-chip"  data-value="Dog">                  Dog                  </span>
+                    <span  class="card-chip"  data-value="Don't have but love">  Don't have but love  </span>
+                    <span  class="card-chip"  data-value="Pet-free">             Pet-free             </span>
+                    <span  class="card-chip"  data-value="All the pets">         All the pets         </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text">Do you smoke?</label>
+                
+                <div class="card-chips smokes">
+                    <span  class="card-chip"  data-value="Yes">           Yes           </span>
+                    <span  class="card-chip"  data-value="No">            No            </span>
+                    <span  class="card-chip"  data-value="Occasionally">  Occasionally  </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="title sec-text">Do you drink?</label>
+                
+                <div class="card-chips drinks">
+                    <span  class="card-chip"  data-value="Yes">           Yes           </span>
+                    <span  class="card-chip"  data-value="No">            No            </span>
+                    <span  class="card-chip"  data-value="Occasionally">  Occasionally  </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <nav class="navbar navbar__bottom">
+        <a href="home.html" id="home"><i class="icon material-icons material-symbols-outlined">home</i></a>
+        <a href="likes.html" id="likes"><i class="icon material-icons material-symbols-outlined">favorite</i></a>
+        <a href="chats.html" id="chats"><i class="icon material-icons material-symbols-outlined">chat_bubble</i></a>
+        <a href="user.html" id="user" class="disabled"><i class="icon material-icons material-symbols-filled">person</i></a>
+    </nav>
+    <div class="navbar__dummy"></div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
