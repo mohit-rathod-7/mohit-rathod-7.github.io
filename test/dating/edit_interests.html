@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>Edit Interests</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="hsl(298, 75%, 90%)">
+
+    <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href='css/navbar.css'>
+    <link rel="stylesheet" href='css/edit_interests.css'>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Google Fonts  & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'>
+     
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    </noscript> 
+</head>
+
+<body class="prevent-select">
+    <nav class="navbar navbar__top">
+        <h1 class="sub-heading">Date</h1>
+    </nav>
+
+    <div class="loader">
+        <img defer src="assets/loader/loader.gif">
+    </div>
+
+    <div class="content">
+        <form class="form" id="form" method="POST" action="#">
+            <div class="field">
+                <label class="title sec-text">What are your Interests?</label>
+                
+                <div class="card-chips">
+                    <span class="card-chip selected" data-value="Cricket">Cricket</span>
+                    <span class="card-chip" data-value="Football">Football</span>
+                    <span class="card-chip" data-value="Badminton">Badminton</span>
+                    <span class="card-chip" data-value="Hockey">Hockey</span>
+                    <span class="card-chip" data-value="Running">Running</span>
+                    <span class="card-chip" data-value="House Parties">House Parties</span> 
+                    <span class="card-chip" data-value="Bollywood">Bollywood</span>
+                    <span class="card-chip" data-value="Movies">Movies</span> 
+                    <span class="card-chip selected" data-value="Music">Music</span>
+                    <span class="card-chip" data-value="Road Trips">Road Trips</span>
+                    <span class="card-chip" data-value="Photography">Photography</span>
+                    <span class="card-chip" data-value="Stand up Comedy">Stand up Comedy</span>
+                    <span class="card-chip selected" data-value="Walking">Walking</span>
+                    <span class="card-chip" data-value="Reading">Reading</span>
+                    <span class="card-chip" data-value="Foodie">Foodie</span>
+                    <span class="card-chip" data-value="Shopping">Shopping</span>
+                    <span class="card-chip" data-value="Clubbing">Clubbing</span>  
+                    <span class="card-chip" data-value="Home Workout">Home Workout</span>
+                    <span class="card-chip" data-value="Gym">Gym</span>
+                    <span class="card-chip" data-value="Online Gaming">Online Gaming</span>
+                    <span class="card-chip selected" data-value="Investing">Investing</span>
+                    <span class="card-chip" data-value="Drawing">Drawing</span>
+                    <span class="card-chip" data-value="Cooking">Cooking</span>
+                    <span class="card-chip selected" data-value="Cycling">Cycling</span>
+                    <span class="card-chip" data-value="Dancing">Dancing</span>
+                    <span class="card-chip" data-value="Real Estate">Real Estate</span>
+                    <span class="card-chip" data-value="Vlogging">Vlogging</span>
+                    <span class="card-chip" data-value="Makeup">Makeup</span>
+                    <span class="card-chip" data-value="Hiking">Hiking</span>
+                    <span class="card-chip" data-value="Memes">Memes</span>
+                    <span class="card-chip" data-value="Blogging">Blogging</span>
+                    <span class="card-chip" data-value="Comedy">Comedy</span>
+                    <span class="card-chip" data-value="Yoga">Yoga</span>
+                    <span class="card-chip" data-value="Swimming">Swimming</span>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="button" id="cancel" type="button" onclick="history.back()">Cancel</button>
+                <button class="button" id="update" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+
+    <nav class="navbar navbar__bottom">
+        <a href="home.html" id="home"><i class="icon material-icons material-symbols-outlined">home</i></a>
+        <a href="likes.html" id="likes"><i class="icon material-icons material-symbols-outlined">favorite</i></a>
+        <a href="chats.html" id="chats"><i class="icon material-icons material-symbols-outlined">chat_bubble</i></a>
+        <a href="user.html" id="user" class="disabled"><i class="icon material-icons material-symbols-filled">person</i></a>
+    </nav>
+    <div class="navbar__dummy"></div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script defer> 
+        var interests = [];
+
+        $(window).on('load', function() {
+            var selected = document.getElementsByClassName("selected");
+
+            for (i=0; i<selected.length; i++){
+                interests.push(selected[i].getAttribute('data-value'));
+            }
+        });
+
+        $('.card-chip').on('click', function(){
+            if ($(this)[0].classList[1] == "selected"){
+                $(this).removeClass('selected');
+                interests.splice($.inArray($(this)[0].getAttribute('data-value'), interests), 1);
+            }
+            else if (interests.length > 4){
+                alert("You can only select upto 5 interests");
+            }
+            else{
+                $(this).addClass('selected');
+                interests.push($(this)[0].getAttribute('data-value'));
+            }
+
+            var parent = $(this).parent()[0].classList[1];
+            var parent_value = $(this)[0].getAttribute('data-value');
+            $("#"+parent).val(parent_value); 
+        }); 
+
+        $('#update').on('click', function(e){
+            if (interests.length == 0){
+                e.preventDefault();
+                alert("PLease select atleast 1 interest")
+            }
+            else{
+                interests.forEach(function(interest){   
+                    let index = interests.indexOf(interest)+1;
+                    let input_tag = `<input  type="hidden"  name="option_${index}"  id="option_${index}"  value="${interest}">`
+                    $(".form div")[0].innerHTML += input_tag;
+                });    
+            }
+        });
+    </script>
+</body>
+</html>
