@@ -7,7 +7,7 @@
 }
 
 .content #top{
-    margin: 4.5rem auto;
+    margin: 3rem auto;
     display: flex;
 }
 
@@ -51,18 +51,36 @@
     box-shadow: var(--boxshadow);
 }
 
+.content .form .field input[type="checkbox"]{
+    height: 1.5rem;
+    aspect-ratio: 1;
+    margin-right: 0.5rem;
+}
+
+.content .form .field span{
+    display: flex;
+    align-items: baseline;
+}
+
+.content .form .field .forget-password{
+    color: var(--gray);
+    font-size: var(--fs-button) !important;
+}
+
 .content .form .button#login{
-    margin: 3.25rem 0;
+    margin: 2.5rem 0;
     padding: 1.5rem;
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
     text-align: center;
     color: var(--layer-cl);
+    width: -webkit-fill-available;
     border-radius: 1rem;
     background: var(--layer-bg);
 }
 
 .content .form #signup{
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
 }
@@ -75,4 +93,15 @@
     margin-left: 0.5rem;
     color: var(--gray);
     font-size: var(--fs-button) !important;
+}
+
+.content .form .field input.error{
+    color: initial;
+    font-size: var(--fs-button);
+    border: 1px solid red;
+}
+
+.content .form .field .error{
+    color: red;
+    font-size: var(--fs-button);
 }
