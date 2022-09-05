@@ -60,15 +60,19 @@
 }
 
 .card-header{
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     display: flex;
     align-items: baseline;
     box-shadow: unset;
-    color: var(--primary-cl);
 }
 
-.card-age{
-    margin-left: 1rem;
+.card-name.heading{
+    font-size: var(--fs-3) !important;
+}
+
+.card-age.sub-heading{
+    margin-left: 0.75rem;
+    font-size: var(--fs-6) !important;
     font-weight: var(--fw-normal) !important;
 }
 
@@ -121,6 +125,8 @@
 .card-chip{
     margin: 0 1rem 1rem 0;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: flex-start;
     width: max-content;
     font-size: var(--fs-button);
     font-weight: 500;
@@ -129,7 +135,12 @@
     border: 0.1rem solid var(--border);
 }
 
-.card-chip.highlited{
+.card-chip .icon{
+    margin-right: 0.5rem;
+    font-size: var(--fs-button);
+}
+
+.card-chip.highlighted{
     border-color: var(--layer-cl);
     border-width: 0.2rem;
 }
@@ -153,6 +164,24 @@
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     word-spacing: 0.25rem;
+}
+
+.content #top{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content #top img{
+    margin-bottom: 2rem;
+    width: 65%;
+}
+
+.content #top p{
+    margin: 0.5rem 0;
+    letter-spacing: 0.1rem;
 }
 
 
