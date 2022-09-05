@@ -48,12 +48,6 @@
         </div>
 
         <form class="form">
-                        <div>
-                {{ form.csrf_token }}
-
-                <input type="hidden" name="next" value="{{ request.args.get('next', '') }}" />
-            </div>
-
             <div class="field">
                 <label class="title sec-text" for="username">Username</label>
                 <input type="text" id="username" class="input_bar" name="username" onkeyup="validateUsername()">
