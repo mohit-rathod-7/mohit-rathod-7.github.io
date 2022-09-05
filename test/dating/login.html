@@ -65,6 +65,15 @@
                     <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
                 </div>
             </div>
+            
+            <div class="field" style="display: flex; justify-content: space-between; align-self: center;">
+                <span>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label class="title sec-text" for="remember">Remember me</label>
+                </span>
+
+                <a class="title forget-password" href="{{ url_for('auth.reset_password') }}">Forget password?</a>
+            </div>
 
             <div class="button" id="login">
                 <a href="#">Login</a>
