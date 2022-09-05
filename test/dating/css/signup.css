@@ -8,13 +8,16 @@
 
 .content #top{
     margin: 2.5rem auto;
-    display: flex;
 }
 
 .content #top p{
     letter-spacing: 0.1rem;
     text-align: center;
-    
+}
+
+.content #top img{
+    margin: 2rem 0;
+    width: 100%;
 }
 
 .content .form .field{
@@ -56,12 +59,14 @@
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
     text-align: center;
+    width: -webkit-fill-available;
     color: var(--layer-cl);
     border-radius: 1rem;
     background: var(--layer-bg);
 }
 
 .content .form #login{
+    margin-bottom: 1.2rem;
     display: flex;
     justify-content: center;
 }
@@ -74,4 +79,15 @@
     margin-left: 0.5rem;
     color: var(--gray);
     font-size: var(--fs-button) !important;
+}
+
+.content .form .field input.error{
+    color: initial;
+    font-size: var(--fs-button);
+    border: 1px solid red;
+}
+
+.content .form .field .error{
+    color: red;
+    font-size: var(--fs-button);
 }
