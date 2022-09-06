@@ -163,6 +163,8 @@ li{
     position: fixed;
     display: flex;
     width: 100%;
+    background: #fcfefb;
+    z-index: 1000;
 }
 
 .loader img{
