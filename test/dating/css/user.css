@@ -62,7 +62,7 @@
 .content .container .container__content ul li{
     padding: 1.5rem;
     position: relative;
-    color: var(--sec-text-cl);
+    color:var(--sec-text-cl);
     font-size: var(--fs-caption);
     font-weight: var(--fw-bold);
     box-shadow: var(--boxshadow-bottom);
@@ -72,11 +72,14 @@
     background: #f6f5f4;
 }
 
-.content .container .container__content ul li.gender .icon{
+.content .container .container__content ul li .icon{
     margin: 1rem 1.5rem;
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.content .container .container__content ul li.gender .icon{
     color: #3fb950;
     display: none;
 }
@@ -108,7 +111,6 @@
 }
 
 .progress {
-    background: linear-gradient(to right, #6b5b95 0%, #6b5b95 20%, #f3f4f6 0%, #f3f4f6 100%);
     border-radius: 3px;
     height: 6px;
     outline: none;
