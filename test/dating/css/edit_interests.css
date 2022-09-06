@@ -55,6 +55,6 @@
 
 .content .buttons .button#cancel {
     margin-right: 1rem;
-    border: 1px solid var(--layer-cl);
     background: inherit;
+    border: 1px solid var(--layer-cl);
 }
