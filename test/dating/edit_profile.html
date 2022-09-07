@@ -30,7 +30,7 @@
         <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
     </noscript> 
     
-    <style>    
+    <style>   
         .content .buttons{
             display: flex;
             flex-direction: row;
@@ -39,12 +39,17 @@
 
         .content .buttons .button{
             display: block;
+            height: unset;
         }
 
         .content .form section{
             padding-bottom: 2rem;
             margin-bottom: 3rem;
             box-shadow: var(--boxshadow-bottom);
+        }
+
+        .content .form section:last-of-type{
+            margin-bottom: 0;
         }
     </style>
 </head>
