@@ -43,15 +43,36 @@
             <h1 class="title">Devansu Yadav</h1>
         </div>
         
-        <a href="#" class="nav__link" id="menu"><i class="icon material-icons material-symbols-outlined">more_vert</i></a>
-        <a href="#" class="nav__link" id="close"><i class="icon material-icons material-symbols-outlined">close</i></a>
-
-        <div class="nav__modal">
-            <a href="#" class="nav__modal-link text sec-text">View Profile</a>
-            <a href="#" class="nav__modal-link text sec-text">Clear chat</a>
-            <a href="#" class="nav__modal-link text sec-text">Report</a>
-            <a href="#" class="nav__modal-link text sec-text">Block</a>
+        <a href="#" class="nav__link" id="menu" onclick="toggleMenu()"><i class="icon material-icons material-symbols-outlined">more_vert</i></a>
+        <a href="#" class="nav__link" id="close" onclick="toggleMenu()"><i class="icon material-icons material-symbols-outlined">close</i></a>
+    
+        <div class="nav__modal_wrap" id="nav__modal_wrap">
+            <div class="nav__modal">
+                <a href="#" class="nav__modal-link text sec-text">View Profile</a>
+                <a href="#" class="nav__modal-link text sec-text">Clear chat</a>
+                <a href="#" class="nav__modal-link text sec-text">Report</a>
+                <a href="#" class="nav__modal-link text sec-text">Block</a>
+            </div>
         </div>
+    
+        <script>
+            // Handle Nav Modal
+            $("#menu").click(function(){
+                $('#close').css('display', 'block'); 
+                $('#menu').css('display', 'none'); 
+            });
+    
+            $("#close").click(function(){
+                $('#menu').css('display', 'block'); 
+                $('#close').css('display', 'none'); 
+            });
+    
+            let navModalWrap = document.getElementById("nav__modal_wrap");
+    
+            function toggleMenu(){
+                navModalWrap.classList.toggle("open_menu");
+            }
+        </script>
     </nav>
 
     <div class="loader">
@@ -284,21 +305,6 @@
     <div class="navbar__dummy"></div>
 
     <script type="text/javascript" src="js/app.js"></script>
-
-    <!-- Handle Nav Modal -->
-    <script>
-        $("#menu").click(function(){
-            $('.nav__modal').css('display', 'flex'); 
-            $('#close').css('display', 'block'); 
-            $('#menu').css('display', 'none'); 
-        });
-
-        $("#close").click(function(){
-            $('.nav__modal').css('display', 'none'); 
-            $('#menu').css('display', 'block'); 
-            $('#close').css('display', 'none'); 
-        });
-    </script>
 
     <!-- Handle Message bar -->
     <script>
