@@ -127,6 +127,12 @@
     outline: none;
 }
 
+.message_bar .message_bar__form .stickers{
+    margin-right: 1.5rem;
+    padding: 0.8rem 0;
+    cursor: pointer;
+}
+
 .message_bar .message_bar__form .send .icon{
     margin-left: 1.5rem;
     padding: 0.8rem;
