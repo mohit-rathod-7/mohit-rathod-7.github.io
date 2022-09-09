@@ -123,10 +123,14 @@
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board header .icon{
-    margin: 0.8rem;
+    padding: 0.8rem;
     max-width: 3.2rem;
     max-height: 3.2rem;
     cursor: pointer;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board header .icon.active{
+    border-bottom: 0.1rem solid var(--layer-cl);
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board section{
