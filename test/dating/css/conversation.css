@@ -61,7 +61,6 @@
     box-shadow: var(--boxshadow);
 }
 
-
 .navbar.navbar__top .nav__modal .nav__modal-link{
     padding: 1.15rem;
     width: -webkit-fill-available;
@@ -92,13 +91,64 @@
     padding: 1rem 1.5rem;
 }
 
-.message_bar .message_bar__form div{
+.message_bar .message_bar__form .stickers__wrapper .stickers__open{
+    margin-right: 1.5rem;
+    padding: 0.8rem 0;
+    min-width: 2.4rem;
+    cursor: pointer;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__close{
+    margin-right: 1.5rem;
+    padding: 0.8rem 0;
+    min-width: 2.4rem;
+    color: var(--layer-cl);
+    display: none;
+    cursor: pointer;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board{
+    position: absolute;
+    left: 0;
+    bottom: 6rem;
+    width: 100%;
+    height: 30rem;
+    background: #f3f4f6;
+    display: none;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board header{
+    display: flex;
+    box-shadow: var(--boxshadow-bottom);
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board header .icon{
+    margin: 0.8rem;
+    max-width: 3.2rem;
+    max-height: 3.2rem;
+    cursor: pointer;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board section{
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.message_bar .message_bar__form .stickers__wrapper .stickers__board section .icon{
+    margin: 0.8rem;
+    max-width: 3.2rem;
+    max-height: 3.2rem;
+    cursor: pointer;
+}
+
+.message_bar .message_bar__form .input_bar__wrapper{
     display: flex;
     width: 100%;
     position:relative;
 }
 
-.message_bar .message_bar__form div > a{
+.message_bar .message_bar__form .input_bar__wrapper .icon{
     padding: 0.8rem;
     position: absolute;
     top: 0;
@@ -106,7 +156,7 @@
     cursor: pointer;
 }
 
-.message_bar .message_bar__form div > a#fullscreen_exit{
+.message_bar .message_bar__form .input_bar__wrapper #fullscreen_exit.icon{
     display: none;
 }
 
@@ -127,14 +177,7 @@
     outline: none;
 }
 
-.message_bar .message_bar__form .stickers{
-    margin-right: 1.5rem;
-    padding: 0.8rem 0;
-    min-width: 2.4rem;
-    cursor: pointer;
-}
-
-.message_bar .message_bar__form .send .icon{
+.message_bar .message_bar__form .send.icon{
     margin-left: 1.5rem;
     padding: 0.8rem;
     cursor: pointer;
@@ -161,6 +204,7 @@
 
 .content .container .chat_section .chat{
     width: inherit;
+    margin-bottom: auto;
 }
 
 .content .container .chat_section .chat .date{
