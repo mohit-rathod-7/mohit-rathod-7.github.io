@@ -130,6 +130,7 @@
 .message_bar .message_bar__form .stickers{
     margin-right: 1.5rem;
     padding: 0.8rem 0;
+    min-width: 2.4rem;
     cursor: pointer;
 }
 
