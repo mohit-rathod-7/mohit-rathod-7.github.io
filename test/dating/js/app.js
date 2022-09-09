@@ -35,12 +35,14 @@ $(window).on('load', function() {
     $('.material-icons').css('visibility', 'visible');
 });
 
-$('input[type="text"], input[type="password"]').focus( function() {
+$('input[type="text"], input[type="password"], textarea').focus( function() {
     $('.navbar__bottom').hide();
     $('.navbar__dummy').hide();
+    $('.content').css('bottom', 0);
 });
 
-$('input[type="text"], input[type="password"]').blur( function() {
+$('input[type="text"], input[type="password"], textarea').blur( function() {
     $('.navbar__bottom').show();
     $('.navbar__dummy').show();
+    $('.content').css('bottom', '6rem');
 });
