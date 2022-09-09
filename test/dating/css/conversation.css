@@ -35,17 +35,32 @@
     width: 4rem;
 }
 
-.navbar.navbar__top .nav__modal{
+.navbar.navbar__top .nav__modal_wrap{
     position: absolute;
-    display: none;
+    display: flex;
     flex-direction: column;
     top: 6rem;
     right: 0;
     width: 50%;
-    max-width: 50%;
+    max-width: 20rem;
+    background: var(--white);
+    box-shadow: var(--boxshadow);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.navbar.navbar__top .nav__modal_wrap.open_menu{
+    max-height: 18.2rem;
+}
+
+.navbar.navbar__top .nav__modal{
+    display: flex;
+    flex-direction: column;
     background: var(--white);
     box-shadow: var(--boxshadow);
 }
+
 
 .navbar.navbar__top .nav__modal .nav__modal-link{
     padding: 1.15rem;
