@@ -47,7 +47,7 @@
     box-shadow: var(--boxshadow);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s;
+    transition: max-height 0.25s;
 }
 
 .navbar.navbar__top .nav__modal_wrap.open_menu{
