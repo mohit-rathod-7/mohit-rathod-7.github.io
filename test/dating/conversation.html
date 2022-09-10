@@ -414,7 +414,7 @@
         $(".stickers__open").click(function(){
             $('.stickers__open').css('display', 'none'); 
             $('.stickers__close').css('display', 'block'); 
-            
+
             $('.chat_section').css({
                 'pointer-events': 'none',
                 'opacity': 0.5,
@@ -422,7 +422,7 @@
 
             $('.message_bar').css({
                 'pointer-events': 'auto',
-                'opacity': '1 !important',
+                'opacity': 1,
             });
         });
 
@@ -431,12 +431,12 @@
             $('.stickers__close').css('display', 'none');
 
             $('.chat_section').css({
-                'pointer-events': 'auto',
+                'pointer-events': 'aunset',
                 'opacity': 1,
             });
 
             $('.message_bar').css({
-                'pointer-events': 'auto',
+                'pointer-events': 'unset',
                 'opacity': 1,
             });
         });
