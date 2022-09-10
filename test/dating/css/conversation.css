@@ -134,15 +134,15 @@
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board section{
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     display: flex;
     flex-wrap: wrap;
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board section .icon{
-    margin: 0.8rem;
-    max-width: 3.2rem;
-    max-height: 3.2rem;
+    margin: 0.7rem;
+    max-width: 6.4rem;
+    max-height: 6.4rem;
     cursor: pointer;
 }
 
