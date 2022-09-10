@@ -87,8 +87,9 @@
 }
 
 .message_bar .message_bar__form{
-    display: flex;
     padding: 1rem 1.5rem;
+    display: flex;
+    background: var(--white);
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__open{
@@ -114,17 +115,19 @@
     width: 100%;
     max-height: 0;
     background: #f3f4f6;
-    overflow: hidden;
+    overflow-y: scroll;
     transition: max-height 0.5s;
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board__wrapper.open{
-    max-height: 29rem;
+    max-height: 30rem;
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board header{
     display: flex;
     box-shadow: var(--boxshadow-bottom);
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board header .icon{
@@ -139,13 +142,12 @@
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board section{
-    padding: 0.3rem 0;
     display: flex;
     flex-wrap: wrap;
 }
 
 .message_bar .message_bar__form .stickers__wrapper .stickers__board section .icon{
-    margin: 0.7rem;
+    margin: 0.5rem 0.7rem;
     max-width: 6.4rem;
     max-height: 6.4rem;
     cursor: pointer;
