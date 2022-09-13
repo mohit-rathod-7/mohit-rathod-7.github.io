@@ -8,16 +8,6 @@
     text-align: center;
 }
 
-.content header #edit_profile{
-    position: absolute;
-    padding: 1rem;
-    right: 10.75rem;
-    bottom: 1rem;
-    background: #f3f4f6;
-    border-radius: 50%;
-    box-shadow: var(--boxshadow);
-}
-
 .content header img{
     width: 50%;
     border-radius: 50%;
