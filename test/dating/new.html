@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Edit Interests</title>
+    <title>User</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="hsl(298, 75%, 90%)">
@@ -281,38 +281,37 @@
     </script>
 
     <!-- Open Modals -->
-    
     <script>
         let modalWrap = document.getElementById("modal__wrapper");
 
         function toggleModalContent(element){
             modalWrap.classList.toggle("open");
-            $('.'+element).css('display', 'block'); 
-        }
-
-        // Handle Nav Modal
-        $("#menu").click(function(){
-            $('#close').css('display', 'block'); 
-            $('#menu').css('display', 'none'); 
-            $('.content').css({
+            
+            $('.content header').css({
                 'pointer-events': 'none',
                 'opacity': 0.5,
             });
-        });
+
+            $('.modal__wrapper').css({
+                'pointer-events': 'auto',
+                'opacity': 1,
+            });
+
+            $('.'+element).css('display', 'block'); 
+        }
+
 
         $(".card-close").click(function(){
             modalWrap.classList.toggle("open");
 
-            $('#menu').css('display', 'block'); 
-            $('#close').css('display', 'none'); 
-            $('.content').css({
+            $('.content header').css({
                 'pointer-events': 'auto',
                 'opacity': 1
             });
 
             setTimeout(function(){
                 $('.modal__content').css('display', 'none'); 
-            }, 1000)
+            }, 750)
         });
     </script>
 </body>
