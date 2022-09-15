@@ -5,7 +5,9 @@
 
 .content header img{
     width: 50%;
+    max-width: 18rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .content header .verified{
