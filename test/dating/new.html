@@ -1,0 +1,326 @@
+<html>
+<head>
+    <title>Edit Interests</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="hsl(298, 75%, 90%)">
+
+    <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href='css/navbar.css'>
+    <link rel="stylesheet" href='css/new.css'>
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Google Fonts  & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'>
+     
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    </noscript> 
+</head>
+
+<body class="prevent-select">
+    <nav class="navbar navbar__top">
+        <h1 class="sub-heading">Date</h1>
+    </nav>
+
+    <div class="loader">
+        <img defer src="assets/loader/loader.gif">
+    </div>
+
+    <div class="content">
+        <header>
+            <img loading="lazy" src="https://via.placeholder.com/195x195/eee/eee" data-src="assets/dark/profile_pic.svg">
+
+            <div class="heading highlight" style="margin-top: 3rem;">Mohit Rathod</div>
+        
+            <section>
+                <div>
+                    <span id="settings" onclick="toggleModalContent('settings')"><i class="material-icons material-symbols-filled">settings</i></span>
+                    <p class="title sec-text">SETTINGS</p>
+                </div>
+                
+                <div>
+                    <span id="profile" onclick="toggleModalContent('profile')"><i class="material-icons material-symbols-filled">person</i></span>
+                    <p class="title sec-text">PROFILE</p>
+                </div>
+
+                <div>
+                    <span id="info" onclick="toggleModalContent('info')"><i class="material-icons material-symbols-outlined">priority_high</i></span>
+                    <p class="title sec-text">INFO</p>
+                </div>
+            </section>
+
+            <div class="version text sec-text">Version 1.0.1</div>
+        </header>
+        
+        <div class="modal__wrapper" id="modal__wrapper">
+            <div class="modal__content settings">
+                <div class="card-close">
+                    <i class="icon material-icons material-symbols-filled">close</i>
+                </div>
+
+                <div class="container">
+                    <div class="container__title title highlight">
+                        <p>Age range</p>
+        
+                        <p class="sec-text">
+                            <span id="min_age">18</span>-<span id="max_age">35</span>
+                        </p>
+                    </div>
+                    
+                    <div class="container__content">
+                        <range-selector
+                            id="yearSelector"
+                            min-label="Minimum"
+                            max-label="Maximum"
+                            min-range="18"
+                            max-range="100"
+                            preset-min="18" 
+                            preset-max="35"
+                            number-of-legend-items-to-show="2"
+                            slider-color="#6b5b95"
+                            circle-color="#f7d2f9"
+                            circle-border-color="#083535"
+                            hide-legend
+                            hide-label
+                        />
+                    </div>
+                </div>
+        
+                <div class="container pd_0">
+                    <div class="container__title title highlight">
+                        <p>Show me</p>
+                    </div>
+                    
+                    <div class="container__content">
+                        <ul>
+                            <li value="men"class="gender">Men<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                            <li class="gender active" value="women">Women<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                            <li value="everyone"class="gender">Everyone<span class="icon material-icons material-symbols-filled">check_circle</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__content profile">
+                <div class="card-close">
+                    <i class="icon material-icons material-symbols-filled">close</i>
+                </div>
+
+                <!-- <div class="container">
+                    <div class="container__title title highlight">
+                        <p>Maximum distance</p>
+                        <p class="sec-text" id="distance"></p>
+                    </div>
+                    
+                    <div class="container__content">
+                        <input class="progress" type="range" min="1" max="100" value="{{user_settings.max_distance}}">
+                    </div>
+                </div> -->
+
+                <div class="container pd_0">
+                    <div class="container__title title highlight">
+                        <p>Profile</p>
+                    </div>
+                            
+                    <div class="container__content">
+                        <ul>
+                            <li onclick="window.location.href='629501951631/'">View profile
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+                            
+                            <li onclick="window.location.href='edit_profile.html'">Edit profile
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+
+                            <li onclick="window.location.href='edit_photos.html'">Edit photos
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+                            
+                            <li onclick="window.location.href='edit_interests.html'">Edit interests
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+                            
+                            <li onclick="window.location.href='reset_password.html'">Change password
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal__content info">
+                <div class="card-close">
+                    <i class="material-icons material-symbols-filled">close</i>
+                </div>
+
+                <div class="container pd_0">
+                    <div class="container__title title highlight">
+                        <p>Others</p>
+                    </div>
+                    
+                    <div class="container__content">
+                        <ul>
+                            <li value="men">Community guidelines
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+
+                            <li value="women">Safety tips
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+
+                            <li value="everyone">Safety centre
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+
+                            <li value="everyone">Privacy policy
+                                <span class="icon icon material-icons material-symbols-filled" style="visibility: visible;">navigate_next</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container logout">
+                    <div class="container__content">
+                        <a href="#" class="sec-text">Logout</a>
+                    </div>
+                </div>
+        
+                <div class="container delete_account">
+                    <div class="container__content">
+                        <a href="#" class="highlight">Delete Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar__bottom">
+        <a href="home.html" id="home"><i class="icon material-icons material-symbols-outlined">home</i></a>
+        <a href="likes.html" id="likes"><i class="icon material-icons material-symbols-outlined">favorite</i></a>
+        <a href="chats.html" id="chats"><i class="icon material-icons material-symbols-outlined">chat_bubble</i></a>
+        <a href="user.html" id="user" class="disabled"><i class="icon material-icons material-symbols-filled">person</i></a>
+    </nav>
+    <div class="navbar__dummy"></div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components@latest/dist/simpleRange.min.js"></script>
+
+    <script>
+        // function updateDistanceOnChange(){
+        //     // Set .progress label on page load
+        //     $("#distance").text( $(".progress").val() + " km");
+
+        //     const progress = document.querySelector('.progress');
+            
+        //     progress.addEventListener('input', function() {
+        //         const value = this.value;
+
+        //         this.style.background = `linear-gradient(to right, #6b5b95 0%, #6b5b95 ${value}%, #f3f4f6 ${value}%, #f3f4f6 100%)`
+                
+        //         $("#distance").text(value + " km");
+        //     })
+        // }  
+        
+        function updateAgeOnChange(){
+            const root = document.querySelector('#yearSelector').shadowRoot;
+            
+            root.addEventListener('input', function() {
+                const min_value = root.getElementById("min").value;
+                const max_value = root.getElementById("max").value;
+
+                $("#min_age").text(min_value);
+                $("#max_age").text(max_value);
+            })
+        }
+
+        function changeCssOfAgeSlider(){
+            root = document.querySelector('#yearSelector').shadowRoot;
+            slider_min_max = root.getElementById("minMaxSlider");
+            slider_min = root.getElementById("min");
+            slider_max = root.getElementById("max");
+
+            slider_min_max.style.height = "6px";
+
+            slider_min.style.height = "6px";
+            slider_min.style.background = "#6b5b95";
+            slider_min.style.backgroundImage = "unset";
+            slider_min.style.margin = "0";
+            slider_min.style.borderTopLeftRadius     = "3px";
+            slider_min.style.borderBottomLeftRadius  = "3px";
+
+            slider_max.style.height = "6px";
+            slider_max.style.background = "#6b5b95";
+            slider_max.style.backgroundImage = "unset";
+            slider_max.style.margin = "0";
+            slider_max.style.borderTopRightRadius    = "3px";
+            slider_max.style.borderBottomRightRadius = "3px";
+        }
+
+        document.addEventListener("DOMContentLoaded", function(){
+            changeCssOfAgeSlider()
+        });
+
+        window.onload = function(){
+            // updateDistanceOnChange();
+            updateAgeOnChange();
+        }
+    </script>
+
+    <!-- Change gender preferences -->
+    <script>
+        $(".container__content ul li.gender").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+
+    <!-- Open Modals -->
+    
+    <script>
+        let modalWrap = document.getElementById("modal__wrapper");
+
+        function toggleModalContent(element){
+            modalWrap.classList.toggle("open");
+            $('.'+element).css('display', 'block'); 
+        }
+
+        // Handle Nav Modal
+        $("#menu").click(function(){
+            $('#close').css('display', 'block'); 
+            $('#menu').css('display', 'none'); 
+            $('.content').css({
+                'pointer-events': 'none',
+                'opacity': 0.5,
+            });
+        });
+
+        $(".card-close").click(function(){
+            modalWrap.classList.toggle("open");
+
+            $('#menu').css('display', 'block'); 
+            $('#close').css('display', 'none'); 
+            $('.content').css({
+                'pointer-events': 'auto',
+                'opacity': 1
+            });
+
+            setTimeout(function(){
+                $('.modal__content').css('display', 'none'); 
+            }, 1000)
+        });
+    </script>
+</body>
+</html>
