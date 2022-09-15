@@ -77,6 +77,14 @@
     background: #f3f4f6;
 }
 
+.modal__content.info{
+    padding-bottom: 0;
+}
+
+.modal__content.settings .container.pd_0{
+    margin-bottom: 1rem;
+}
+
 .modal__content .card-close {
     position: sticky;
     top: 0;
