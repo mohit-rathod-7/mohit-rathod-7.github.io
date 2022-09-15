@@ -43,7 +43,7 @@
         <header>
             <img onclick="window.location.href='629501951631/'" loading="lazy" src="https://via.placeholder.com/195x195/eee/eee" data-src="assets/dark/profile_pic.svg">
 
-            <div onclick="window.location.href='629501951631/'" class="heading highlight" style="margin: 3rem;">
+            <div onclick="window.location.href='629501951631/'" class="heading highlight button" style="margin: 3rem;">
                 Mohit Rathod
             
                 <span class="verified"><i class="material-icons material-symbols-filled">verified</i></span>
@@ -266,6 +266,10 @@
         window.onload = function(){
             // updateDistanceOnChange();
             updateAgeOnChange();
+                    
+            var root = document.querySelector('#yearSelector').shadowRoot;
+            slider_min_max = root.getElementById("minMaxSlider");
+            slider_min_max.setAttribute("data-range-width", "335");
         }
     </script>
 
