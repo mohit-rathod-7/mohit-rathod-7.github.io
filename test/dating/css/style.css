@@ -37,6 +37,7 @@
     --text-link-cl: #106bd5;
     --pri-text-cl: #21262e;
     --sec-text-cl: #505050;
+    --verified: #4598e5;
 
     --fs-1: 3rem; /* 30px */
     --fs-2: calc(var(--fs-1) - 0.2rem); /* 28px */
