@@ -71,10 +71,10 @@
 }
 
 .modal__content{
+    padding: 1rem 1.5rem;
     display: none;
     flex-direction: column;
-    background: var(--white);
-    box-shadow: var(--boxshadow);
+    background: #f3f4f6;
 }
 
 .modal__content .card-close {
@@ -93,7 +93,6 @@
 }
 
 .content .container{
-    margin: 0.75rem 1.5rem;
     background: var(--white);
     border-radius: 0.5rem;
     box-shadow: var(--boxshadow)
@@ -120,8 +119,7 @@
 .content .container .container__title{
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem 0;
-    padding: 0 1.25rem;
+    padding: 1.5rem 1.25rem;
 }
 
 .content .container .container__content input[type="range"]{
@@ -167,7 +165,7 @@
 }    
 
 .content .container.logout .container__content, .content .container.delete_account .container__content{
-    margin: auto;
+    margin: 1rem;
     padding: 1.5rem;
     font-size: var(--fs-button);
     font-weight: var(--fw-bold);
