@@ -38,7 +38,7 @@
     max-height: 5rem;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0.1rem 0.5rem 0 gray;
+    box-shadow: 0 0.1rem 0.5rem 0 #d3d4d6;
 }
 
 .content header section div:nth-of-type(2) span{
