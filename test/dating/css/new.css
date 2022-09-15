@@ -67,7 +67,7 @@
 }
 
 .modal__wrapper.open{
-    max-height: 37rem;
+    max-height: 40rem;
 }
 
 .modal__content{
@@ -96,14 +96,6 @@
     background: var(--white);
     border-radius: 0.5rem;
     box-shadow: var(--boxshadow)
-}
-
-.content .container:first-child{
-    margin-top: 1.5rem;
-}
-
-.content .container:last-child{
-    margin-bottom: 1.5rem;
 }
 
 .content .container .container__content{
