@@ -1,0 +1,208 @@
+.content{
+    background: #f3f4f6;
+}
+
+.content header{
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.content header img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.content header .verified{
+    color: var(--verified);
+}
+
+.content header section{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+    
+.content header section div{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 10rem;
+}
+
+.content header section div span{
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 5rem;
+    min-height: 5rem;
+    max-width: 5rem;
+    max-height: 5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--boxshadow);
+}
+
+.content header section div:nth-of-type(2) span{
+    min-width: 7rem;
+    min-height: 7rem;
+    max-width: 7rem;
+    max-height: 7rem;
+}
+
+.content header section div span i{
+    font-size: 3rem;
+}
+
+.content header section div:nth-of-type(2) span i{
+    font-size: 4rem;
+}
+
+.modal__wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 0;
+    background: #f3f4f6;
+    overflow-y: scroll;
+    transition: max-height 0.5s;
+}
+
+.modal__wrapper.open{
+    max-height: 37rem;
+}
+
+.modal__content{
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    box-shadow: var(--boxshadow);
+}
+
+.modal__content .card-close {
+    position: sticky;
+    top: 0;
+    border-radius: 50%;
+}
+
+.modal__content .card-close i{
+    padding: 1.5rem;
+    position: relative;
+    width: max-content;
+    float: right;
+    font-size: var(--fs-1);
+    cursor: pointer;
+}
+
+.content .container{
+    margin: 0.75rem 1.5rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--boxshadow)
+}
+
+.content .container:first-child{
+    margin-top: 1.5rem;
+}
+
+.content .container:last-child{
+    margin-bottom: 1.5rem;
+}
+
+.content .container .container__content{
+    padding: 1.25rem;
+    padding-top: 0;
+    padding-bottom: 1.95rem;
+}
+
+.container.pd_0 .container__content{
+    padding: 0;
+}
+
+.content .container .container__title{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 0 1.25rem;
+}
+
+.content .container .container__content input[type="range"]{
+    width: 100%;
+}
+
+.content .container .container__content ul li{
+    padding: 1.5rem;
+    position: relative;
+    color:var(--sec-text-cl);
+    font-size: var(--fs-caption);
+    font-weight: var(--fw-bold);
+    box-shadow: var(--boxshadow-bottom);
+    cursor: pointer;
+}
+
+.content .container .container__content ul li.active{
+    background: #f6f5f4;
+}
+
+.content .container .container__content ul li .icon{
+    margin: 1rem 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content .container .container__content ul li.gender .icon{
+    color: #3fb950;
+    display: none;
+}
+
+.content .container .container__content ul li.active.gender .icon{
+    display: unset;
+}
+
+.content .container .container__content ul li:first-child{
+    box-shadow: var(--boxshadow-top), var(--boxshadow-bottom);
+}
+
+.content .container .container__content ul li:last-child{
+    box-shadow: unset
+}    
+
+.content .container.logout .container__content, .content .container.delete_account .container__content{
+    margin: auto;
+    padding: 1.5rem;
+    font-size: var(--fs-button);
+    font-weight: var(--fw-bold);
+    text-align: center;
+}
+
+.content .version{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: var(--fs-caption) !important;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.progress {
+    border-radius: 3px;
+    height: 6px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #083535;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #f7d2f9;
+}
