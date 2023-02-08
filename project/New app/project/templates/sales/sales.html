@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from "macros/macros.html" import tab %}
+
+
+{% block title %}Sales{% endblock %}
+
+{% block navbar_heading %}Sales{% endblock %}
+
+{% block style %}
+<style>
+    
+</style>
+{% endblock %}
+
+{% block tabs %}
+    {{ tab("Daily Sales", "daily_sales", "active") }}
+    {{ tab("Appointments", "appointments", "") }}
+    {{ tab("Invoices", "invoices", "") }}
+    {{ tab("Vouchers", "vouchers", "") }}
+    {{ tab("Paid plans", "paid_plans", "") }}
+{% endblock %}
+

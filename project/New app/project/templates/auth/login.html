@@ -1,0 +1,239 @@
+{% extends "auth/auth.html" %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block navbar_heading %}Login{% endblock %}
+
+{% block style %}
+<style>
+    .title{
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .container .main .content{
+        padding: 0 !important;
+        font-size: 2rem;
+    }
+
+    .container .main .content .container{
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .container .main .content .container .usertype{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .container .main .content .container .usertype img{   
+        margin: 0 1rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 1rem;
+    }
+
+    .container .main .content .container .usertype img:hover{
+        border: 2px solid rgb(0 0 0 / 20%);
+    }
+
+    .container .main .content .container .usertype .selected img{
+        border: 2px solid darkgray;
+    }   
+
+    .container .main .content .container .usertype p{
+        text-align: center;
+    }
+
+    /* ----------------------------------------------------------------------------------------- */
+
+    .content .form .field{
+        margin-top: 2rem;
+    }
+
+    .content .form .field div{
+        position: relative;
+    }
+
+    .content .form .field div .password-icon{
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        color: var(--gray);
+    }
+
+    .content .form .field div .password-icon.invisible{
+        display: none;
+    }
+
+    .content .form .input_bar{
+        width: -webkit-fill-available;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: var(--fs-button);
+        line-height: 2.4rem;
+        border: 0;
+        outline: 0;
+        background: #f3f4f6;
+        box-shadow: var(--boxshadow);
+    }
+
+    .content .form .field input[type="checkbox"]{
+        height: 1.5rem;
+        aspect-ratio: 1;
+        margin-right: 0.5rem;
+        
+    }
+
+    .content .form .field span{
+        display: flex;
+        align-items: baseline;
+    }
+
+    .content .form .field .forget-password{
+        margin-left: 5rem;
+        color: var(--gray);
+        font-size: var(--fs-button) !important;
+    }
+
+    .content .form .button#login{
+        margin: 2.5rem 0;
+        padding: 1.5rem;
+        font-size: var(--fs-button);
+        font-weight: var(--fw-bold);
+        text-align: center;
+        color: lightgray;
+        background: black;
+        width: -webkit-fill-available;
+        border-radius: 1rem;
+    }
+
+    .content .form #signup{
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .content .form #signup p{
+        font-size: var(--fs-button) !important;
+    }
+
+    .content .form #signup a{
+        margin-left: 0.5rem;
+        color: var(--gray);
+        font-size: var(--fs-button) !important;
+    }
+
+    .content .form .field input.error{
+        color: initial;
+        font-size: var(--fs-button);
+        border: 1px solid red;
+    }
+
+    .content .form .field .error{
+        color: red;
+        font-size: var(--fs-button);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">Choose Account Type</h1>
+
+    <div class="usertype">
+        <div class="selected" data-type="business">
+            <img src="{{ url_for('static', filename='assets/shop/72.png') }}" alt="">
+            <p>Business</p>
+        </div>
+        
+        <div data-type="user">
+            <img src="{{ url_for('static', filename='assets/user/72.png') }}" alt="">
+            <p>User</p>
+        </div>
+    </div>
+
+    <form class="form" id="loginForm" method="POST">
+        <div>
+            {{ form.csrf_token }}
+
+            <input type="hidden" name="next" value="{{ request.args.get('next', '') }}" />
+            <input type="hidden" name="usertype" value="business" />
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+            <!-- <label class="title sec-text" for="email">Username or Email ID</label> -->
+            <input type="text" class="input_bar" name="email" id="email" placeholder="Email">
+            <span class="error" id="error_email">
+                {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+            </span>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+            <!-- <label class="title sec-text" for="password">Password</label> -->
+            
+            <div>
+                <input type="password" class="input_bar password" name="password" id="password" placeholder="Password" onkeyup="validatePassword()">
+                <i class="icon password-icon material-icons material-symbols-outlined">visibility</i>
+                <i class="icon password-icon invisible material-icons material-symbols-outlined">visibility_off</i>
+                <span class="error" id="error_password">
+                    {% if form.password.errors %}
+                        {% for error in form.password.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+
+        <!-- Remember me -->
+        <div class="field" style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span>
+                <input type="checkbox" name="remember" id="remember">
+                <label class="sec-text" style="cursor: pointer;" for="remember">Remember me</label>
+            </span>
+
+            <a class="forget-password" href="{{ url_for('auth.reset_password') }}">Forget password?</a>
+        </div>
+
+        <button class="button" id="login" type="submit" onclick="return validateLoginForm()" formaction="business/">Login</button>
+
+        <div id="signup">
+            <p class="text sec-text">Don't have an account?</p>
+            <a class="" href="{{ url_for('auth.signup') }}">Sign up</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    $('.usertype div').on('click', function() {
+        if (!$(this).hasClass('selected')){
+            var usertype = $(this).attr('data-type');
+            
+            $("input[name=usertype]").val(usertype);
+            $(this).addClass('selected').siblings().removeClass('selected');
+
+            // Change form submit link on selecting usertype
+            if (usertype == 'business'){
+                $("#login").attr('formaction', "business/");
+            }
+            else{
+                $("#login").attr('formaction', "user/");
+            }
+        }
+    });
+</script>
+
+{% endblock %}

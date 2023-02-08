@@ -1,0 +1,75 @@
+:root{
+    --cl--flash-success:     #155724;
+    --bg--flash-success:     #d4edda;
+    --border--flash-success: #c3e6cb;
+
+    --cl--flash-info:        #0c5460;
+    --bg--flash-info:        #d1ecf1;
+    --border--flash-info:    #bee5eb;
+
+    --cl--flash-error:       #721c24;
+    --bg--flash-error:       #f8d7da;
+    --border--flash-error:   #f5c6cb;
+}
+
+.flash{
+    padding: 2rem;
+    position: absolute;
+    display: flex;
+    width: -webkit-fill-available;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    box-shadow: var(--boxshadow-bottom);
+    opacity: 0;
+    z-index: 2000;
+}
+
+.flash .icon{
+    margin: auto 1.5rem auto 0;
+    min-width: 2.4rem !important;
+}
+
+.flash .flash-text{
+    display: flex;
+    align-items: baseline;
+    font-size: var(--fs-small);
+    font-weight: 500;
+}
+
+.flash .progress{
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    width: 0%;
+    height: 0.3rem;
+}
+
+.flash.flash__success{
+    background: var(--bg--flash-success);
+    color: var(--cl--flash-success);
+    border-color: var(--border--flash-success);
+}
+
+.flash.flash__success .progress{
+    background-color: var(--cl--flash-success);
+}
+
+.flash.flash__info{
+    background: var(--bg--flash-info);
+    color: var(--cl--flash-info);
+    border-color: var(--border--flash-info);
+}
+
+.flash.flash__info .progress{
+    background-color: var(--cl--flash-info);
+}
+
+.flash.flash__error{
+    background: var(--bg--flash-error);
+    color: var(--cl--flash-error);
+    border-color: var(--border--flash-error);
+}
+
+.flash.flash__error .progress{
+    background-color: var(--cl--flash-error);
+}

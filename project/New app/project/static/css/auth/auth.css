@@ -1,0 +1,15 @@
+.container .main{
+    margin-left: 0 !important;
+}
+
+.container .main .navbar{
+    padding: 1rem 5.5rem 1rem 1rem;
+}
+
+.container .main .navbar div:nth-of-type(1){
+    justify-content: unset;
+}
+
+.container .main .navbar .heading{
+    margin: auto;
+}
