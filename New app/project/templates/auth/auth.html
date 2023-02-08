@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <title>App - {% block title %}{% endblock %}</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="hsl(298, 75%, 90%)">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/auth.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"            defer></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validateFields.js') }}" defer></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/validateForms.js') }}"  defer></script>
+
+    <!-- Flashes -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flashes.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/flashes.js') }}" defer></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <!-- Google Fonts  & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+    <link rel="preload" as="style" onload="this.rel= 'stylesheet'" href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'>
+     
+    <noscript>
+        <link rel="stylesheet" href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    </noscript> 
+
+    {% block style %}{% endblock %}
+</head>
+
+<body class="prevent-select">
+    <div class="loader">
+        <img src="{{ url_for('static', filename='img/loader.gif') }}">
+    </div>
+
+    <div class="flashes">
+        {% with success = get_flashed_messages(category_filter=["success"]) %}
+            {% if success %}
+                {% for msg in success %}
+                    <div class="flash flash__success" id="success">
+                        <span class="icon material-icons material-symbols-filled">check_circle</span>
+                        <span class="flash-text">{{ msg }}</span>
+                        <div class="progress"></div>
+                    </div>  
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    
+        {% with success = get_flashed_messages(category_filter=["error"]) %}
+            {% if success %}
+                {% for msg in success %}
+                <div class="flash flash__error" id="error">
+                    <span class="icon material-icons material-symbols-filled">error</span>
+                    <span class="flash-text">{{ msg }}</span>
+                    <div class="progress"></div>
+                </div>  
+                {% endfor %}
+            {% endif %}
+        {% endwith %} 
+    
+        {% with success = get_flashed_messages(category_filter=["info"]) %}
+            {% if success %}
+                {% for msg in success %}
+                    <div class="flash flash__info" id="info">
+                        <span class="icon material-icons material-symbols-filled">info</span>
+                        <span class="flash-text">{{ msg }}</span>
+                        <div class="progress"></div>
+                    </div>  
+                {% endfor %}
+            {% endif %}
+        {% endwith %} 
+    </div>
+    
+    <div class="container">
+        <section class="main">
+            <div class="navbar">
+                <div>
+                    <div class="navbar__icons">
+                        <i class="goback icon material-icons material-icons-outlined">arrow_back</i>
+                    </div>
+                    
+                    <h1 class="heading">{% block navbar_heading %}{% endblock %}</h1>
+                </div>
+            </div>
+          
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.goback').click(function(){
+                parent.history.back();
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

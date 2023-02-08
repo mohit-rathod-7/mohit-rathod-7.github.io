@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% from "macros/macros.html" import tab %}
+
+
+{% block title %}Dashboard{% endblock %}
+
+{% block navbar_heading %}Dashboard{% endblock %}
+
+{% block style %}
+<style>
+    
+</style>
+{% endblock %}
+
+{% block tabs %}
+    {{ tab("Namaste", "namaste", "active") }}
+    {{ tab("Hello", "Hello", "") }}
+    {{ tab("Hey", "hey", "") }}
+    {{ tab("Hi", "hi", "") }}
+{% endblock %}
+
